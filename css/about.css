@@ -3,6 +3,7 @@
 .navbar {
     opacity: 1;
     animation: none;
+    transition: all 1s ease;
 }
 
 @keyframes easeInToRight{
