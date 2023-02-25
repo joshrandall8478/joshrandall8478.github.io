@@ -17,6 +17,7 @@
 html, body {
     background-color: var(--main-bg-color);
     overflow-x: hidden;
+    height: 100%;
 }
 
 .main {
@@ -108,7 +109,8 @@ html, body {
 
 .next__container{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     align-items: right;
     justify-self: center;
     text-align: left;
@@ -118,13 +120,23 @@ html, body {
     width: 100%;
     max-width: 1300px;
     padding: 0 50px;
-    opacity: 0;
-    animation: 1s ease-out 1s 1 easeInToLeft;
-    animation-fill-mode: forwards;
+    /* animation: 1s ease-out 1s 1 easeInToLeft;
+    animation-fill-mode: forwards; */
+    
 }
+
+.next__parallax{ 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter:brightness(50%);
+    background-size: cover;
+}
+
 
 .next__content h1 {
     font-size: 7rem;
+    opacity: 1;
 }
 
 .next__content h2 {
