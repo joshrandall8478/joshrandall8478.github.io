@@ -156,6 +156,10 @@ html, body {
 }
 
 .project__preview.active {
+    text-align: right;
+    align-items: right;
+    justify-self: right;
+    transform: all 0.5 s;
     opacity: 1;
 }
 
