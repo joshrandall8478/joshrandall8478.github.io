@@ -1,13 +1,17 @@
 const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
-let projectItem = document.querySelector('.project__item');
-let projectItemActive = document.querySelector('.project__item active');
+let projectPreviewActive = document.querySelector('.project__preview.active');
+let projectItemActive = document.querySelector('.project__item.active');
 
-projectItem.addEventListener('click', function (){
+function showProject(project_id){
+    let preview_id = project_id+'preview';
     projectItemActive.classList.remove('active');
-    document.querySelector(this.id).classList.add('active');
-    document.querySelector(this.id + ' preview').classList.add('active');
-})
+    projectPreviewActive.classList.remove('active');
+    document.querySelector(project_id).classList.add('active');
+    document.querySelector(preview_id).classList.add('active');
+}
+
+
 
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
