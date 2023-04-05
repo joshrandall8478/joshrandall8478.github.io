@@ -100,7 +100,7 @@
     margin: 0 10px;
 }
 
-#button {
+.button {
     opacity: 0;
     animation: 0.5s ease 2.8s 1 easeInToBottom;
     animation-fill-mode: forwards;
@@ -120,7 +120,7 @@
     transition: all 0.2s;
 }
 
-#button:hover{
+.button:hover{
     cursor: pointer;
     transition: all 0.2s;
     color: var(--main-fg-color);
@@ -160,7 +160,7 @@ hr {
         font-size: 2rem;
     }
 
-    .paragraph {
+    .main__content p {
         font-size: 1.4rem;
         margin: 10px;
         text-align: left;
@@ -180,82 +180,13 @@ hr {
         margin-right: auto;
         padding: 50px auto;
     }
-
-    .skills {
-        width: 100%;
-        max-width: 1300px;
-        padding: 0 15px;
-    }
-
-    .skills h1 {
-        font-size: 3rem;
-    }
-
-    .skills__category {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        padding: 20px 0px 20px 0px;
-    }
-
-    .adobe__attribution {
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 802px) {
-    .skills__category {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 626px) {
-    .skills__category {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media screen and (max-width: 510px) {
-    .skills {
-        position: absolute;
-    }
-
-    .skills__category {
-        display: grid;
-        position: relative;
-        grid-template-columns: 0.5fr 0.5fr;
+    .button {
+        justify-content: center;
         align-items: center;
-        /* padding: auto 0px auto 0px; */
-    }
-}
-
-@media screen and (max-width: 402px) {
-    .skills {
-        position: absolute;
-    }
-
-    .skills__category {
-        display: grid;
-        position: relative;
-        right: 50px;
-        grid-template-columns: 150px 150px;
-        padding: auto 0px auto 0px;
-    }
-
-    .skills__item i {
-        font-size: 4rem;
-    }
-
-    .skills__item h2,
-    h3 {
-        font-size: 1rem;
-    }
-
-    .skills__item img {
-        width: 60px;
-        height: auto;
-    }
-
-    .adobe__attribution {
-        font-size: 1rem;
+        text-align: center;
+        font-size: 2em;
+        width: 80%;
+        height: 80px;
+        margin: 0;
     }
 }
