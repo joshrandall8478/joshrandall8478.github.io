@@ -156,13 +156,17 @@ html, body {
 .main__links a{
     color: var(--main-fg-color);
     margin: 0 10px;
+    transition: all 0.3s ease;
     text-decoration: none;
 }
 
 .main__links a:hover{
     color: var(--main-hover-color);
     transition: all 0.3s ease;
+    transform: scale(1.5);
+    padding: 0 10px;
 }
+
 
 /* Navbar Shit */
 
