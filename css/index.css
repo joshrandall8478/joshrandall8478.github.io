@@ -262,6 +262,12 @@ html, body {
     .main__links {
         font-size: 3rem;
     }
+    .main__links a:hover{
+        color: var(--main-hover-color);
+        transition: all 0.3s ease;
+        transform: scale(1);
+        padding: 0 0px;
+    }
     .main__content p {
         font-size: 1rem;
     }
