@@ -1,0 +1,13 @@
+{
+    "projects" : [ {
+        "name" : "Project 1",
+        "tagline" : "Project 1 tagline",
+        "description" : "This is project 1",
+        "image" : ""
+    }, {
+        "name" : "Project 2",
+        "tagline" : "Project 2 tagline",
+        "description" : "This is project 2",
+        "image" : ""
+    }]
+}
