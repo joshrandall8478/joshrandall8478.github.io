@@ -1,8 +1,8 @@
 // Load projects from json file into data constant
-const data = fetch('./projects.json');
+const data = fetch('projects.json');
 console.log(data);
 // Load projects from data constant into div
-const projectsList = document.getElementById("projects-list");
+const projectsList = document.getElementById('projects-list');
 // Loop through projects and add each project to div
 let listHTML = '';
 for (let i = 0; i < data.length; i++) {
