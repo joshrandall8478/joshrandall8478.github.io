@@ -1,13 +1,18 @@
 // TODO: Make this program correctly interface with projects.json.
 // !ISSUE: data is undefined
 // Load projects from json file into data constant
-const data = fetch('projects.json');
-// console.log(data);
+// const data = fetch('projects.json');
+
+const data = new Request('./projects.json');
+
+fetch(data)
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 // Load projects from data constant into div
 const projectsList = document.getElementById('projects-list');
 // Loop through projects and add each project to div
 console.log(data.length);
-// var listHTML = '';
+var listHTML = '';
 for (let i = 0; i < data.length; i++) {
     const project = data[i];
     console.log(project.name);
