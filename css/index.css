@@ -165,7 +165,9 @@ html, body {
 
 #threads{
     display: block;
-    margin: 2 auto;
+    margin: auto;
+    margin-left: 5px;
+    margin-right: -10px;
     fill: var(--main-fg-color);
 }
 
