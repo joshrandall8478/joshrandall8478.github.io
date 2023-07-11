@@ -160,6 +160,21 @@ html, body {
     transition: all 0.3s ease;
     text-decoration: none;
 }
+
+/** threads icon css **/
+
+#threads{
+    display: block;
+    margin: 2 auto;
+    fill: var(--main-fg-color);
+}
+
+#threads:hover {
+    fill: url(#0);
+}
+
+
+
 /* .main__links svg{
     
     margin: 0 10px;
@@ -372,6 +387,11 @@ html, body {
 
     #mobile-menu.is-active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /** threads animation cancel */
+    #threads:hover {
+        fill: url(#1);
     }
 }
 
