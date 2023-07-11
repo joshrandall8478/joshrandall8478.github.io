@@ -167,7 +167,6 @@ html, body {
     display: block;
     margin: auto;
     margin-left: 5px;
-    margin-right: -10px;
     fill: var(--main-fg-color);
     animation: jump 0.6s ease-in-out 2s 7;
 }
@@ -186,9 +185,10 @@ html, body {
 
 #mastodon:hover {
     background-image: linear-gradient(to left top, #4d00ff, #5f27ff, #6e3cff, #7c4eff, #885eff, #986eff, #a77fff, #b48fff, #c7a5ff, #d8bbff, #e7d2ff, #f4e9ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transision: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 @keyframes disappear{
@@ -223,6 +223,7 @@ html, body {
 
 #new-text {
     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
