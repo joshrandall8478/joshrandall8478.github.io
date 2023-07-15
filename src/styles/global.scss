@@ -237,6 +237,28 @@ li::marker
             max-width: 400px;
         }  
     }
+
+    .blog__item {
+        // display: grid;
+        // grid-template-rows: 1fr 1fr;
+        max-height: 200px;
+        // h2{
+        //     font-size: 1.5rem;
+        // }
+        // h3 {
+        //     font-size: 1rem;
+        // }
+        // p {
+        //     font-size: 0.9rem;
+        // }
+        // div {
+        //     img {
+        //     max-width: 100px;
+        //     float: right;
+        //     margin-bottom: 15px;
+        //     }
+        // }
+    }
 }
 
 // iPhone sizing
@@ -253,5 +275,26 @@ li::marker
         .not-found-image{
             max-width: 300px;
         }  
+    }
+    .blog__item {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        max-height: 150px;
+        h2{
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        div {
+            img {
+            max-width: 100px;
+            float: right;
+            margin-bottom: 15px;
+            }
+        }
     }
 }
