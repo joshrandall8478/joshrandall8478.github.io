@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 const allPosts = await Astro.glob('./posts/*.md');
+allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <!DOCTYPE html>
@@ -93,7 +94,7 @@ const allPosts = await Astro.glob('./posts/*.md');
                             {post.frontmatter.title}
                         </h2>
                         <h3>
-                            Published: {post.frontmatter.pubDate}
+                            Date: {post.frontmatter.date}
                         </h3>
                         <p>
                             {post.frontmatter.description}

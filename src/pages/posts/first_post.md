@@ -1,6 +1,6 @@
 ---
 title: 'First Official Post'
-pubDate: 7/14/23, 10:53PM
+date: "7/14/23"
 description: 'I fucking did it.'
 image:
     url: 'https://thumbs.dreamstime.com/z/salute-21169127.jpg'

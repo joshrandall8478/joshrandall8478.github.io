@@ -1,6 +1,6 @@
 ---
 title: 'Tutorial Blog Post'
-pubDate: 7/14/23, 10:19PM
+date: "7/14/23"
 description: 'This is the first post of my new Astro blog.'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
