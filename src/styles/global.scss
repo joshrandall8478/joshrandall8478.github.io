@@ -183,7 +183,14 @@ li::marker
             max-width: 200px;
         }
         img{
-            max-width: 500px;
+            max-width: 100%;
+        }
+        p{
+            max-width: 90%;
+            font-size: 1.4rem;
+        }
+        hr {
+            width: 100%;
         }
     }
     
@@ -234,6 +241,11 @@ li::marker
 
 // iPhone sizing
 @media screen and (max-width: 480px) {
+    .blog__content{
+        p {
+            font-size: 1.2rem;
+        }
+    }
     .main__content {
         .not-found-header{
             font-size: 2rem;

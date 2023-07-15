@@ -422,7 +422,7 @@ body {
     font-size: 1.3rem;
   }
   .main__links {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 .navbar {
@@ -603,7 +603,14 @@ li::marker {
     max-width: 200px;
   }
   .blog__content img {
-    max-width: 500px;
+    max-width: 100%;
+  }
+  .blog__content p {
+    max-width: 90%;
+    font-size: 1.4rem;
+  }
+  .blog__content hr {
+    width: 100%;
   }
   .blog__list {
     color: whitesmoke;
@@ -648,6 +655,9 @@ li::marker {
   }
 }
 @media screen and (max-width: 480px) {
+  .blog__content p {
+    font-size: 1.2rem;
+  }
   .main__content .not-found-header, .not__found__content .not-found-header, .blog__container .not-found-header {
     font-size: 2rem;
   }
