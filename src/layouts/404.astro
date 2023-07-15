@@ -81,8 +81,9 @@ const { frontmatter } = Astro.props;
   </nav>
   <div class="main">
     <div class="main__container">
-      <div class="main__content">
-        <h1 id="404_header" style="text-align:center">{frontmatter.title}</h1>
+      <div class="not__found__content">
+        <h1 class="not-found-header">{frontmatter.title}</h1>
+      <slot />
       </div>
     </div>
   </div>

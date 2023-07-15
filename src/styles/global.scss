@@ -23,6 +23,22 @@ li::marker
     font-weight: bolder;
 }
 
+.not__found__content{
+    @extend .main__content;
+    align-items: center;
+    text-align: center;
+}
+
+.not-found-header{
+    text-align: center;
+}
+.not-found-image {
+    width: 500px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .main__content {
     text-align: left;
     h1 {
@@ -205,5 +221,25 @@ li::marker
             margin-bottom: 15px;
         }
         color: $color_1;
+    }
+    .main__content {
+        .not-found-header{
+            font-size: 3rem;
+        }
+        .not-found-image{
+            max-width: 400px;
+        }  
+    }
+}
+
+// iPhone sizing
+@media screen and (max-width: 480px) {
+    .main__content {
+        .not-found-header{
+            font-size: 2rem;
+        }
+        .not-found-image{
+            max-width: 300px;
+        }  
     }
 }
