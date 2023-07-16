@@ -563,7 +563,7 @@ li::marker {
   border-radius: 25px;
   height: auto;
   border: 3px solid whitesmoke;
-  max-width: 500px;
+  max-width: 75%;
 }
 .blog__content .blog-image {
   border-style: none;
