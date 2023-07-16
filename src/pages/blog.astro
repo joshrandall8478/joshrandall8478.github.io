@@ -1,7 +1,8 @@
 ---
 import '../styles/global.css';
 const allPosts = await Astro.glob('./posts/*.md');
-allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 ---
 
 <!DOCTYPE html>
@@ -85,7 +86,7 @@ allPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatte
         <div class="main__container">
             <div class="main__content">
                 <ul class="blog__list">
-                    {allPosts.map((post) => 
+                    {nonDraftPosts.map((post) => 
                     <li>
                         <a href={post.url}>
                     <div class="blog__item">
