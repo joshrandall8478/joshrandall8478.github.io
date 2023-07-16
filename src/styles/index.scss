@@ -223,8 +223,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	font-size: 1.2rem;
-	position: sticky;
-    position: -webkit-sticky;
+	position: fixed;
 	top: 0;
 	width: 100%;
 	z-index: 999;
