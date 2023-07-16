@@ -97,6 +97,9 @@ nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.front
                         <h3>
                             Date: {post.frontmatter.date}
                         </h3>
+                        <h4>
+                            Author: {post.frontmatter.author}
+                        </h4>
                         <p>
                             {post.frontmatter.description}
                             </p>

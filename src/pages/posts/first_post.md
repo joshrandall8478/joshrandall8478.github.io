@@ -1,6 +1,7 @@
 ---
 title: 'First Official Post'
 date: "7/14/23"
+author: "Joshua Randall"
 description: 'I fucking did it.'
 image:
     url: 'https://thumbs.dreamstime.com/z/salute-21169127.jpg'

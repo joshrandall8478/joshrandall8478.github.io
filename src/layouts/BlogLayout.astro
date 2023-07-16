@@ -90,9 +90,14 @@ let metaTitle = "Joshua Randall - " + frontmatter.title;
             <a href="/blog"><i class="fa fa-arrow-left"></i> <span>Back to Blogs</span></a>
         </div>
         <div class="blog__content">
-            <h1>{frontmatter.title}</h1>
+            <div class="blog-info">
+                <h1>{frontmatter.title}</h1>
             <h2>Published: {frontmatter.date}</h2>
-            <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+            <h3>Author: {frontmatter.author}</h3>
+            <div class="blog-image-container">
+                <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+            </div>
+            </div>
             <hr>
             <slot />
         </div>

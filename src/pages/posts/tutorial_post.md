@@ -1,6 +1,7 @@
 ---
 title: 'Tutorial Blog Post'
 date: "7/14/23"
+author: "Joshua Randall"
 description: 'This is the first post of my new Astro blog.'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'

@@ -543,6 +543,10 @@ li::marker {
   font-size: 2rem;
   margin-bottom: 15px;
 }
+.blog__content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
 .blog__content hr {
   border: 3px solid grey;
   margin: 15px 0;

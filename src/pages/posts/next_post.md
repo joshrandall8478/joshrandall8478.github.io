@@ -1,6 +1,7 @@
 ---
 title: 'Next Post :)'
 date: "7/15/23"
+author: "Joshua Randall"
 description: 'If you are seeing this, i got the page to sort!!!'
 image:
     url: 'https://shotkit.com/wp-content/uploads/2019/02/Stock-photo.jpg'
