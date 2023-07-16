@@ -219,12 +219,19 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: sticky;
+  position: fixed;
+  position: -webkit-sticky;
   top: 0;
+  width: 100%;
   z-index: 999;
   opacity: 0;
   animation: 0.6s ease 1s 1 easeInToBottom;
   animation-fill-mode: forwards;
+  margin-bottom: 0px;
+}
+
+.main {
+  margin-top: 75px;
 }
 
 .navbar.hide {
@@ -461,7 +468,6 @@ html {
   opacity: 1;
   animation: none;
   transition: all 1s ease;
-  position: sticky;
 }
 
 #main__title {
