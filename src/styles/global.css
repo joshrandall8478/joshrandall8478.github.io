@@ -670,7 +670,7 @@ li::marker {
   .blog__item {
     display: grid;
     grid-template-rows: 1fr 1fr;
-    max-height: 150px;
+    min-height: 150px;
   }
   .blog__item h2 {
     font-size: 1.5rem;
