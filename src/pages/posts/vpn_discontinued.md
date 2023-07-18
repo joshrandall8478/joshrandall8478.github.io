@@ -19,4 +19,4 @@ As for easy local communication (for development), I will create a local wiregua
 For those who desperately need a VPN, previously liked the past arrangement, and are willing to help with server costs (albeit they aren't that much), please get in contact with me at <span style="color: $color_3;">josh@joshrandall.net</span>. I will be more than happy to work something out with you.
 
 
-In anycase, thank you for taking your time to read this 👏🏼
+In any case, thank you for taking your time to read this 👏🏼
