@@ -12,9 +12,7 @@ layout: ../../layouts/BlogLayout.astro
 
 As of <span style="color:aqua;">7/17/23</span>, the VPN service will be discontinued. This is due to the fact that I am no longer able to maintain the service, and it is not worth the cost to keep it running. I apologize for any minor inconvenience this may cause to anyone who may have been actively using the service.
 
-I am trying to give Proton Mail a try, which also has a VPN service included. Because of this decision to pull support for the main VPN service, I am getting more functionality out of my current arrangement at the same price. For those who desperately need a VPN, I can still let you use any of my <span style="color: #ff897b;">Wireguard</span> profiles through Proton VPN if you were on my previous arrangement, and within my legal and financial limitations (also through no charge to you).
-
-If Proton mail proves to be a worthy replacment of GMail and iCloud mail, then my new arrangement will take place. If it fails, I will recontinue the VPN server and remigrate my domain email back to iCloud. Currently working on RSS feeds for the blog, and a few other things. I will be posting more updates as I go along.
+I am trying to give Proton Mail a try, which also has a VPN service included. Because of this decision to pull support for the main VPN service, I am getting more functionality out of my current arrangement at the same price. I will be using the Proton Mail VPN service for a month, and if it proves to be a worthy replacement, I will continue to use it. If it does not, I will be discontinuing the VPN service entirely, and will not be looking for a replacement.
 
 As for easy local communication (for development), I will create a local wireguard instance soon for this purpose. It will also not be on 24/7, with the soul purpose of development.
 
