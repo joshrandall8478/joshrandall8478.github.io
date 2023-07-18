@@ -16,4 +16,7 @@ I am trying to give Proton Mail a try, which also has a VPN service included. Be
 
 As for easy local communication (for development), I will create a local wireguard instance soon for this purpose. It will also not be on 24/7, with the soul purpose of development.
 
-Thank you for taking your time to read this 👏🏼
+For those who desperately need a VPN, previously liked the past arrangement, and are willing to help with server costs (albiet they aren't that much), please get in contact with me at <span style="color: $color_3;">josh@joshrandall.net</span>. I will be more than happy to work something out with you.
+
+
+In anycase, thank you for taking your time to read this 👏🏼
