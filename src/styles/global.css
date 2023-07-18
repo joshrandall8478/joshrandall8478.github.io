@@ -664,7 +664,7 @@ li::marker {
     max-width: 400px;
   }
   .blog__item {
-    max-height: 200px;
+    max-height: 300px;
   }
 }
 @media screen and (max-width: 480px) {
