@@ -16,83 +16,158 @@ $font-family_1: 'Poppins', sans-serif;
 		opacity: 0;
 		transform: translateY(50%);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
+
 @keyframes easeInToBottom {
 	0% {
 		opacity: 0;
 		transform: translateY(-50%);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
+
 @keyframes easeInToLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(50%);
 	}
+
 	100% {
 		opacity: 1;
 		transform: translateX(0);
 	}
 }
+
 @keyframes easeOutToRight {
 	0% {
 		opacity: 1;
 		transform: translateX(0%);
 	}
+
 	100% {
 		opacity: 0;
 		transform: translateX(50%);
 	}
 }
+
 @keyframes disappear {
 	0% {
 		opacity: 1;
 	}
+
 	100% {
 		opacity: 0;
 	}
 }
+
 @keyframes jump {
 	0% {
 		transform: translateY(0);
 	}
+
 	50% {
 		transform: translateY(-10px);
 	}
+
 	100% {
 		transform: translateY(0);
 	}
 }
+
 @keyframes blackFade {
 	0% {
 		background-color: black;
 	}
+
 	100% {
 		background-color: $background-color_1;
 	}
 }
+
+// * MAIN STYLING
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 	font-family: $font-family_1;
-	&::selection{
+
+	&::selection {
 		background: $color_3;
 	}
-    html {
-        background-color: $background-color_1;
-        overflow-x: hidden;
-        body {
-            .main {
-                color: $color_1;
-            }
-        }
-    }
+
+	html {
+		background-color: $background-color_1;
+		overflow-x: hidden;
+
+		body {
+			nav {
+				background: #242424;
+				height: 80px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-size: 1.2rem;
+				position: fixed;
+				top: 0;
+				width: 100%;
+				z-index: 999;
+				margin-bottom: 0px;
+				
+			}
+
+			main {
+				margin-top: 75px;
+				color: $color_1;
+
+				section {
+					display: grid;
+					grid-template-rows: auto;
+					align-items: center;
+					justify-self: center;
+					text-align: center;
+					margin: 0 auto;
+					height: 90vh;
+					z-index: 1;
+					width: 100%;
+					max-width: 1300px;
+					padding: 0 50px;
+
+					h1 {
+						font-size: 3rem;
+						margin-bottom: 15px;
+					}
+
+					h2 {
+						font-size: 2rem;
+						margin-bottom: 15px;
+					}
+
+					h3 {
+						font-size: 1.5rem;
+						margin-bottom: 15px;
+					}
+
+					p {
+						font-size: 1.2rem;
+						margin-bottom: 15px;
+					}
+
+					hr {
+						border: 3px solid $color_4;
+						margin: 15px 0;
+						border-radius: 25px;
+					}
+				}
+			}
+		}
+	}
 }

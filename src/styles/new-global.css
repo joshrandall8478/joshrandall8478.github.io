@@ -81,6 +81,54 @@
   background-color: #131313;
   overflow-x: hidden;
 }
-* html body .main {
+* html body nav {
+  background: #242424;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  margin-bottom: 0px;
+}
+* html body main {
+  margin-top: 75px;
   color: whitesmoke;
+}
+* html body main section {
+  display: grid;
+  grid-template-rows: auto;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  margin: 0 auto;
+  height: 90vh;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+}
+* html body main section h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+* html body main section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+* html body main section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+* html body main section p {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+* html body main section hr {
+  border: 3px solid grey;
+  margin: 15px 0;
+  border-radius: 25px;
 }/*# sourceMappingURL=new-global.css.map */
