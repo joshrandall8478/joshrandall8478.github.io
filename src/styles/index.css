@@ -306,6 +306,7 @@ body {
   font-size: 2em;
   color: #77DD77;
   padding: 10px 20px;
+  margin-top: 10px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
