@@ -1,13 +1,13 @@
 const menu = document.querySelector('#mobile-menu')
-const menuLinks = document.querySelector('.navbar__menu')
+const menuLinks = document.querySelector('.navbar_menu')
 
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
-    // if (menu.classList.contains('is-active')) {
-    //     return disableScroll();
-    // }
-    //     return enableScroll();
+    if (menu.classList.contains('is-active')) {
+        return disableScroll();
+    }
+        return enableScroll();
 })
 
 // window.addEventListener('scroll', () => {
@@ -19,28 +19,29 @@ menu.addEventListener('click', function() {
 
 // Sam's code
 // window.addEventListener('click', (element)=> {
-//     if (element.target === "mobile-menu") { 
+//     if (element.target === "navbar_toggle") { 
 //         disableScroll();
-//     } else if (element.target === "mobile-menu.is-active") {
+//     } else if (element.target === "navbar_toggle.is-active") {
 //         enableScroll();
 //     }  
 // })
 
-// function disableScroll() {
-//     // Get the current page scroll position
-//     scrollTop =
-//     window.pageYOffset || document.documentElement.scrollTop;
-//     scrollLeft =
-//     window.pageXOffset || document.documentElement.scrollLeft,
-  
-//         // if any scroll is attempted,
-//         // set this to the previous value
-//     window.onscroll = ()=> {
-//         window.scrollTo(scrollLeft, scrollTop);
-//     };
-// }
 
 
-// function enableScroll() {
-//     window.onscroll = function() {};
-// }
+function disableScroll() {
+    // Get the current page scroll position
+    let scrollTop =
+    window.pageYOffset || document.documentElement.scrollTop;
+    let scrollLeft =
+    window.pageXOffset || document.documentElement.scrollLeft;
+        // if any scroll is attempted,
+        // set this to the previous value
+    window.onscroll = ()=> {
+        window.scrollTo(scrollLeft, scrollTop);
+    };
+}
+
+
+function enableScroll() {
+    window.onscroll = function() {};
+}
