@@ -8,7 +8,7 @@ interface Props {
 const { title } = Astro.props;
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html id="mainHTML" lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,7 +41,7 @@ const { title } = Astro.props;
 </head>
 <body>
     <!-- Navbar -->
-    <TopBar id="topbar" />
+    <TopBar/>
     <!-- Main Content -->
     <slot />
     <script src="../scripts/app.js"></script>
