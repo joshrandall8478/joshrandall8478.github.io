@@ -1,0 +1,40 @@
+@import "./new-global.scss";
+.blog__list {
+    .blog__item{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    h3{
+        font-size: 1.5rem;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    p{ 
+        font-size: 1rem;
+    }
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            color: $color_1;
+            &:hover {
+                color: $color_2;
+                transition: all 0.3s ease;
+            }
+        }
+        img{
+            border-radius: 25px;
+            height: auto;
+            max-width: 250px;
+            max-height: 200px;
+            float: right;
+            margin-bottom: 15px;
+        }
+    }
+    hr{
+        margin-bottom: 15px;
+    }
+    color: $color_1;
+}
+
