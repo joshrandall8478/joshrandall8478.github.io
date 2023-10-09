@@ -1,0 +1,49 @@
+---
+import '../styles/new-global.css';
+import TopBar from '../components/topbar.astro';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html id="mainHTML" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Data -->
+    <meta name="og:site_name" content="Joshua Randall">
+    <meta property="og:title" content={"Joshua Randall - " + title}>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/preview.png">
+    <meta property="og:url" content="https://joshrandall.net">
+    <meta property="og:description" content="Main website for Joshua Randall">
+    <!-- <meta name="theme-color" content="#77DD77"> -->
+
+    <!-- Stylesheet and Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+	
+    <!-- Mastodon Verification-->
+    <a rel="me" href="https://hachyderm.io/@pursuit"></a>
+    <a rel="me" href="https://mastodon.world/@pursuit"></a>
+
+    <!-- FontAwesome Javascript Link -->
+    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
+    <title>Josh Randall - {title}</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <TopBar/>
+    <!-- Main Content -->
+    <slot />
+    <script src="../scripts/app.js"></script>
+</body>
+</html>
