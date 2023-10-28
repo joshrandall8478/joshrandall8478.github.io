@@ -4,8 +4,8 @@ import TopBar from '../components/topbar.astro';
 interface Props {
 	title: string;
 }
-
-const { title } = Astro.props;
+const properties = Astro.props;
+let metaTitle = "Joshua Randall - " + properties.title;
 ---
 <!DOCTYPE html>
 <html id="mainHTML" lang="en">
@@ -16,7 +16,7 @@ const { title } = Astro.props;
 
     <!-- Open Graph Data -->
     <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content={"Joshua Randall - " + {title}}>
+    <meta property="og:title" content={metaTitle}>
     <meta property="og:type" content="website">
     <meta property="og:image" content="/assets/preview.png">
     <meta property="og:url" content="https://joshrandall.net">
@@ -37,7 +37,7 @@ const { title } = Astro.props;
 
     <!-- FontAwesome Javascript Link -->
     <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>Josh Randall - {title}</title>
+    <title>{metaTitle}</title>
 </head>
 <body>
     <!-- Navbar -->

@@ -266,6 +266,11 @@ main section hr {
 .blog__list .blog__item {
   display: grid;
   grid-template-columns: 2fr 1fr;
+  border: 2px solid whitesmoke;
+  border-radius: 25px;
+  margin: 10px 15px;
+  padding: 10px 15px;
+  text-align: left;
 }
 .blog__list h3 {
   font-size: 1.5rem;

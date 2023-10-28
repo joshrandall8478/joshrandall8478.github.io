@@ -339,10 +339,4 @@ main section hr {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
-}
-
-#topbar {
-  opacity: 0;
-  animation: 0.6s ease 1s 1 easeInToBottom;
-  animation-fill-mode: forwards;
 }/*# sourceMappingURL=new-index.css.map */
