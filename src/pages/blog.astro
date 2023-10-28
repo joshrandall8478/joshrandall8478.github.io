@@ -1,6 +1,5 @@
 ---
 import '../styles/blog-list.css';
-import TopBar from '../components/topbar.astro';
 import Layout from '../layouts/MainLayout.astro';
 const allPosts = await Astro.glob('./posts/*.md');
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
@@ -8,14 +7,10 @@ nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.front
 ---
 
 <Layout title="Posts">
-    <!-- Navbar -->
-    <TopBar/>
-    <!-- Main Content -->
     <main>
         <section>
             <div class="container">
                 <div class="content">
-
                 <ul class="blog__list">
                     {nonDraftPosts.map((post) => 
                     <li>
@@ -47,5 +42,4 @@ nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.front
             </div>
         </div>
     </div>
-    <script src="../scripts/app.js"></script>
 </Layout>

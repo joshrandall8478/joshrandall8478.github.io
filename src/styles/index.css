@@ -267,20 +267,6 @@ main section hr {
   animation-fill-mode: forwards;
 }
 
-.container {
-  display: grid;
-  grid-template-rows: auto;
-  align-items: center;
-  justify-self: center;
-  text-align: center;
-  margin: 0 auto;
-  height: 90vh;
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  padding: 0 50px;
-}
-
 #main_title {
   font-size: 7rem;
   animation: 1s ease 0s 1 easeInToTop;
@@ -339,4 +325,16 @@ main section hr {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 960px) {
+  #main_title {
+    font-size: 4rem;
+  }
+  #main_subtitle {
+    font-size: 2rem;
+  }
+  .button {
+    font-size: 1em;
+  }
 }/*# sourceMappingURL=index.css.map */
