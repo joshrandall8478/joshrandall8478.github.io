@@ -1,0 +1,210 @@
+@import "./new-global.scss";
+
+.blog-image{
+    border-radius: 25px;
+}
+
+.blog__container{
+    @extend .main__content;
+    grid-template-rows: 0.5fr 1fr;
+}
+
+.blog__content{
+    text-align:left;
+    h2{
+        font-size: 2rem;
+        margin-bottom: 15px;
+    }
+    h3 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+    hr{
+        border: 3px solid $color_4;
+        margin: 15px 0;
+        border-radius: 25px;
+    }
+    a{
+        color: $color_3;
+        &:hover {
+            color: $color_2;
+            transition: all 0.3s ease;
+        }
+    }
+    img{
+        border-radius: 25px;
+        height: auto;
+        border: 3px solid $color_1;
+        max-width: 75%;
+    }
+    .blog-image{
+        border-style: none;
+        max-width: 400px;
+    }
+}
+
+#back__container {
+    padding-top: 20px;
+    color: $color_1;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    margin: 0 5px;
+    text-align: center;
+    span{ 
+        font-size: 1.3em;
+        margin-right: 10px;
+    }
+    i{
+        padding-left: 5px;
+        font-size: 1.5em;
+        margin-right: 10px;
+    }
+    a{
+        border: 3px solid $color_1;
+        padding: 5px;
+        border-radius: 25px;
+        margin-right: 10px;
+        text-decoration: none;
+        color: $color_1;
+        &:hover {
+            border: 3px solid $color_3;
+            color: $color_2;
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .blog__content{
+        h1{
+            font-size: 3rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        .blog-image {
+            max-width: 200px;
+        }
+        img{
+            max-width: 100%;
+        }
+        p{
+            max-width: 90%;
+            font-size: 1.4rem;
+        }
+        hr {
+            width: 100%;
+        }
+    }
+    
+    .blog__list {
+        .blog__item{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+        h2{
+            font-size: 2rem;
+        }
+        p{ 
+            font-size: 1rem;
+        }
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: $color_1;
+                &:hover {
+                    color: $color_2;
+                    transition: all 0.3s ease;
+                }
+            }
+            img{
+                width: 200px;
+                float: right;
+                margin-bottom: 15px;
+            }
+        }
+        hr{
+            margin-bottom: 15px;
+        }
+        color: $color_1;
+    }
+    .main__content {
+        .not-found-header{
+            font-size: 3rem;
+        }
+        .not-found-image{
+            max-width: 400px;
+        }  
+    }
+
+    .blog__item {
+        // display: grid;
+        // grid-template-rows: 1fr 1fr;
+        max-height: 300px;
+        // h2{
+        //     font-size: 1.5rem;
+        // }
+        // h3 {
+        //     font-size: 1rem;
+        // }
+        // p {
+        //     font-size: 0.9rem;
+        // }
+        // div {
+        //     img {
+        //     max-width: 100px;
+        //     float: right;
+        //     margin-bottom: 15px;
+        //     }
+        // }
+    }
+}
+
+// iPhone sizing
+@media screen and (max-width: 480px) {
+    .blog__content{
+        p {
+            font-size: 1.2rem;
+        }
+    }
+    .main__content {
+        .not-found-header{
+            font-size: 2rem;
+        }
+        .not-found-image{
+            max-width: 300px;
+        }  
+    }
+    hr {
+        width: 50%;
+    }
+    .blog__item {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        min-height: 150px;
+        h1 {
+            font-size: 1.3rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        h3 {
+            font-size: 1rem;
+        }
+        p {
+            font-size: 0.9rem;
+        }
+        div {
+            img {
+            max-width: 100px;
+            float: right;
+            margin-bottom: 15px;
+            }
+        }
+    }
+}
