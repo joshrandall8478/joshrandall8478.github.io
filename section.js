@@ -1,7 +1,7 @@
 
 
 
-document.addEventListener('click', (element)=>{
+document.addEventListener('mouseover', (element)=>{
     // if the click is not on the dropdown button or inside the dropdown, close all dropdowns
     const isDropDownBtn = element.target.matches("[data-dropdown-button]")
     if (!isDropDownBtn && element.target.closest('[data-dropdown]') != null){
