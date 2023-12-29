@@ -1,0 +1,28 @@
+---
+// pages/blog/[...page].astro
+// https://docs.astro.build/en/core-concepts/routing/#pagination
+export async function getStaticPaths({ paginate }) {
+  // Generate pages from our array of astronauts, with 2 to a page
+  const allPosts = await Astro.glob('../posts/*.md');
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+  return paginate(nonDraftPosts, { pageSize: 2 });
+}
+// All paginated data is passed on the "page" prop
+const { page } = Astro.props;
+const { prev, next} = page.url;
+
+---
+
+<!--Display the current page number. Astro.params.page can also be used!-->
+<h1>Page {page.currentPage}</h1>
+<ul>
+  <!--List the array of astronaut info-->
+  {page.data.map((post) => <li>{post.frontmatter.title}</li>)}
+</ul>
+<h1>Blog Posts</h1>
+  <p>Posts {page.start + 1} to {page.end + 1}</p>
+  <p>{page.size} posts per page</p>
+  <p>Page {page.currentPage} of {page.lastPage}</p>
+  <p><a href={next}>Next Page</a></p>
+  <p><a href={prev}>Previous Page</a></p>
