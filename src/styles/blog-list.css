@@ -354,10 +354,4 @@ main section hr {
 }
 .blog__list hr {
   margin-bottom: 15px;
-}
-
-@media screen and (max-width: 900px) {
-  .blog__list .blog__item {
-    width: 100%;
-  }
 }/*# sourceMappingURL=blog-list.css.map */
