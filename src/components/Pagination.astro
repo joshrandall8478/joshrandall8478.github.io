@@ -46,7 +46,7 @@ const paginationList = Array.from({length: length}, (_, i) => i + 1);
             </a>
         )}
     
-        { lastUrl == currentUrl || lastUrl == "/blog/1" ? (
+        { lastUrl == currentUrl || lastUrl == firstUrl + "1" ? (
             <span class="pagination__link disabled">
                 <i class="fa-solid fa-angles-right"></i>
             </span>
