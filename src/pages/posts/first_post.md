@@ -13,6 +13,6 @@ Welcome to the new updated __joshrandall.net__. I took the liberty of converting
 
 <img width=1000px src="https://i.imgur.com/E8YuV4S.png">
 
-That being said, I highly reccomend this framework (use: npm install astro@latest).
+That being said, I highly reccomend this framework (use: `npm install astro@latest`).
 
 On another note, I will be posting to the site more often and working to make sure it looks and performs the best. I have been spending more time on Mastodon (please follow me [here](https://hachyderm.io/@pursuit)). Thank you for taking your time to read this test post!
