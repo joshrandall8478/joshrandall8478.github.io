@@ -332,7 +332,6 @@ main section hr {
   .pagination__link {
     font-size: 1rem;
     margin: 0px;
-    bottom: 2px;
     padding: 5px;
   }
 }

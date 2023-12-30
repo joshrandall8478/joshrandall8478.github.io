@@ -114,41 +114,6 @@
         }
     }
     
-    .blog__list {
-        .blog__item{
-            display: grid;
-            grid-template-rows: 1fr 1fr;
-        }
-        h3{
-            font-size: 1.5rem;
-        }
-        h2{
-            font-size: 2rem;
-        }
-        p{ 
-            font-size: 1rem;
-        }
-        li{
-            list-style: none;
-            a{
-                text-decoration: none;
-                color: $color_1;
-                &:hover {
-                    color: $color_2;
-                    transition: all 0.3s ease;
-                }
-            }
-            img{
-                width: 200px;
-                float: right;
-                margin-bottom: 15px;
-            }
-        }
-        hr{
-            margin-bottom: 15px;
-        }
-        color: $color_1;
-    }
     .main__content {
         .not-found-header{
             font-size: 3rem;
@@ -158,27 +123,27 @@
         }  
     }
 
-    .blog__item {
-        // display: grid;
-        // grid-template-rows: 1fr 1fr;
-        max-height: 300px;
-        // h2{
-        //     font-size: 1.5rem;
-        // }
-        // h3 {
-        //     font-size: 1rem;
-        // }
-        // p {
-        //     font-size: 0.9rem;
-        // }
-        // div {
-        //     img {
-        //     max-width: 100px;
-        //     float: right;
-        //     margin-bottom: 15px;
-        //     }
-        // }
-    }
+    // .blog__item {
+    //     // display: grid;
+    //     // grid-template-rows: 1fr 1fr;
+    //     max-height: 300px;
+    //     // h2{
+    //     //     font-size: 1.5rem;
+    //     // }
+    //     // h3 {
+    //     //     font-size: 1rem;
+    //     // }
+    //     // p {
+    //     //     font-size: 0.9rem;
+    //     // }
+    //     // div {
+    //     //     img {
+    //     //     max-width: 100px;
+    //     //     float: right;
+    //     //     margin-bottom: 15px;
+    //     //     }
+    //     // }
+    // }
 }
 
 // iPhone sizing
@@ -202,28 +167,5 @@
     hr {
         width: 50%;
     }
-    .blog__item {
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        min-height: 150px;
-        h1 {
-            font-size: 1.3rem;
-        }
-        h2{
-            font-size: 1.5rem;
-        }
-        h3 {
-            font-size: 1rem;
-        }
-        p {
-            font-size: 0.9rem;
-        }
-        div {
-            img {
-            max-width: 100px;
-            float: right;
-            margin-bottom: 15px;
-            }
-        }
-    }
+    
 }

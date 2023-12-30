@@ -332,7 +332,6 @@ main section hr {
   .pagination__link {
     font-size: 1rem;
     margin: 0px;
-    bottom: 2px;
     padding: 5px;
   }
 }
@@ -446,49 +445,11 @@ main section hr {
   .blog__content hr {
     width: 100%;
   }
-  .blog__list {
-    color: whitesmoke;
-  }
-  .blog__list .blog__item {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-  }
-  .blog__list h3 {
-    font-size: 1.5rem;
-  }
-  .blog__list h2 {
-    font-size: 2rem;
-  }
-  .blog__list p {
-    font-size: 1rem;
-  }
-  .blog__list li {
-    list-style: none;
-  }
-  .blog__list li a {
-    text-decoration: none;
-    color: whitesmoke;
-  }
-  .blog__list li a:hover {
-    color: #c1e1c1;
-    transition: all 0.3s ease;
-  }
-  .blog__list li img {
-    width: 200px;
-    float: right;
-    margin-bottom: 15px;
-  }
-  .blog__list hr {
-    margin-bottom: 15px;
-  }
   .main__content .not-found-header, .blog__container .not-found-header {
     font-size: 3rem;
   }
   .main__content .not-found-image, .blog__container .not-found-image {
     max-width: 400px;
-  }
-  .blog__item {
-    max-height: 300px;
   }
 }
 @media screen and (max-width: 480px) {
@@ -506,27 +467,5 @@ main section hr {
   }
   hr {
     width: 50%;
-  }
-  .blog__item {
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    min-height: 150px;
-  }
-  .blog__item h1 {
-    font-size: 1.3rem;
-  }
-  .blog__item h2 {
-    font-size: 1.5rem;
-  }
-  .blog__item h3 {
-    font-size: 1rem;
-  }
-  .blog__item p {
-    font-size: 0.9rem;
-  }
-  .blog__item div img {
-    max-width: 100px;
-    float: right;
-    margin-bottom: 15px;
   }
 }/*# sourceMappingURL=blog.css.map */
