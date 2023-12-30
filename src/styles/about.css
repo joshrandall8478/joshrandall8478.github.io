@@ -151,7 +151,6 @@ html {
   border: 3px #77dd77 solid;
   border-radius: 25px;
   background: none;
-  font-size: 2em;
   color: #77dd77;
   padding: 10px 20px;
   text-decoration: none;
@@ -173,7 +172,7 @@ html {
   font-size: 1.7rem;
   position: sticky;
   width: 70%;
-  z-index: 999;
+  z-index: 2;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
@@ -269,7 +268,7 @@ main section hr {
     left: 0px;
     opacity: 1;
     position: absolute;
-    z-index: 2;
+    z-index: 10;
     transition: left 0.5s, opacity 0.5s;
     height: 80vh;
     font-size: 1.6rem;
