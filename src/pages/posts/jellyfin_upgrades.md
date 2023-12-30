@@ -2,7 +2,7 @@
 title: 'Jellyfin Upgrades'
 date: "12/29/23"
 author: "Joshua Randall"
-description: 'Details about Jellyfin upgrade'
+description: 'Details about Jellyfin upgrades'
 image:
     url: 'https://jellyfin.org/images/social.png'
     alt: 'Jellyfin logo'
