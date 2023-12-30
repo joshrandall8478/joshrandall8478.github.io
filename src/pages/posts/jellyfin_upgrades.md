@@ -1,5 +1,5 @@
 ---
-title: 'Jellyfin Upgrade'
+title: 'Jellyfin Upgrades'
 date: "12/29/23"
 author: "Joshua Randall"
 description: 'Details about Jellyfin upgrade'
