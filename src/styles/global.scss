@@ -168,6 +168,22 @@ html {
 	}
 }
 
+.button {
+	border: 3px $color_3 solid;
+	border-radius: 25px;
+	background: none;
+	color: $color_3;
+	padding: 10px 20px;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	&:hover {
+		color: $color_2;
+		border: 3px $color_2 solid;
+		transition: all 0.3s ease;
+	}
+}
+
 #pagination {
 	background: #242424;
 	height: 80px;
@@ -178,7 +194,7 @@ html {
 	position: sticky;
 	// bottom: -10;
 	width: 70%;
-	z-index: 999;
+	z-index: 2;
 	margin-left: auto;
     margin-right: auto;
 	// margin-bottom: 10px;

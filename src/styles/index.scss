@@ -47,23 +47,10 @@
 }
 
 .button {
-	border: 3px $color_3 solid;
-	border-radius: 25px;
-	background: none;
+	font-size: 2em;
 	opacity: 0;
 	animation: 0.5s ease-out 1s easeInToBottom;
 	animation-fill-mode: forwards;
-	font-size: 2em;
-	color: $color_3;
-	padding: 10px 20px;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.3s ease;
-	&:hover {
-		color: $color_2;
-		border: 3px $color_2 solid;
-		transition: all 0.3s ease;
-	}
 }
 
 
