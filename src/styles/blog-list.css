@@ -155,13 +155,14 @@ html {
   align-items: center;
   font-size: 1.7rem;
   position: sticky;
-  bottom: 0;
   width: 70%;
   z-index: 999;
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
   border-radius: 25px;
+  margin-top: 2rem;
+  bottom: 1.5rem;
 }
 
 .pagination__link {
@@ -299,6 +300,8 @@ main section hr {
   #pagination {
     width: 80%;
     font-size: 1.2rem;
+    margin-top: 2rem;
+    bottom: 1.5rem;
   }
   .pagination__link {
     margin: 2px;

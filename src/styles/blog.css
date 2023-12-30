@@ -83,7 +83,7 @@ html {
   overflow-x: hidden;
 }
 
-nav {
+#topbar {
   background: #242424;
   height: 80px;
   display: flex;
@@ -145,6 +145,44 @@ nav {
 .navbar_links:hover {
   color: #c1e1c1;
   transition: all 0.3s ease;
+}
+
+#pagination {
+  background: #242424;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.7rem;
+  position: sticky;
+  width: 70%;
+  z-index: 999;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  border-radius: 25px;
+  margin-top: 2rem;
+  bottom: 1.5rem;
+}
+
+.pagination__link {
+  color: whitesmoke;
+  text-decoration: none;
+  margin: 5px;
+  padding: 10px;
+}
+
+.pagination__link:hover {
+  color: #c1e1c1;
+  transition: all 0.3s ease;
+}
+
+.pagination__link.disabled {
+  color: #868484;
+}
+
+.pagination__link.active {
+  color: #77dd77;
 }
 
 main {
@@ -259,6 +297,15 @@ main section hr {
   #mobile-menu.is-active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  #pagination {
+    width: 80%;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    bottom: 1.5rem;
+  }
+  .pagination__link {
+    margin: 2px;
+  }
 }
 .blog-image {
   border-radius: 25px;
@@ -270,6 +317,12 @@ main section hr {
 
 .blog__content {
   text-align: left;
+}
+.blog__content code {
+  background: rgba(128, 128, 128, 0.5);
+  font-family: monospace;
+  padding: 4px;
+  border-radius: 5px;
 }
 .blog__content h2 {
   font-size: 2rem;
@@ -300,6 +353,12 @@ main section hr {
 .blog__content .blog-image {
   border-style: none;
   max-width: 400px;
+}
+.blog__content p {
+  font-size: 1.4rem;
+}
+.blog__content li {
+  font-size: 1.4rem;
 }
 
 #back__container {
@@ -348,6 +407,10 @@ main section hr {
     max-width: 100%;
   }
   .blog__content p {
+    max-width: 90%;
+    font-size: 1.4rem;
+  }
+  .blog__content li {
     max-width: 90%;
     font-size: 1.4rem;
   }
@@ -401,6 +464,9 @@ main section hr {
 }
 @media screen and (max-width: 480px) {
   .blog__content p {
+    font-size: 1.2rem;
+  }
+  .blog__content li {
     font-size: 1.2rem;
   }
   .main__content .not-found-header, .blog__container .not-found-header {

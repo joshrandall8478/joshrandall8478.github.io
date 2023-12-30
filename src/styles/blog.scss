@@ -11,6 +11,12 @@
 
 .blog__content{
     text-align:left;
+    code {
+        background: rgba(128,128,128,0.5);
+        font-family: monospace;
+        padding: 4px;
+        border-radius: 5px;
+    }
     h2{
         font-size: 2rem;
         margin-bottom: 15px;
@@ -40,6 +46,12 @@
     .blog-image{
         border-style: none;
         max-width: 400px;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+    li{
+        font-size: 1.4rem;
     }
 }
 
@@ -90,6 +102,10 @@
             max-width: 100%;
         }
         p{
+            max-width: 90%;
+            font-size: 1.4rem;
+        }
+        li{
             max-width: 90%;
             font-size: 1.4rem;
         }
@@ -169,6 +185,9 @@
 @media screen and (max-width: 480px) {
     .blog__content{
         p {
+            font-size: 1.2rem;
+        }
+        li{
             font-size: 1.2rem;
         }
     }
