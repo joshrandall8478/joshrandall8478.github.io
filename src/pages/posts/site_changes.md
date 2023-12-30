@@ -12,7 +12,9 @@ I spent some time working on the site while I was with family. Here are all the 
 <br>
 
 - Posts display nicely on mobile for once in <a href="/posts">posts</a> and <a href="/projects">projects</a>.
-    -  Page navigators exist ([paginators](https://rimdev.io/creating-a-pagination-component-with-astro)) for both of these pages to account for more posts being added in the future.
+    - <a href="/projects">Projects</a> now exists.
+        - <a href="/projects/meloetta">Meloetta</a> is now under the projects page. The page will be updated as the project progresses.
+    - Page navigators exist ([paginators](https://rimdev.io/creating-a-pagination-component-with-astro)) for both of these pages to account for more posts being added in the future.
 - `code blocks` are now supported in markdown posts like this one, for future code references.
 - Cleaned up and organized CSS properties.
 - Blogs are now named Posts, this change may not reflect on every file in the repository.

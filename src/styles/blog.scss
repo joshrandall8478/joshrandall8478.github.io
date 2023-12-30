@@ -14,7 +14,7 @@
     code {
         background: rgba(128,128,128,0.5);
         font-family: monospace;
-        padding: 4px;
+        padding: 0px 4px;
         border-radius: 5px;
     }
     h2{
@@ -55,6 +55,9 @@
         li{
            margin-left: 30px;
         };
+    }
+    *{
+        margin: 10px 0;
     }
 }
 
