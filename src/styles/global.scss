@@ -351,6 +351,7 @@ main {
 	}
 	#pagination {
 		width: 100%;
+		
 		// margin-top: 2rem;
 		bottom: 1.5rem;
 	}
@@ -365,6 +366,9 @@ main {
 	}
 }
 @media screen and (max-width: 600px){
+	#pagination {
+		height: 60px;
+	}
 	.pagination__link {
 		font-size: 1rem;
 		margin: 0px;

@@ -326,6 +326,9 @@ main section hr {
   }
 }
 @media screen and (max-width: 600px) {
+  #pagination {
+    height: 60px;
+  }
   .pagination__link {
     font-size: 1rem;
     margin: 0px;
