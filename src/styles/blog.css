@@ -388,6 +388,9 @@ main section hr {
 .blog__content li {
   font-size: 1.4rem;
 }
+.blog__content li li {
+  margin-left: 30px;
+}
 
 #back__container {
   padding-top: 20px;
