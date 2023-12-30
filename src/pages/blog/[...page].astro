@@ -1,12 +1,14 @@
 ---
 // pages/blog/[...page].astro
 // https://docs.astro.build/en/core-concepts/routing/#pagination
+import '../../styles/blog-list.css';
+import Layout from '../../layouts/MainLayout.astro';
 export async function getStaticPaths({ paginate }) {
   // Generate pages from our array of astronauts, with 2 to a page
   const allPosts = await Astro.glob('../posts/*.md');
     const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-  return paginate(nonDraftPosts, { pageSize: 2 });
+  return paginate(nonDraftPosts, { pageSize: 1 });
 }
 import Pagination from '../../components/Pagination.astro';
 // All paginated data is passed on the "page" prop
@@ -15,43 +17,41 @@ const { prev, next} = page.url;
 
 ---
 
-<!--Display the current page number. Astro.params.page can also be used!-->
-<h1>Page {page.currentPage}</h1>
-<ul>
-  <!--List the array of astronaut info-->
-  {page.data.map((post) => <li>
-    <a href={post.url}>
-<div class="blog__item">
-    <div>
-    <h2>
-        {post.frontmatter.title}
-    </h2>
-    <h3>
-        Date: {post.frontmatter.date}
-    </h3>
-    <h4>
-        Author: {post.frontmatter.author}
-    </h4>
-    <p>
-        {post.frontmatter.description}
-        </p>
+<Layout title="Posts">
+    <main>
+        <section>
+            <div class="container">
+                <div class="content">
+                <ul class="blog__list">
+                    {page.data.map((post) => <li>
+                        <a href={post.url}>
+                    <div class="blog__item">
+                        <div>
+                        <h2>
+                            {post.frontmatter.title}
+                        </h2>
+                        <h3>
+                            Date: {post.frontmatter.date}
+                        </h3>
+                        <h4>
+                            Author: {post.frontmatter.author}
+                        </h4>
+                        <p>
+                            {post.frontmatter.description}
+                            </p>
+                        </div>
+                        <div>
+                            <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
+                        </div>
+                    </a>
+                    </li>
+                    </div>)}
+                    </ul>
+                </div>
+            </div>
+        </div>
     </div>
-    <div>
-        <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
-    </div>
-</a>
-</li>
-</div>)}
-</ul>
-<ul></ul>
-  <p>Posts {page.start + 1} to {page.end + 1}</p>
-  <p>{page.size} posts per page</p>
-  <p>Page {page.currentPage} of {page.lastPage}</p>
-  <p><a href={next}>Next Page</a></p>
-  <p><a href={prev}>Previous Page</a></p>
-  <p><a href={page.firstPage}>First Page</a></p>
-  <p><a href={page.lastPage}>Last Page</a></p>
-<Pagination 
+    <Pagination 
     length={page.lastPage} 
     currentUrl={page.url.current} 
     currentPage={page.currentPage} 
@@ -60,3 +60,4 @@ const { prev, next} = page.url;
     nextUrl={next} 
     lastUrl={`/blog/` + page.lastPage}
 />
+</Layout>
