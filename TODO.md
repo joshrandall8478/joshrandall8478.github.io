@@ -1,0 +1,1 @@
+[Read this](https://rimdev.io/creating-a-pagination-component-with-astro)

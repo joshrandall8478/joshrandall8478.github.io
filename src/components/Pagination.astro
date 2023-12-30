@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
+const paginationList = Array.from({length: length}, (_, i) => i + 1);
+---
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<div id="pagination">
+    <div id="pagination_container">
+        { firstUrl == currentUrl ? (
+            <span class="pagination__link disabled">
+                <i class="fa-solid fa-angles-left"></i>
+            </span>
+        ) : (
+            <a href={firstUrl} class="pagination__link">
+                <i class="fa-solid fa-angles-left"></i>
+            </a>
+        )}
+    
+        { prevUrl ? (
+            <a href={prevUrl} class="pagination__link">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+        ) : (
+            <span class="pagination__link disabled">
+                <i class="fa-solid fa-arrow-left"></i>
+            </span>        
+        )}
+        
+        {
+            paginationList.map((num) => (
+                <a href={`${firstUrl}${num == 1 ? "" : '/'+(num)}`} class={`pagination__link ${currentPage == num ? "disabled active" : ""}`}>
+                    {num}
+                </a>
+            ))
+        }
+    
+        { !nextUrl ? (
+            <span class="pagination__link disabled">
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+        ) : (
+            <a href={nextUrl} class="pagination__link">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        )}
+    
+        { lastUrl == currentUrl || lastUrl == "/blog/1" ? (
+            <span class="pagination__link disabled">
+                <i class="fa-solid fa-angles-right"></i>
+            </span>
+        ) : (
+            <a href={lastUrl} class="pagination__link">
+                <i class="fa-solid fa-angles-right"></i>
+            </a>
+        )}
+    </div>
+</div>

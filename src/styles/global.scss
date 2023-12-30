@@ -108,7 +108,7 @@ html {
 	background-color: $background-color_1;
 	overflow-x: hidden;
 }
-nav {
+#topbar {
 	background: #242424;
 	height: 80px;
 	display: flex;
@@ -168,6 +168,41 @@ nav {
 	}
 }
 
+#pagination {
+	background: #242424;
+	height: 80px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.7rem;
+	position: sticky;
+	// bottom: -10;
+	width: 70%;
+	z-index: 999;
+	margin-left: auto;
+    margin-right: auto;
+	// margin-bottom: 10px;
+    padding: 10px;
+    border-radius:25px;
+	margin-top: 2rem;
+	bottom: 1.5rem;
+}
+.pagination__link {
+    color: $color_1;
+    text-decoration: none;
+    margin: 5px;
+  	padding: 10px;
+}
+.pagination__link:hover{
+	color:$color_2;
+	transition: all 0.3s ease;
+}
+.pagination__link.disabled{
+	color:#868484;
+}
+.pagination__link.active{
+	color:$color_3;
+}
 
 main {
 	margin-top: 75px;
@@ -293,5 +328,14 @@ main {
 				transform: translateY(-8px) rotate(-45deg);
 			}
 		}
+	}
+	#pagination {
+		width: 80%;
+		font-size: 1.2rem;
+		margin-top: 2rem;
+		bottom: 1.5rem;
+	}
+	.pagination__link {
+		margin: 2px;
 	}
 }
