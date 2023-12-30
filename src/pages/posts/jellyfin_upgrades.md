@@ -23,7 +23,7 @@ This will allow for faster load and buffering, as the server now has more power 
 
 Now that we have more storage, please feel free to use [Jellyseerr](https://jellyseerr.joshrandall.net) to request media.
 
-- User data and configuration is now being snapshotted to [Backblaze S3 buckets](https://backblaze.com).
+- User data and configuration is now being snapshotted to [Backblaze S3 buckets](https://backblaze.com) using `restic`.
 
 <br>
 
