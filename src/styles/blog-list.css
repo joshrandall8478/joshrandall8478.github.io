@@ -315,19 +315,12 @@ main section hr {
     width: 100%;
     bottom: 1.5rem;
   }
-  .pagination__link {
-    margin: 5px;
-    padding: 2px;
-  }
 }
-@media screen and (max-width: 480px) {
-  #pagination_container {
-    padding: -2px;
-  }
+@media screen and (max-width: 600px) {
   .pagination__link {
-    font-size: 0.9rem;
+    font-size: 1rem;
     margin: 0px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px;
   }
 }
 .blog__list {

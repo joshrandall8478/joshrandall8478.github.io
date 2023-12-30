@@ -8,7 +8,7 @@ export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob('../posts/*.md');
     const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-  return paginate(nonDraftPosts, { pageSize: 4 });
+  return paginate(nonDraftPosts, { pageSize: 1 });
 }
 import Pagination from '../../components/Pagination.astro';
 // All paginated data is passed on the "page" prop
