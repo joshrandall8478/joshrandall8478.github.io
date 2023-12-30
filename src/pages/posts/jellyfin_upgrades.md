@@ -23,10 +23,14 @@ This will allow for faster load and buffering, as the server now has more power 
 
 Now that we have more storage, please feel free to use [Jellyseerr](https://jellyseerr.joshrandall.net) to request media.
 
-- User data and configuration is now being backed up to Backblaze S3 buckets.
+- User data and configuration is now being snapshotted to [Backblaze S3 buckets](https://backblaze.com).
 
 <br>
 
 This will allow us to restore user data and configurations quickly if any issues arise, and in the worst case scenario of a drive death.
 
 If you are using the JRH Jellyfin instance, please let me know if you have any issues. We hope you continue to enjoy the service.
+
+<br>
+
+<a class=button href="https://jellyfin.joshrandall.net">Go to Jellyfin</a>
