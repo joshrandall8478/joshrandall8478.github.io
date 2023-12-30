@@ -199,6 +199,11 @@ html {
   color: #77dd77;
 }
 
+.emote {
+  width: 30px;
+  height: 30px;
+}
+
 main {
   margin-top: 75px;
   color: whitesmoke;
@@ -314,6 +319,10 @@ main section hr {
   #pagination {
     width: 100%;
     bottom: 1.5rem;
+  }
+  .emote {
+    width: 15px;
+    height: 15px;
   }
 }
 @media screen and (max-width: 600px) {

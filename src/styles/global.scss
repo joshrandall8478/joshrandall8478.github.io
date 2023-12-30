@@ -219,6 +219,11 @@ html {
 	color:$color_3;
 }
 
+.emote{
+	width: 30px;
+	height: 30px;
+}
+
 main {
 	margin-top: 75px;
 	color: $color_1;
@@ -354,6 +359,10 @@ main {
 	// 		padding: 0 25px;
 	// 	}
 	// }
+	.emote{
+		width: 15px;
+		height: 15px;
+	}
 }
 @media screen and (max-width: 600px){
 	.pagination__link {
