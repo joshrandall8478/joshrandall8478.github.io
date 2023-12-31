@@ -18,6 +18,13 @@
     animation: 0.5s ease-out 1s 1 easeInToBottom;
     animation-fill-mode: forwards;
 }
+#main_paragraph {
+	margin-top: 25px;
+	font-size: 2rem;
+	opacity: 0;
+	animation: 0.5s ease-out 2s 1 easeInToBottom, 0.5s ease-out 5s 1 easeOutToBottom;;
+    animation-fill-mode: forwards;
+}
 .main_links {
 	position: relative;
 	z-index: 2;
@@ -46,7 +53,67 @@
 	}
 }
 
-.button {
+hr {
+	border: 3px solid whitesmoke;
+	border-radius: 7px 7px 7px 7px;
+	justify-content: center;
+	align-items: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+.align_left {
+	text-align: left;
+	img{
+		justify-content: end;
+		margin-left: auto;
+	}
+}
+
+.align_right {
+	text-align: right;
+	img{
+		justify-content: start;
+		margin-right: auto;
+	}
+}
+.next_section {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	img{
+		border-radius: 25px;
+        height: auto;
+        border: 3px solid $color_1;
+		max-width: 75%;
+	}
+	.content {
+		position: relative;
+		top: 0;
+	}
+	h1 {
+		color: $color_2;
+		font-size: 10rem;
+	}
+	h2 {
+		color: $color_2;
+		font-size: 5rem;
+	}
+	h3 {
+		color: $color_2;
+		font-size: 3rem;
+	}
+	h4{
+		color: $color_2;
+		font-size: 2rem;
+	}
+	.button{
+		font-size: 2rem;
+	}
+}
+
+
+.main_button {
 	font-size: 2em;
 	opacity: 0;
 	animation: 0.5s ease-out 1s easeInToBottom;
@@ -61,8 +128,51 @@
 	#main_subtitle{
 		font-size:2rem;
 	}
-	.button{
+	#main_paragraph {
+		font-size: 1.5rem;
+	}
+	.main_button{
 		font-size: 1em;
+	}
+	.next_section{
+		text-align: center;
+		grid-template-columns: none;
+		grid-template-rows: 0.3fr 0.3fr;
+		height: 80vh;
+		.content{
+			order: 2;
+		}
+		.section_image{
+			margin-top: 15px; 
+			align-items: center;
+			justify-content: center;
+			margin-left: auto;
+			margin-right: auto;
+			order: 1;
+			width: 50%;
+		}
+		h2 {
+			font-size: 3rem;
+		
+		}
+		h3{
+			font-size: 3rem;
+		
+		}
+		h4{
+			font-size: 2rem;
+		
+		
+		}
+		p {
+			font-size: 1rem;
+		
+		}
+		.button {
+			font-size: 1rem;
+		
+		
+		}
 	}
 }
 // #topbar {

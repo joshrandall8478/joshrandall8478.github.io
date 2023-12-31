@@ -1,6 +1,20 @@
 ---
 import '../styles/index.css';
 import Layout from '../layouts/MainLayout.astro';
+export async function getLatestProject() {
+    const allPosts = await Astro.glob('./projects/*.md');
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+    return nonDraftPosts[0];
+}
+const latestProject = await getLatestProject();
+export async function getLatestPost() {
+    const allPosts = await Astro.glob('./posts/*.md');
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
+    return nonDraftPosts[0];
+}
+const latestPost = await getLatestPost();
 ---
 <Layout title="Main">
     <!-- Main Content -->
@@ -18,10 +32,36 @@ import Layout from '../layouts/MainLayout.astro';
                     </li>
                     <!-- <li><a class="fa-brands fa-discord"></a></li> -->
                 </ul>
-                <button onclick="window.location.href = '/posts/jellyfin_upgrades';" class="button"><img class="emote" src="https://static-00.iconduck.com/assets.00/jellyfin-icon-2048x2048-tf5ztk6m.png"> Jellyfin Upgrades</button>
+                <a class="button main_button" href="/posts/jellyfin_upgrades"><img class="emote" src="https://static-00.iconduck.com/assets.00/jellyfin-icon-2048x2048-tf5ztk6m.png"> Jellyfin Upgrades</a>
                 <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
+                <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p>
             </div>
             </div>
+        </section>
+        <section class="next_section align_left" >
+            <div class="content">
+                <h2>Latest Post</h2>
+                <h3>{latestPost.frontmatter.title}</h3>
+                <h4>Date: {latestPost.frontmatter.date}</h4>
+                <h4>Author: {latestPost.frontmatter.author}</h4>
+                <p>{latestPost.frontmatter.description}</p>
+                <br>
+                <a class="button" href={latestPost.url}> Click here to learn more</a>
+            </div>
+                <img class="section_image" src={latestPost.frontmatter.image.url} alt="Latest Post Image"/>
+    </section>
+    <hr>
+        <section class="next_section align_right">
+            <img class="section_image" src={latestProject.frontmatter.image.url} alt="Latest Project Image"/>
+                <div class="content">
+                    <h2>Latest Project</h2>
+                    <h3>{latestProject.frontmatter.title}</h3>
+                    <h4>Date: {latestProject.frontmatter.date}</h4>
+                    <p>{latestProject.frontmatter.subtitle}</p>
+                    <br>
+                    <a class="button" href={latestProject.url}> Click here to learn more</a>
+                </div>
+                    
         </section>
     </main>
 </Layout>
