@@ -454,20 +454,19 @@ hr.active {
   top: 0;
 }
 .next_section h1 {
-  color: #c1e1c1;
   font-size: 10rem;
 }
 .next_section h2 {
-  color: #c1e1c1;
   font-size: 5rem;
 }
 .next_section h3 {
-  color: #c1e1c1;
   font-size: 3rem;
 }
 .next_section h4 {
-  color: #c1e1c1;
   font-size: 2rem;
+}
+.next_section p {
+  font-size: 1.5rem;
 }
 .next_section .button {
   font-size: 2rem;
@@ -526,7 +525,7 @@ hr.active {
     font-size: 1.5rem;
   }
   .next_section p {
-    font-size: 1rem;
+    font-size: 1.3rem;
   }
   .next_section .button {
     font-size: 1rem;
