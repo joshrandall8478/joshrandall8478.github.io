@@ -12,7 +12,7 @@ draft: false
 
 I have made a few significant changes to the landing page of <a href="/">the main site</a>, by finally adding two extra sections that automatically change to the latest post/project that has been pushed to the site.
 
-![Index Section Code](/public/assets/231231_18h35m30s_screenshot.png)
+![Index Section Code](/assets/231231_18h35m30s_screenshot.png)
 
 By using a couple of asyncronous functions in the frontmatter of the index page, we can grab the latest post in the array and the data associated with it. If you are curious to see how it works in its entirety, the code is publically available in [the site's Github Repository](https://github.com/joshrandall8478/joshrandall8478.github.io).
 
