@@ -18,6 +18,16 @@
     transform: translateY(0);
   }
 }
+@keyframes easeOutToBottom {
+  0% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+}
 @keyframes easeInToLeft {
   0% {
     opacity: 0;
@@ -470,8 +480,5 @@ main section hr {
   }
   .main__content .not-found-image, .blog__container .not-found-image {
     max-width: 300px;
-  }
-  hr {
-    width: 50%;
   }
 }/*# sourceMappingURL=blog.css.map */

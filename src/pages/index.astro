@@ -38,6 +38,7 @@ const latestPost = await getLatestPost();
             </div>
             </div>
         </section>
+        <hr>
         <section class="next_section align_left" >
             <div class="content">
                 <h2>Latest Post</h2>
@@ -64,4 +65,20 @@ const latestPost = await getLatestPost();
                     
         </section>
     </main>
+    <script>
+const hr = document.querySelectorAll('hr');
+// Create the observer, same as before:
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+    if (entry.isIntersecting) {
+        hr.forEach((element) => {
+            element.classList.add('active');
+        })
+        return;
+    }
+    });
+});
+
+observer.observe(document.querySelector('.section_image'));
+    </script>
 </Layout>
