@@ -356,6 +356,11 @@ main section hr {
 .blog__content {
   text-align: left;
 }
+.blog__content .astro-code {
+  border: 2px solid #77dd77;
+  border-radius: 15px;
+  padding: 10px;
+}
 .blog__content .astro-code code {
   background: none;
 }
@@ -396,7 +401,7 @@ main section hr {
 }
 .blog__content .blog-image {
   border-style: none;
-  max-width: 400px;
+  max-width: 50%;
 }
 .blog__content p {
   font-size: 1.4rem;
@@ -451,7 +456,7 @@ main section hr {
     font-size: 2rem;
   }
   .blog__content .blog-image {
-    max-width: 50%;
+    max-width: 75%;
   }
   .blog__content img {
     max-width: 100%;
