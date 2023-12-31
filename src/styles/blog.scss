@@ -11,6 +11,14 @@
 
 .blog__content{
     text-align:left;
+    .astro-code {
+        code {
+            background: none;
+            span{
+                font-family: monospace;
+            }
+        }
+    }
     code {
         background: rgba(128,128,128,0.5);
         font-family: monospace;
@@ -102,7 +110,7 @@
             font-size: 2rem;
         }
         .blog-image {
-            max-width: 200px;
+            max-width: 50%;
         }
         img{
             max-width: 100%;
