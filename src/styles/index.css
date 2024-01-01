@@ -416,9 +416,6 @@ hr {
   margin-left: auto;
   margin-right: auto;
   width: 0;
-}
-
-hr.active {
   animation: 0.7s ease 0s 1 hr;
   animation-fill-mode: forwards;
 }
@@ -529,15 +526,5 @@ hr.active {
   }
   .next_section .button {
     font-size: 1rem;
-  }
-}
-@media screen and (max-width: 480px) {
-  hr {
-    width: 75%;
-    animation: none;
-  }
-  hr.active {
-    width: 75%;
-    animation: none;
   }
 }/*# sourceMappingURL=index.css.map */
