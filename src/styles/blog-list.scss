@@ -52,10 +52,11 @@
 @media screen and (max-width: 900px) {
     .blog__list{
         .blog__item{
-            height:fit-content
-            // display: grid;
-            // grid-template-rows: 1fr 1fr;
-            // min-height: 150px;
+            height:fit-content;
+            display: grid;
+            grid-template-columns: none;
+            grid-template-rows: fit-content fit-content;
+            min-height: 150px;
             h1 {
                 font-size: 1.3rem;
             }
@@ -70,14 +71,15 @@
             }
             div {
                 img {
-                max-width: 100px;
-                float: right;
-                margin-bottom: 15px;
+                    // margin-right:auto;
+                    justify-content: left;
+                    align-items:left;
+                    float: left;
                 }
             }
             img{
-                max-width: 150px;
-                max-height: 200px;
+                // max-width: 150px;
+                // max-height: 200px;
             }
         }
     }

@@ -397,7 +397,15 @@ main section hr {
 }
 
 @media screen and (max-width: 900px) {
-  .blog__list .blog__item height:fit-content h1 {
+  .blog__list .blog__item {
+    height: -moz-fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: fit-content fit-content;
+    min-height: 150px;
+  }
+  .blog__list .blog__item h1 {
     font-size: 1.3rem;
   }
   .blog__list .blog__item h2 {
@@ -410,13 +418,9 @@ main section hr {
     font-size: 0.9rem;
   }
   .blog__list .blog__item div img {
-    max-width: 100px;
-    float: right;
-    margin-bottom: 15px;
-  }
-  .blog__list .blog__item img {
-    max-width: 150px;
-    max-height: 200px;
+    justify-content: left;
+    align-items: left;
+    float: left;
   }
 }
 @media screen and (max-width: 500px) {
