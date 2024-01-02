@@ -402,7 +402,6 @@ main section hr {
 .blog__content .blog-image {
   border-style: none;
   max-width: 50%;
-  border: 3px solid whitesmoke;
 }
 .blog__content p {
   font-size: 1.4rem;
