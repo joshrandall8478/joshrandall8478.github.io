@@ -399,6 +399,12 @@ main section hr {
   border: 3px solid whitesmoke;
   max-width: 75%;
 }
+.blog__content .emote {
+  max-width: none;
+  margin: auto;
+  border-radius: 0;
+  border-style: none;
+}
 .blog__content .blog-image {
   border-style: none;
   max-width: 50%;

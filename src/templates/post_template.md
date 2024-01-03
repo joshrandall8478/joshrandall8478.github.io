@@ -2,7 +2,7 @@
 title: 'Title'
 date: "M/DD/YY"
 author: "Joshua Randall"
-description: 'Description'
+description: "Description"
 image:
     url: 'Image URL'
     alt: 'Image Description'

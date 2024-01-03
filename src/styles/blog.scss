@@ -54,6 +54,12 @@
         border: 3px solid $color_1;
         max-width: 75%;
     }
+    .emote{
+        max-width: none;
+        margin: auto;
+        border-radius: 0;
+        border-style:none;
+    }
     .blog-image{
         border-style: none;
         max-width: 50%;

@@ -372,9 +372,11 @@ main {
 	// 		padding: 0 25px;
 	// 	}
 	// }
-	.emote{
-		width: 15px;
-		height: 15px;
+	.main_button{
+		.emote{
+			width: 15px;
+			height: 15px;
+		}
 	}
 }
 @media screen and (max-width: 600px){
