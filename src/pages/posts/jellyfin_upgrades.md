@@ -41,6 +41,4 @@ The slideshow banner that we introduced a few months ago now sports a carousel n
 
 If you are using the JRH Jellyfin instance, please let me know if you have any issues. We hope you continue to enjoy the service.
 
-<br>
-
 <a class=button href="https://jellyfin.joshrandall.net">Go to Jellyfin</a>

@@ -10,6 +10,8 @@ layout: ../../layouts/BlogLayout.astro
 draft: false
 ---
 
+<a class=button href="https://jellyfin.joshrandall.net">Go to JRH Jellyfin</a>
+
 Our Jellyfin instance went down numerous times over break, mainly due to a mistake I made thinking I could switch Ubuntu LTS to Ubuntu latest. My guess as to what happened, was that this caused major issues to the kernal (which, I didn't think about both Ubuntu versions having separate kernals). This caused the server to crash numerous times, and I was forced to reinstall the OS. A friend who has donated drives and computers to the server (thanks Chris 🙏🏼) suggested me to try [Rocky Linux](https://rockylinux.org/), which is a fork of [CentOS](https://www.centos.org/). At least for right now, I am very pleased with the project (and am definitely pleased with [Cockpit](https://cockpit-project.org/)), especially since things are running very stable at the moment.
 
 I am also very pleased at the fact that I do not have to worry or even think about `/etc/fstab`, since Cockpit has a very nice GUI for managing storage and mounting during boot times.

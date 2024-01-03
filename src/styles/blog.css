@@ -330,7 +330,7 @@ main section hr {
     width: 100%;
     bottom: 1.5rem;
   }
-  .emote {
+  .main_button .emote {
     width: 15px;
     height: 15px;
   }
@@ -420,6 +420,10 @@ main section hr {
 }
 .blog__content * {
   margin: 10px 0;
+}
+.blog__content .button {
+  display: inline-block;
+  margin: 5px auto;
 }
 
 #back__container {
