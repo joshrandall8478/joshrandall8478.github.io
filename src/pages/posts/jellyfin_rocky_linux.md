@@ -19,7 +19,7 @@ I am also very pleased at the fact that I do not have to worry or even think abo
 ![Rocky Linux Cockpit Dashboard, Storage Section](/assets/image.png)
 
 ### How does this affect users?
-- During disaster recovery, there were no signs of lost data that should affect users. No user data or media was lost, since we restored media from the old OS HDD and user data + configurations from `restic` and [BackBlaze](https://backblaze.com) (We avoided the Shibuya incident).
+- During disaster recovery, there were no signs of lost data that should affect users. No user data or media were lost, since we restored media from the old OS HDD and user data + configurations from `restic` and [BackBlaze](https://backblaze.com) (We avoided the Shibuya incident).
 - [Meloetta](/projects/meloetta) was also down for a short time since it is on the same server. The bot is now restored and running. 
 
 For anyone who was immediately affected by downtimes, thank you for your continued patience and support. If you are using JRH Jellyfin, please continue to let me know if any issues arise.
