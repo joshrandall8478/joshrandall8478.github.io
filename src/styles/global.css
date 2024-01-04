@@ -56,6 +56,14 @@
     opacity: 0;
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -330,7 +338,7 @@ main section hr {
     width: 100%;
     bottom: 1.5rem;
   }
-  .main_button .emote {
+  #main_button .emote {
     width: 15px;
     height: 15px;
   }

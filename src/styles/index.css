@@ -56,6 +56,14 @@
     opacity: 0;
   }
 }
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes jump {
   0% {
     transform: translateY(0);
@@ -330,7 +338,7 @@ main section hr {
     width: 100%;
     bottom: 1.5rem;
   }
-  .main_button .emote {
+  #main_button .emote {
     width: 15px;
     height: 15px;
   }
@@ -378,6 +386,25 @@ main section hr {
   opacity: 0;
   animation: 0.5s ease-out 2s 1 easeInToBottom, 0.5s ease-out 5s 1 easeOutToBottom;
   animation-fill-mode: forwards;
+}
+
+#main_button {
+  border: 3px #77dd77 solid;
+  border-radius: 25px;
+  background: none;
+  color: #77dd77;
+  padding: 10px 20px;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 2em;
+  opacity: 0;
+  animation: 0.5s ease-out 1.4s 1 appear;
+  animation-fill-mode: forwards;
+}
+#main_button:hover {
+  color: #c1e1c1;
+  border: 3px #c1e1c1 solid;
+  transition: all 0.3s ease;
 }
 
 .main_links {
@@ -467,13 +494,6 @@ hr {
 }
 .next_section .button {
   font-size: 2rem;
-}
-
-.main_button {
-  font-size: 2em;
-  opacity: 0;
-  animation: 0.5s ease-out 1s easeInToBottom;
-  animation-fill-mode: forwards;
 }
 
 @media screen and (max-width: 960px) {

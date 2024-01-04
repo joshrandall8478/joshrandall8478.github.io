@@ -80,6 +80,16 @@ $font-family_1: "Poppins", sans-serif;
 	}
 }
 
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
 @keyframes jump {
 	0% {
 		transform: translateY(0);
@@ -372,7 +382,7 @@ main {
 	// 		padding: 0 25px;
 	// 	}
 	// }
-	.main_button{
+	#main_button{
 		.emote{
 			width: 15px;
 			height: 15px;

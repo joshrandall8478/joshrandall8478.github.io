@@ -34,6 +34,26 @@
 	animation: 0.5s ease-out 2s 1 easeInToBottom, 0.5s ease-out 5s 1 easeOutToBottom;;
     animation-fill-mode: forwards;
 }
+
+#main_button {
+	border: 3px $color_3 solid;
+	border-radius: 25px;
+	background: none;
+	color: $color_3;
+	padding: 10px 20px;
+	text-decoration: none;
+	cursor: pointer;
+	font-size: 2em;
+	opacity: 0;
+	animation: 0.5s ease-out 1.4s 1 appear;
+	animation-fill-mode: forwards;
+	&:hover {
+		color: $color_2;
+		border: 3px $color_2 solid;
+		transition: all 0.3s ease;
+	}
+}
+
 .main_links {
 	position: relative;
 	z-index: 2;
@@ -127,14 +147,6 @@ hr {
 	.button{
 		font-size: 2rem;
 	}
-}
-
-
-.main_button {
-	font-size: 2em;
-	opacity: 0;
-	animation: 0.5s ease-out 1s easeInToBottom;
-	animation-fill-mode: forwards;
 }
 
 

@@ -330,7 +330,7 @@ main section hr {
     width: 100%;
     bottom: 1.5rem;
   }
-  .main_button .emote {
+  #main_button .emote {
     width: 15px;
     height: 15px;
   }
