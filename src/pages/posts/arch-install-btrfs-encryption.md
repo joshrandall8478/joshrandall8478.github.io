@@ -125,19 +125,21 @@ swapon /dev/sda3
   ```
 This finished the arch install. now when you reboot, you will be prompted to enter a password to decrypt the btrfs partition
 ## Post install
-	```bash
-	useradd -m -d /home/archuser archuser
-	passwd archuser
-	sudo groupadd sudo
-	sudo pacman -Syu
-	sudo pacman -Sy plasma plasma-wayland-session plasma-applications kitty git --needed
-	systemctl enable sddm
-	cd /tmp
-	git clone https://aur.archlinux.org/yay-bin.git
-	cd yay-bin
-	makepkg -si
-	yay -S timeshift-bin
-	```
+
+```bash
+useradd -m -d /home/archuser archuser
+passwd archuser
+sudo groupadd sudo
+sudo pacman -Syu
+sudo pacman -Sy plasma plasma-wayland-session plasma-applications kitty git --needed
+systemctl enable sddm
+cd /tmp
+git clone https://aur.archlinux.org/yay-bin.git
+cd yay-bin
+makepkg -si
+yay -S timeshift-bin
+```
+
 This is all you need for a fully functioning desktop
 ## TPM 2.0 and LUKS (WIP)
 - `cat /sys/class/tpm/tpm0/tpm_version_major`
