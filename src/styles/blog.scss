@@ -12,8 +12,8 @@
 .blog__content{
     word-wrap: break-word;
     text-align:left;
-    width: 75vw;
-    max-width: 80%;
+    // width: 100vw;
+    max-width:fit-content;
     .astro-code {
         // max-width: 75%;
         border: 2px solid $color_3;
@@ -197,7 +197,21 @@
 //         }
 //     }
 // }
+@media screen and (max-width: 550px) {
+    .blog-info{
+        h1{
+            font-size:2rem;
+        }
+        h2{
+            font-size: 1.5rem;
+        }
+        h3{
+            font-size: 1.2rem;
+        }
+    }
+}
 @media screen and (max-width: 480px) {
+
     .blog__content{
         
         p {

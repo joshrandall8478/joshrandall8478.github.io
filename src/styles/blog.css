@@ -364,8 +364,8 @@ main section hr {
 .blog__content {
   word-wrap: break-word;
   text-align: left;
-  width: 75vw;
-  max-width: 80%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 .blog__content .astro-code {
   border: 2px solid #77dd77;
@@ -511,6 +511,17 @@ main section hr {
   }
   .main__content .not-found-image, .blog__container .not-found-image {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .blog-info h1 {
+    font-size: 2rem;
+  }
+  .blog-info h2 {
+    font-size: 1.5rem;
+  }
+  .blog-info h3 {
+    font-size: 1.2rem;
   }
 }
 @media screen and (max-width: 480px) {
