@@ -381,6 +381,13 @@ main section hr {
   padding: 0px 4px;
   border-radius: 5px;
 }
+.blog__content blockquote {
+  border-left: 5px solid #77dd77;
+  background-color: rgba(81, 80, 80, 0.5);
+  padding-left: 10px;
+  margin-left: 10px;
+  color: rgb(203, 203, 203);
+}
 .blog__content h2 {
   font-size: 2rem;
   margin-bottom: 15px;
