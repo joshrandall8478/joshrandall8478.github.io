@@ -10,12 +10,17 @@
 }
 
 .blog__content{
+    word-wrap: break-word;
     text-align:left;
+    width: 75vw;
+    max-width: 80%;
     .astro-code {
+        // max-width: 75%;
         border: 2px solid $color_3;
         border-radius: 15px;
         padding: 10px;
         code {
+            word-wrap:break-word;
             background: none;
             span{
                 font-family: monospace;
@@ -70,7 +75,8 @@
     }
     .blog-image{
         border-style: none;
-        max-width: 50%;
+        max-width: 60vw;
+        max-height: 40vh;
     }
     p{
         font-size: 1.4rem;
@@ -124,6 +130,7 @@
 
 @media screen and (max-width: 1000px) {
     .blog__content{
+        max-width: 80vw;
         h1{
             font-size: 3rem;
         }
@@ -131,7 +138,8 @@
             font-size: 2rem;
         }
         .blog-image {
-            max-width: 75%;
+            max-width: 75vw;
+            max-height: 50vh;
         }
         img{
             max-width: 100%;
