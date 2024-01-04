@@ -96,7 +96,7 @@ html {
 
 .paragraph {
 	text-align: right;
-	font-size: 1.6rem;
+	font-size: 1.30rem;
 	opacity: 0;
 	animation: 1s alternate 1s 1 easeInToTop;
 	animation-fill-mode: forwards;
@@ -162,7 +162,8 @@ hr {
 	animation-fill-mode: forwards;
 }
 .skills__category {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 	padding: 50px 0px 50px 0px;
 }
 .category__titles {
@@ -180,8 +181,10 @@ hr {
 	padding: 5px 15px;
 	opacity: 0%;
 	img {
-		width: 75px;
-		height: auto;
+		// Filter converts images to whitesmoke (approximately)
+		filter: brightness(0) invert(95%);
+		width: auto;
+		height: 72px;
 	}
 }
 .skills__item.active {
@@ -203,7 +206,7 @@ hr {
 	animation: 0.7s ease 1s 1 easeInToTop;
 	animation-fill-mode: forwards;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1100px), screen and (max-height: 770px) {
 	.container {
 		display: inline;
 	}
@@ -283,10 +286,6 @@ hr {
 		}
 		h2 {
 			font-size: 1rem;
-		}
-		img {
-			width: 60px;
-			height: auto;
 		}
 	}
 	h3 {
