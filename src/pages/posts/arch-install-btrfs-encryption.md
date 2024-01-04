@@ -138,7 +138,7 @@ This finished the arch install. now when you reboot, you will be prompted to ent
 	makepkg -si
 	yay -S timeshift-bin
 	```
-- This is all you need for a fully functioning desktop
+This is all you need for a fully functioning desktop
 ## TPM 2.0 and LUKS (WIP)
 - `cat /sys/class/tpm/tpm0/tpm_version_major`
 	- if this returns 2.0, then you are good
