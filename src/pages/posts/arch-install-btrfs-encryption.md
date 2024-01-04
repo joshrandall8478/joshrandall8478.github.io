@@ -10,7 +10,7 @@ layout: ../../layouts/BlogLayout.astro
 draft: false
 ---
 
-> *Editors note: This documentation was written by a friend during the Summer of 2023 (hence why I made him the author). These commands were transcribed directly from a YouTube video (which will be linked once that video is found). Parts of this document is edited by me for accuracy, continuity, and formatting with this site.*
+> *Editors note: This documentation was written by a friend during the Summer of 2023 (hence why I made him the author). These commands were transcribed directly from [this YouTube video](https://youtu.be/Xynotc9BKe8). Parts of this document is edited by me for accuracy, continuity, and formatting with this site.*
 
 ## Formatting Partitions and LUKS
 
