@@ -395,7 +395,7 @@ html {
   animation-fill-mode: forwards;
 }
 
-.content h3 {
+.content h3, .content h4 {
   opacity: 0;
   animation: 0.7s ease 1s 1 easeInToBottom;
   animation-fill-mode: forwards;
@@ -563,7 +563,7 @@ hr {
   animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 1100px), screen and (max-height: 770px) {
+@media screen and (max-width: 1200px), screen and (max-height: 850px) {
   .container {
     display: inline;
   }
