@@ -14,10 +14,10 @@ import Pagination from '../../components/Pagination.astro';
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
 const { prev, next} = page.url;
-
+const currentPath = Astro.url.pathname;
 ---
 
-<Layout title="Projects">
+<Layout title="Projects" currentPath={currentPath}>
     <main>
         <section>
             <div class="container">

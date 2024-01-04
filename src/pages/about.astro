@@ -1,9 +1,10 @@
 ---
 import '../styles/about.css';
 import Layout from '../layouts/MainLayout.astro';
+const currentPath = Astro.url.pathname;
 ---
 
-<Layout title="About">
+<Layout title="About" currentPath={currentPath}>
     <!-- Main Content -->
     <main>
 

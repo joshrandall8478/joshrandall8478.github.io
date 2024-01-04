@@ -3,6 +3,7 @@ import "../styles/blog.css";
 
 const { frontmatter } = Astro.props;
 let metaTitle = "Joshua Randall - " + frontmatter.title;
+let currentPath = frontmatter.url.currentPath;
 import TopBar from '../components/topbar.astro';
 ---
 
@@ -18,7 +19,7 @@ import TopBar from '../components/topbar.astro';
     <meta property="og:title" content={metaTitle} >
     <meta property="og:type" content="website">
     <meta property="og:image" content={frontmatter.image.url}>
-    <meta property="og:url" content="https://joshrandall.net">
+    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
     <meta property="og:description" content="Main website for Joshua Randall">
     <!-- <meta name="theme-color" content="#77DD77"> -->
 
