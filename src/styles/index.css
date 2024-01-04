@@ -467,10 +467,9 @@ hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.next_section img {
+.next_section .section_image {
   border-radius: 25px;
   height: auto;
-  border: 3px solid whitesmoke;
   max-width: 75%;
 }
 .next_section .content {

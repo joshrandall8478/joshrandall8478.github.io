@@ -115,10 +115,10 @@ hr {
 .next_section {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	img{
+	.section_image{
 		border-radius: 25px;
         height: auto;
-        border: 3px solid $color_1;
+        // border: 3px solid $color_1;
 		max-width: 75%;
 	}
 	.content {
