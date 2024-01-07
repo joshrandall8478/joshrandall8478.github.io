@@ -571,7 +571,7 @@ hr {
   animation-fill-mode: forwards;
 }
 
-@media screen and (max-width: 1200px), screen and (max-height: 850px) {
+@media screen and (max-width: 1000px), screen and (max-height: 750px) {
   .container {
     display: inline;
   }
