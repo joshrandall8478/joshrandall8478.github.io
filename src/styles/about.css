@@ -573,7 +573,11 @@ hr {
 
 @media screen and (max-width: 1000px), screen and (max-height: 750px) {
   .container {
-    display: inline;
+    display: inline-block;
+    padding: 0px 5vw;
+  }
+  .skills {
+    padding: 0px 5vw;
   }
   .content {
     margin: 10px;
