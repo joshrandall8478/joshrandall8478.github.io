@@ -645,14 +645,22 @@ hr {
   .skills__category {
     display: grid;
     position: relative;
-    right: 50px;
-    grid-template-columns: 150px 150px;
-    padding: auto 0px auto 0px;
+    right: 25px;
+    grid-template-columns: 50vw 50vw;
+    padding: auto 0px;
+  }
+  .skills__item {
+    padding: 15px 0px;
   }
   .skills__item i {
-    font-size: 4rem;
+    font-size: 3.1rem;
+  }
+  .skills__item img {
+    height: 45px;
+    width: 45px;
   }
   .skills__item h2 {
+    word-wrap: break-word;
     font-size: 1rem;
   }
   h3 {
