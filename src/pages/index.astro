@@ -24,8 +24,8 @@ const currentPath = Astro.url.pathname;
     <link rel="me" href="https://urusai.social/@josh"></link>
     <!-- Main Content -->
     <main>
-        <section>
-            <div class="container">
+        <section id="main-section" class="background main-background-filter">
+            <div class="non-blurred container">
                 <div class="content">
                 <h1 id="main_title">Joshua Randall</h1>
                 <h2 id="main_subtitle">Computer Science Major</h2>
@@ -40,7 +40,7 @@ const currentPath = Astro.url.pathname;
                 <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
                 <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p>
             </div>
-            </div>
+            
         </section>
         <hr>
         <section class="next_section align_left">
@@ -70,6 +70,68 @@ const currentPath = Astro.url.pathname;
             
 </section>
     </main>
+    <script>
+        let folder = "/assets/backgrounds/";
+        let gifLimit = 1;
+        let jpgLimit = 0;
+        let pngLimit = 0;
+        let webpLimit = 0;
+        let limit;
+        let format;
+        let loop = true;
+        while (loop){
+            switch (Math.floor(Math.random() * 4)) {
+                case 0:
+                    if (gifLimit == 0){
+                        continue;
+                    }
+                    else{
+                        loop = false;
+                    }
+                    folder += "gif/";
+                    limit = gifLimit;
+                    format = ".gif";
+                    break;
+                case 1:
+                if (jpgLimit == 0){
+                        continue;
+                    }
+                    else{
+                        loop = false;
+                    }
+                    folder += "jpg/";
+                    limit = jpgLimit;
+                    format = ".jpg"
+                    break;
+                case 2:
+                if (pngLimit == 0){
+                        continue;
+                    }
+                    else{
+                        loop = false;
+                    }
+                    folder += "png/";
+                    limit = pngLimit;
+                    format = ".png"
+                    break;
+                case 3:
+                if (webpLimit == 0){
+                        continue;
+                    }
+                    else{
+                        loop = false;
+                    }
+                    folder += "webp/";
+                    limit = webpLimit;
+                    format = ".webp"
+                    break;
+            }
+        }
+
+        let random = Math.floor( Math.random() * limit ) + 1 ;
+        let image = folder + random + format;
+        document.getElementById("main-section").style.backgroundImage = "url('" + image + "')";
+    </script>
     <!-- <script>
 const hr = document.querySelectorAll('hr');
 // Create the observer, same as before:

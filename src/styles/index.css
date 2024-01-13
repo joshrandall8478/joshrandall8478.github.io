@@ -361,6 +361,16 @@ main section hr {
     width: 75%;
   }
 }
+@keyframes backgroundFadeIn {
+  0% {
+    -webkit-backdrop-filter: blur(5px) brightness(0%);
+            backdrop-filter: blur(5px) brightness(0%);
+  }
+  100% {
+    -webkit-backdrop-filter: blur(5px) brightness(30%);
+            backdrop-filter: blur(5px) brightness(30%);
+  }
+}
 #mainHTML {
   overflow-x: hidden;
   background-color: black;
@@ -405,6 +415,35 @@ main section hr {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
+}
+
+.background {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: none;
+}
+
+.main-background-filter {
+  position: relative;
+}
+
+.main-background-filter::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  -webkit-backdrop-filter: blur(5px) brightness(0%);
+          backdrop-filter: blur(5px) brightness(0%);
+  animation: 1s ease-out 0.6s backgroundFadeIn;
+  animation-fill-mode: forwards;
+}
+
+.non-blurred {
+  z-index: 999;
 }
 
 .main_links {
@@ -500,6 +539,9 @@ hr {
 }
 
 @media screen and (max-width: 960px) {
+  .background {
+    background-attachment: scroll;
+  }
   hr {
     width: 0;
   }
