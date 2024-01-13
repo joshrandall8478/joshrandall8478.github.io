@@ -379,6 +379,11 @@ main section hr {
 .blog__content .astro-code code span {
   font-family: monospace;
 }
+.blog__content figcaption {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  font-style: italic;
+}
 .blog__content code {
   background: rgba(128, 128, 128, 0.5);
   font-family: monospace;

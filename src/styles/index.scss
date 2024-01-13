@@ -99,7 +99,11 @@ hr {
 
 .align_left {
 	text-align: left;
+	.content{
+		order: 1;
+	}
 	img{
+		order: 2;
 		justify-content: end;
 		margin-left: auto;
 	}

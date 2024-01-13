@@ -27,6 +27,12 @@
             }
         }
     }
+    figcaption{
+        font-size: 1rem;
+        // color: $color_3;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
     code {
         background: rgba(128,128,128,0.5);
         font-family: monospace;

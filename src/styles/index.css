@@ -450,7 +450,11 @@ hr {
 .align_left {
   text-align: left;
 }
+.align_left .content {
+  order: 1;
+}
 .align_left img {
+  order: 2;
   justify-content: end;
   margin-left: auto;
 }
