@@ -88,7 +88,7 @@ const currentPath = Astro.url.pathname;
         // let jpgLimit = 0;
         // let pngLimit = 0;
         // let webpLimit = 0;
-        let limit = 57;
+        let limit = 55;
         let format = "gif";
         let loop = true;
         // while (loop){
@@ -149,10 +149,11 @@ const currentPath = Astro.url.pathname;
         document.getElementById("contact").style.backgroundImage = "url('" + image + "')";
     </script>
     <script>
-        const arr = ["Full Time Arch Linux User", "Computer Science Major", "Part Time Windows user", "Linux Enthusiast", "Apple Ecosystem Enthusiast", "Tried Gentoo Once"]
+        const arr = ["Full Time Arch Linux User", "Computer Science Major", "Part Time Windows user", "Linux Enthusiast", "Apple Ecosystem Enthusiast", "Tried Gentoo Once", "カジュアルなアニメビューア", "PC Builder + Gamer", "Casual Homelabber", "Uses Neovim Like Notepad", "Titanfall 2 Veteran", "Daily Stick Shift Driver"]
 
         const random = Math.floor( Math.random() * arr.length );
         document.getElementById("main_subtitle").innerHTML = arr[random];
+        // document.getElementById("main_subtitle").innerHTML = arr[arr.length - 1];
     </script>
     <script>
         const arr = ["Get in contact.", "Have inquiries?", "Want to work together?", "Need help with something?", "Want to get in touch?", "Business idea?", "Project idea?"];

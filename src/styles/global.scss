@@ -138,6 +138,44 @@ $font-family_1: "Poppins", sans-serif;
 	}
 }
 
+@mixin formatting{
+	.astro-code {
+        // max-width: 75%;
+        border: 2px solid $color_3;
+        border-radius: 15px;
+        padding: 10px;
+        code {
+            word-wrap:break-word;
+            background: none;
+            span{
+                font-family: monospace;
+            }
+        }
+    }
+    figcaption{
+        font-size: 1rem;
+        // color: $color_3;
+        margin-bottom: 20px;
+        font-style: italic;
+    }
+    code {
+        background: rgba(128,128,128,0.5);
+        font-family: monospace;
+        padding: 0px 4px;
+        border-radius: 5px;
+    }
+    blockquote {
+        border-left: 5px solid $color_3;
+        background-color: rgba(81, 80, 80, 0.5);
+        padding-left: 10px;
+        margin-left: 10px;
+        color: rgb(203, 203, 203);
+        // font-style: italic;
+    }
+}
+
+@include formatting;
+
 // * MAIN STYLING
 * {
 	box-sizing: border-box;
@@ -229,6 +267,8 @@ html {
 		transition: all 0.3s ease;
 	}
 }
+
+
 
 #pagination {
 	background: #242424;
