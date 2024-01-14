@@ -246,6 +246,14 @@ html {
 	height: 30px;
 }
 
+.link{
+	color: $color_3;
+        &:hover {
+            color: $color_2;
+            transition: all 0.3s ease;
+        }
+}
+
 main {
 	margin-top: 75px;
 	color: $color_1;

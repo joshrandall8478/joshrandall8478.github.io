@@ -222,6 +222,14 @@ html {
   height: 30px;
 }
 
+.link {
+  color: #77dd77;
+}
+.link:hover {
+  color: #c1e1c1;
+  transition: all 0.3s ease;
+}
+
 main {
   margin-top: 75px;
   color: whitesmoke;

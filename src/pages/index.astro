@@ -69,6 +69,15 @@ const currentPath = Astro.url.pathname;
         </div>
             
 </section>
+<hr>
+<section id=contact class="contact_section background background-filter">
+    <div class="content non-blurred">
+        <h2>Get in contact</h2>
+        <p>The best way to contact me from this website is by emailing me at <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a>.</p>
+        <br>
+        <a id="contact_button" class="button" href="mailto:contact@joshrandall.net"><i class="fa-solid fa-paper-plane"></i> Mail me here</a>
+    </div>
+</section>
     </main>
     <script>
         let folder = "/assets/backgrounds/gif/";
@@ -131,7 +140,24 @@ const currentPath = Astro.url.pathname;
         let random = Math.floor( Math.random() * limit ) + 1 ;
         let image = folder + random + '.' + format;
         document.getElementById("main-section").style.backgroundImage = "url('" + image + "')";
+
+        random = Math.floor( Math.random() * limit ) + 1 ;
+        image = folder + random + '.' + format;
+        document.getElementById("contact").style.backgroundImage = "url('" + image + "')";
     </script>
+    <script>
+        const arr = ["Professional Arch Linux User", "Computer Science Major", "Programmer by day, and also by night", "Linux Enthusiast"]
+        setInterval(() => {
+            const random = Math.floor( Math.random() * arr.length );
+            document.getElementById("main_subtitle").innerHTML = arr[random];
+        }, 1000);
+    </script>
+    <script>
+        const arr = ["Get in contact.", "Have inquiries?", "Want to work together?", "Need help with something?", "Want to get in touch?", "Business idea?", "Jogo is still alive."];
+        const random = Math.floor( Math.random() * arr.length );
+        document.getElementById("contact").getElementsByTagName("h2")[0].innerHTML = arr[random];
+    </script>
+
     <!-- <script>
 const hr = document.querySelectorAll('hr');
 // Create the observer, same as before:
