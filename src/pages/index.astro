@@ -154,12 +154,12 @@ const currentPath = Astro.url.pathname;
         document.getElementById("main_subtitle").innerHTML = arr[random];
     </script>
     <script>
-        const arr = ["Get in contact.", "Have inquiries?", "Want to work together?", "Need help with something?", "Want to get in touch?", "Business idea?"];
+        const arr = ["Get in contact.", "Have inquiries?", "Want to work together?", "Need help with something?", "Want to get in touch?", "Business idea?", "Project idea?"];
         const random = Math.floor( Math.random() * arr.length );
         document.getElementById("contact").getElementsByTagName("h2")[0].innerHTML = arr[random];
     </script>
 
-    <!-- <script>
+    <script>
 const hr = document.querySelectorAll('hr');
 // Create the observer, same as before:
 const observer = new IntersectionObserver(entries => {
@@ -173,6 +173,6 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-observer.observe(document.querySelector('.section_image'));
-    </script> -->
+observer.observe(document.querySelector('hr'));
+    </script>
 </Layout>

@@ -70,6 +70,18 @@ $font-family_1: "Poppins", sans-serif;
 	}
 }
 
+@keyframes easeInToRight {
+	0% {
+		opacity: 0;
+		transform: translateX(-50%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
 @keyframes easeOutToRight {
 	0% {
 		opacity: 1;

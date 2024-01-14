@@ -160,12 +160,11 @@ hr {
 	margin-left: auto;
 	margin-right: auto;
 	width: 0;
+}
+hr.active {
 	animation: 0.7s ease 0s 1 hr;
 	animation-fill-mode: forwards;
 }
-// hr.active {
-	
-// }
 
 .align_left {
 	text-align: left;
