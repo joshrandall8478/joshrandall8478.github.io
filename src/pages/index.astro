@@ -149,7 +149,7 @@ const currentPath = Astro.url.pathname;
         document.getElementById("contact").style.backgroundImage = "url('" + image + "')";
     </script>
     <script>
-        const arr = ["Full Time Arch Linux User", "Computer Science Major", "Part Time Windows user", "Linux Enthusiast", "Apple Ecosystem Enthusiast", "Tried Gentoo Once", "カジュアルなアニメビューア", "PC Builder + Gamer", "Casual Homelabber", "Uses Neovim Like Notepad", "Titanfall 2 Veteran", "Daily Stick Shift Driver"]
+        const arr = ["Full Time <a class=link href='https://archlinux.org/'>Arch Linux</a> User", "Computer Science Major", "Part Time <a class=link href='https://www.microsoft.com/en-us/windows'>Windows</a> user", "<a class=link href='https://en.wikipedia.org/wiki/Linux'>Linux</a> Enthusiast", "<a class=link href='https://en.wikipedia.org/wiki/Apple_ecosystem'>Apple Ecosystem</a> Enthusiast", "Tried <a class=link href='https://www.gentoo.org/'>Gentoo</a> Once", "<a class=link href='https://translate.google.com/?sl=ja&tl=en&text=%E3%82%AB%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%93%E3%83%A5%E3%83%BC%E3%82%A2&op=translate&hl=en'>カジュアルなアニメビューア</a>", "Custom PC Builder", "Casual <a class=link href='https://linuxhandbook.com/homelab/'>Homelabber</a>", "Uses <a class=link href='https://neovim.io/'>Neovim</a> Like Notepad", "<a class=link href='https://store.steampowered.com/app/1237970/Titanfall_2/'>Titanfall 2</a> Veteran", "Daily <a class=link href='https://en.wikipedia.org/wiki/Manual_transmission'>Stick Shift</a> Driver"]
 
         const random = Math.floor( Math.random() * arr.length );
         document.getElementById("main_subtitle").innerHTML = arr[random];
