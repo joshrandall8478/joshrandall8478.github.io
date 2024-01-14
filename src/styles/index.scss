@@ -36,8 +36,18 @@
     opacity: 0;
     animation: 0.5s ease-out 1s 1 easeInToBottom;
     animation-fill-mode: forwards;
-	transition: all 0.3s ease;
+	// transition: all 0.3s ease;
 }
+
+.anim1{
+	animation: 0.5s ease-out 1s 1 easeOutToBottom;
+	animation-fill-mode: forwards;
+}
+.anim2 {
+	animation: 0.5s ease-out 1.5s 1 easeInToTop;
+	animation-fill-mode: forwards;
+}
+
 #main_paragraph {
 	margin-top: 25px;
 	font-size: 2rem;
@@ -289,6 +299,18 @@ hr {
 			font-size: 1.3rem;
 		}
 		.button {
+			font-size: 1.5rem;
+		}
+	}
+	#main_button{
+		font-size: 1.5rem;
+		&:hover {
+			font-size: 1.5rem;
+		}
+	}
+	#contact_button{
+		font-size: 1.5rem;
+		&:hover {
 			font-size: 1.5rem;
 		}
 	}
