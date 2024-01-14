@@ -367,8 +367,8 @@ main section hr {
             backdrop-filter: blur(5px) brightness(0%);
   }
   100% {
-    -webkit-backdrop-filter: blur(5px) brightness(30%);
-            backdrop-filter: blur(5px) brightness(30%);
+    -webkit-backdrop-filter: blur(5px) brightness(35%);
+            backdrop-filter: blur(5px) brightness(35%);
   }
 }
 #mainHTML {
