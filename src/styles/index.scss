@@ -89,6 +89,19 @@
 	animation-fill-mode: forwards;
 }
 
+.background-filter{
+	position:relative;
+
+}
+.background-filter::after{
+	content: "";
+	display: block;
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0;
+	backdrop-filter: blur(5px) brightness(35%);
+}
+
 .non-blurred{
 	z-index: 999;
 }
