@@ -1,7 +1,5 @@
 #!/bin/bash
 
-ext=".gif"
-
 if [ "$#" -eq 0 ]; then
 	echo "No arguments provided."
 	echo "Usage: ./bulk_rename.sh [/destination] [extension]"
