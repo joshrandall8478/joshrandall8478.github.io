@@ -44,7 +44,21 @@ const currentPath = Astro.url.pathname;
             
         </section>
         <!-- <hr> -->
-        <section class="next_section align_left">
+        <section class="next_section align_left" >
+            <img class="section_image" src={latestPost.frontmatter.image.url} alt="Latest Post Image"/>
+            <div class="content">
+                <h2>Latest Post</h2>
+                <h3>{latestPost.frontmatter.title}</h3>
+                <h4>Date: {latestPost.frontmatter.date}</h4>
+                <h4>Author: {latestPost.frontmatter.author}</h4>
+                <p>{latestPost.frontmatter.description}</p>
+                <br>
+                <a class="button" href={latestPost.url}> Click here to learn more</a>
+            </div>
+                
+    </section>
+        <hr>
+        <section class="next_section align_right">
             <img class="section_image" src={latestProject.frontmatter.image.url} alt="Latest Project Image"/>
                 <div class="content">
                     <h2>Latest Project</h2>
@@ -56,20 +70,7 @@ const currentPath = Astro.url.pathname;
                 </div>
                     
         </section>
-    <hr>
-    <section class="next_section align_right" >
-        <img class="section_image" src={latestPost.frontmatter.image.url} alt="Latest Post Image"/>
-        <div class="content">
-            <h2>Latest Post</h2>
-            <h3>{latestPost.frontmatter.title}</h3>
-            <h4>Date: {latestPost.frontmatter.date}</h4>
-            <h4>Author: {latestPost.frontmatter.author}</h4>
-            <p>{latestPost.frontmatter.description}</p>
-            <br>
-            <a class="button" href={latestPost.url}> Click here to learn more</a>
-        </div>
-            
-</section>
+    
 <!-- <hr> -->
 <section id=contact class="contact_section background background-filter">
     <div class="content non-blurred">
@@ -84,61 +85,9 @@ const currentPath = Astro.url.pathname;
     </main>
     <script>
         let folder = "/assets/backgrounds/gif/";
-        // let gifLimit = 1;
-        // let jpgLimit = 0;
-        // let pngLimit = 0;
-        // let webpLimit = 0;
+
         let limit = 66;
-        let format = "gif";
-        // let loop = true;
-        // while (loop){
-        //     switch (Math.floor(Math.random() * 4)) {
-        //         case 0:
-        //             if (gifLimit == 0){
-        //                 continue;
-        //             }
-        //             else{
-        //                 loop = false;
-        //             }
-        //             folder += "gif/";
-        //             limit = gifLimit;
-        //             format = ".gif";
-        //             break;
-        //         case 1:
-        //         if (jpgLimit == 0){
-        //                 continue;
-        //             }
-        //             else{
-        //                 loop = false;
-        //             }
-        //             folder += "jpg/";
-        //             limit = jpgLimit;
-        //             format = ".jpg"
-        //             break;
-        //         case 2:
-        //         if (pngLimit == 0){
-        //                 continue;
-        //             }
-        //             else{
-        //                 loop = false;
-        //             }
-        //             folder += "png/";
-        //             limit = pngLimit;
-        //             format = ".png"
-        //             break;
-        //         case 3:
-        //         if (webpLimit == 0){
-        //                 continue;
-        //             }
-        //             else{
-        //                 loop = false;
-        //             }
-        //             folder += "webp/";
-        //             limit = webpLimit;
-        //             format = ".webp"
-        //             break;
-        //     }
-        // }
+        const format = "gif";
 
         let random = Math.floor( Math.random() * limit ) + 1 ;
         let image = folder + random + '.' + format;
