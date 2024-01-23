@@ -144,9 +144,11 @@ blockquote {
   font-family: "Poppins", sans-serif;
 }
 *::-moz-selection {
+  color: black;
   background: #77dd77;
 }
 *::selection {
+  color: black;
   background: #77dd77;
 }
 
@@ -282,12 +284,6 @@ html {
 .link:hover {
   color: #c1e1c1;
   transition: all 0.3s ease;
-}
-.link::-moz-selection {
-  color: whitesmoke;
-}
-.link::selection {
-  color: whitesmoke;
 }
 
 main {
