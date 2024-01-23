@@ -184,6 +184,7 @@ $font-family_1: "Poppins", sans-serif;
 	font-family: $font-family_1;
 
 	&::selection {
+		color: whitesmoke;
 		background: $color_3;
 	}
 }
@@ -312,10 +313,10 @@ html {
 
 .link{
 	color: $color_3;
-        &:hover {
-            color: $color_2;
-            transition: all 0.3s ease;
-        }
+	&:hover {
+		color: $color_2;
+		transition: all 0.3s ease;
+	}
 }
 
 main {

@@ -144,9 +144,11 @@ blockquote {
   font-family: "Poppins", sans-serif;
 }
 *::-moz-selection {
+  color: whitesmoke;
   background: #77dd77;
 }
 *::selection {
+  color: whitesmoke;
   background: #77dd77;
 }
 
