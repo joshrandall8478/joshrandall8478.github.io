@@ -673,9 +673,6 @@ hr.active {
   #main_paragraph {
     font-size: 1.5rem;
   }
-  #main_button {
-    font-size: 1em;
-  }
   .next_section {
     text-align: center;
     grid-template-columns: none;
@@ -722,13 +719,13 @@ hr.active {
     font-size: 1.5rem;
   }
   #main_button {
-    font-size: 1.5rem;
+    font-size: 1em;
   }
   #main_button:hover {
     font-size: 1.5rem;
   }
   #contact_button {
-    font-size: 1.5rem;
+    font-size: 1em;
   }
   #contact_button:hover {
     font-size: 1.5rem;
