@@ -1,3 +1,28 @@
+# The Actual README
+
+I started working on this site while I was taking an HTML, CSS, and JS class. This was a way for me to practice what I was actively learning in class and out, and apply it to something practical and necessary to expand my portfolio and "brand". 
+
+![Screenshot](public/assets/240129_00h12m07s_screenshot.png)
+
+Using the site is very straight forward since the site uses a very simple design. Current feature set includes:
+- [x] Parallax backgrounds for desktop
+- [x] Mobile prioritized design
+- [x] Clean but non intrusive CSS animations
+- [x] Handling of post and project pages using Astro's built in routing
+    - [x] Post and project pages are generated from markdown files
+
+#### Attributions
+- [Astro](https://astro.build)
+- [This YouTube tutorial for HTML CSS and JS](https://youtu.be/FazgJVnrVuI).
+    - The tutorial was used to make early template versions of this site which were never public (much thanks to [Brian Design](https://www.youtube.com/@briandesign)). After practicing with the tutorial, I used the template versions I created as a base for this site. The only things that is very reminiscent or the same, would be the hamburger menu bars to open the mobile menu + the top navigation bar, and the fonts may be similar since Google fonts were used. Everything else apart from those things mentioned was made from scratch.
+- The many GIFs taken from Google images to create the awesome backgrounds for this site.
+- Icons for the [about page](https://joshrandall.net/about) taken from Google images, some with necessary proper attribution visible on site.
+
+
+<hr>
+
+> Below is a template README from astro, which is there to help you out if you decide to fork this repo or run the site locally:
+
 # Astro Starter Kit: Minimal
 
 ```
