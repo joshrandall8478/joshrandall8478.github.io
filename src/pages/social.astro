@@ -1,0 +1,32 @@
+---
+import '../styles/global.css';
+import Layout from '../layouts/MainLayout.astro';
+const currentPath = Astro.url.pathname;
+---
+<Layout title="Main" currentPath={currentPath}>
+    <!-- Mastodon Verification-->
+    <!-- <link rel="me" href="https://hachyderm.io/@pursuit"></link>
+    <link rel="me" href="https://allthingstech.social/@josh"></link>
+    <link rel="me" href="https://urusai.social/@josh"></link> -->
+    <link rel="me" href="https://emich.social/@jranda10"></link>
+    <link rel="me" href="https://social.joshrandall.net/@josh"></link>
+    <!-- Main Content -->
+    <main>
+        <section id="main-section" class="background main-background-filter">
+            <div class="non-blurred container">
+                <div class="content">
+                <h1 id="main_title">We've moved!</h1>
+                <img style="max-width:600px;width:50vw;border-radius:25px;" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ficeshrimp.dev%2Ficeshrimp%2Ficeshrimp%2Fmedia%2Fbranch%2Fdev%2Fassets%2Flogo.png&f=1&nofb=1&ipt=dabd5539b3ddede5330c1950347b24848761989cd4b99f19cce0c7257a79b34f&ipo=images" alt="">
+                <br><br>
+                <p>Our iceshrimp instance "social.joshrandall.net" has now moved to <a class="link" href="https://joshrandall.social">joshrandall.social</a>.</p>
+                <p>If you have an account, all of your data should still be intact.</p>
+                <br>
+                <a class="button" style="font-size:2em;" href="https://joshrandall.social">Go there now</a>
+            </div>
+            
+        </section>
+                
+    
+<!-- <hr> -->
+    </main>
+</Layout>
