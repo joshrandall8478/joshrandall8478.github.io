@@ -6,7 +6,6 @@ const currentPath = Astro.url.pathname;
 
 <Layout title="About" currentPath={currentPath}>
     <!-- Main Content -->
-    <main>
 
         <div class="container">
             <div class="content">
@@ -305,5 +304,4 @@ const observer = new IntersectionObserver(entries => {
 
 observer.observe(document.querySelector('.skills'));
     </script>
-    </main>
 </Layout>
