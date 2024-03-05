@@ -22,7 +22,7 @@ layout: ../layouts/NowLayout.astro
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
 - Virtual Machines (now that I have more than 16GB of RAM)
-- Managing JRH
+- Managing [JRH](https://services.joshrandall.net)
 - Learning PHP 💀
 - Optimizing Arch <img id=icon src="https://avatars.githubusercontent.com/u/4673648?s=280&v=4">
 - Attempting to maintain grades above a 3.5 GPA
@@ -35,5 +35,8 @@ layout: ../layouts/NowLayout.astro
   - Burn My Dread - Persona 3 (*an absolute classic*) <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hjRlteHMOimmqH1nQsJo6?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 - EDM / MonsterCat
   - Can't Say - KUURO <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6oTTpsofyulE2QhQQvU0b9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+- Alternative Metal
+  - Baby Drummer - Bad Nerves <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1HW8Eci2TSMF9EaVZHnNzj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - The Summoning - Sleep Token <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hql0mbMMRqo3V3XfrTu73?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 - ULTRAKILL OST
   - Dune Eternal - Heaven Pierce Her <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/24XObJwRqeU0UAms16JPXP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
