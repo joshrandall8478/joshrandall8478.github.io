@@ -30,6 +30,13 @@ layout: ../layouts/NowLayout.astro
 - Attempting to maintain grades above a 3.5 GPA
 - Attempting to get an internship
 
+## <i class="fa-solid fa-gamepad"></i> Games I'm Playing
+- Persona 3 Reload
+- Persona 5 Royal
+- Overwatch
+- Valorant
+- Titanfall 2
+
 ## <i class="fa-solid fa-headphones"></i> Music I'm Listening To
 - Mainly Persona OST
   - [It's Going Down Now](https://www.youtube.com/watch?v=Yfw7Sr940hY) - Persona 3 Reload
@@ -37,6 +44,7 @@ layout: ../layouts/NowLayout.astro
   - Burn My Dread - Persona 3 (*an absolute classic*) <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hjRlteHMOimmqH1nQsJo6?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 - EDM / MonsterCat
   - Can't Say - KUURO <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6oTTpsofyulE2QhQQvU0b9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - Any and all [Rocket League](https://www.rocketleague.com/en) music
 - Alternative Metal
   - Baby Drummer - Bad Nerves <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1HW8Eci2TSMF9EaVZHnNzj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
   - The Summoning - Sleep Token <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hql0mbMMRqo3V3XfrTu73?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
