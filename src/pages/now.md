@@ -11,6 +11,8 @@ layout: ../layouts/NowLayout.astro
 - Projects for School
   - Wiring lists outputting to truth tables
   - Evaluating Logical Expressions
+- Some of my Personal Projects
+  - [Meloetta](/projects/meloetta) - A Discord bot that plays music
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
 - Boolean Algebra
