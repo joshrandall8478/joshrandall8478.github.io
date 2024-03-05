@@ -1,13 +1,9 @@
 ---
 import '../styles/global.css';
 import TopBar from '../components/topbar.astro';
-interface Props {
-	title: string;
-    currentPath: string;
-}
-const properties = Astro.props;
-let metaTitle = "Joshua Randall - " + properties.title;
-let currentPath = properties.currentPath;
+const frontmatter = Astro.props;
+let metaTitle = "Joshua Randall - Now";
+let currentPath = "/now";
 ---
 <!DOCTYPE html>
 <html id="mainHTML" lang="en">
@@ -20,7 +16,7 @@ let currentPath = properties.currentPath;
     <meta name="og:site_name" content="Joshua Randall">
     <meta property="og:title" content={metaTitle}>
     <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/preview.png">
+    <meta property="og:image" content={frontmatter.image.url}>
     <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
     <meta property="og:description" content="Main website for Joshua Randall">
     <!-- <meta name="theme-color" content="#77DD77"> -->

@@ -1,7 +1,7 @@
 ---
 import "../styles/blog.css";
 
-const { frontmatter } = Astro.props;
+const frontmatter = Astro.props;
 let metaTitle = "Joshua Randall - " + frontmatter.title;
 let currentPath = frontmatter.url.currentPath;
 import TopBar from '../components/topbar.astro';
