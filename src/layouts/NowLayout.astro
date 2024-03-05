@@ -1,0 +1,56 @@
+---
+import '../styles/now.css';
+import TopBar from '../components/topbar.astro';
+const { frontmatter } = Astro.props;
+let metaTitle = "Joshua Randall - Now";
+let currentPath = "/now";
+---
+<!DOCTYPE html>
+<html id="mainHTML" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Open Graph Data -->
+    <meta name="og:site_name" content="Joshua Randall">
+    <meta property="og:title" content={metaTitle}>
+    <meta property="og:type" content="website">
+    <meta property="og:image" content={frontmatter.image.url}>
+    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
+    <meta property="og:description" content="Main website for Joshua Randall">
+    <!-- <meta name="theme-color" content="#77DD77"> -->
+
+    <!-- Stylesheet and Favicon -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome Javascript Link -->
+    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
+    <title>{metaTitle}</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <TopBar/>
+    <!-- Main Content -->
+    <main>
+        <section>
+            <h1 id="now-title">What I'm doing now...</h1>
+            <img style="margin-bottom: 15px;" id="now-img" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+            <p>/now Updated: {frontmatter.date}</p>
+            <i class="small">
+                (This is <a class="link" href="https://nownownow.com/about">a now page</a>. If you have your own site, <a class=link href="https://nownownow.com/about">you should make one</a> too.)</i>
+            <hr>
+            <div class="now-content">
+                <slot />
+            </div>
+        </section>
+    </main>
+    
+    
+</body>
+</html>
