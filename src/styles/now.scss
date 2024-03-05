@@ -1,0 +1,58 @@
+@import "./global.scss";
+@import "./blog.scss";
+#now-img {
+    margin: auto;
+    border-radius: 25px;
+    height: auto;
+    border: 3px solid $color_1;
+    max-width: 60%;
+}
+
+#now-title{
+    margin-top: 10px;
+}
+
+.now-content{
+    @extend .blog__content;
+    padding-bottom: 20px;
+    text-align: left;
+    h2 {
+        display: inline-block;
+        border-bottom: 2px solid $color_1;
+        padding-bottom: 2px;
+        border-bottom-style: dashed;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    @media screen and (max-width: 1000px){
+        h2{
+            display: block;
+        }
+    }
+    #icon {
+		// Filter converts images to whitesmoke (approximately)
+		filter: brightness(0) invert(95%);
+		width: auto;
+		height: 25px;
+        border-radius: 0px;
+        // height: auto;
+        border: none;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+	}
+}
+
+@media screen and (max-width: 1000px){
+    #now-title{
+        font-size: 2rem;
+    }
+    #now-img{
+        max-width: 70vw;
+    }
+    .now-content{
+        h2{
+            font-size: 1.6rem;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 ---
-import '../styles/global.css';
+import '../styles/now.css';
 import TopBar from '../components/topbar.astro';
-const frontmatter = Astro.props;
+const { frontmatter } = Astro.props;
 let metaTitle = "Joshua Randall - Now";
 let currentPath = "/now";
 ---
@@ -38,7 +38,17 @@ let currentPath = "/now";
     <TopBar/>
     <!-- Main Content -->
     <main>
-        <slot />
+        <section>
+            <h1 id="now-title">What I'm doing now...</h1>
+            <img style="margin-bottom: 15px;" id="now-img" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+            <p>/now Updated: {frontmatter.date}</p>
+            <i class="small">
+                (This is <a class="link" href="https://nownownow.com/about">a now page</a>. If you have your own site, <a class=link href="https://nownownow.com/about">you should make one</a> too.)</i>
+            <hr>
+            <div class="now-content">
+                <slot />
+            </div>
+        </section>
     </main>
     
     
