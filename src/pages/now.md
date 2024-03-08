@@ -37,6 +37,11 @@ layout: ../layouts/NowLayout.astro
 - Valorant
 - Titanfall 2
 
+## <i class="fa-solid fa-tv"></i> What I'm Watching
+*Anything crossed out I recently completed*
+- Bocchi The Rock
+- ~~Horimiya~~
+
 ## <i class="fa-solid fa-headphones"></i> Music I'm Listening To
 - Mainly Persona OST
   - [It's Going Down Now](https://www.youtube.com/watch?v=Yfw7Sr940hY) - Persona 3 Reload
