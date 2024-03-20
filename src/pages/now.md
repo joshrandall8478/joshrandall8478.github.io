@@ -21,11 +21,11 @@ layout: ../layouts/NowLayout.astro
 - R and Statistics
 - Headless content management
 - Java (JVM) Assembly
+- Microcode
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
 - Virtual Machines (now that I have more than 16GB of RAM)
 - Managing [JRH](https://services.joshrandall.net)
-- Learning PHP 💀
 - Optimizing Arch <img id=icon src="https://avatars.githubusercontent.com/u/4673648?s=280&v=4">
 - Attempting to maintain grades above a 3.5 GPA
 - Attempting to get an internship
@@ -38,15 +38,11 @@ layout: ../layouts/NowLayout.astro
 - Titanfall 2
 
 ## <i class="fa-solid fa-headphones"></i> Music I'm Listening To
-- Mainly Persona OST
-  - [It's Going Down Now](https://www.youtube.com/watch?v=Yfw7Sr940hY) - Persona 3 Reload
-  - Pursuing My True Self - Persona 4 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/0aYDsydt27Ag7pwHOZMCBA?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  - Burn My Dread - Persona 3 (*an absolute classic*) <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hjRlteHMOimmqH1nQsJo6?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-- EDM / MonsterCat
-  - Can't Say - KUURO <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6oTTpsofyulE2QhQQvU0b9?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  - Any and all [Rocket League](https://www.rocketleague.com/en) music
-- Alternative Metal
-  - Baby Drummer - Bad Nerves <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1HW8Eci2TSMF9EaVZHnNzj?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  - The Summoning - Sleep Token <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3hql0mbMMRqo3V3XfrTu73?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-- ULTRAKILL OST
-  - Dune Eternal - Heaven Pierce Her <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/24XObJwRqeU0UAms16JPXP?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+-  Levi Ryan, blksmiith
+  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2llmSAUZzE3lusEW8IjKKm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Tl7EQXOy8J41f2FfYSjSa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3nsKCNqxtdYclc6EpwVVRV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+- Anything in my electronic playlist
+  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/305CgEQGtmagEyR8RCoBIy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/305CgEQGtmagEyR8RCoBIy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+- Breakcore
+  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ILLO4blVTqacQP69hbsrc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
