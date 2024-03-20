@@ -37,6 +37,11 @@ layout: ../layouts/NowLayout.astro
 - Valorant
 - Titanfall 2
 
+## <i class="fa-solid fa-tv"></i> What I'm Watching
+*Anything crossed out I recently completed*
+- Bocchi The Rock
+- ~~Horimiya~~
+
 ## <i class="fa-solid fa-headphones"></i> Music I'm Listening To
 -  Levi Ryan, blksmiith
   - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2llmSAUZzE3lusEW8IjKKm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
