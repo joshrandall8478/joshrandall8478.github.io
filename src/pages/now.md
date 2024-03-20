@@ -41,13 +41,16 @@ layout: ../layouts/NowLayout.astro
 *Anything crossed out I recently completed*
 - Bocchi The Rock
 - ~~Horimiya~~
+- Euphoria \**Rewatching*
 
 ## <i class="fa-solid fa-headphones"></i> Music I'm Listening To
 -  Levi Ryan, blksmiith
-  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2llmSAUZzE3lusEW8IjKKm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Tl7EQXOy8J41f2FfYSjSa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3nsKCNqxtdYclc6EpwVVRV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2llmSAUZzE3lusEW8IjKKm?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Tl7EQXOy8J41f2FfYSjSa?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3nsKCNqxtdYclc6EpwVVRV?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 - Anything in my electronic playlist
-  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/305CgEQGtmagEyR8RCoBIy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe><iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/305CgEQGtmagEyR8RCoBIy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/305CgEQGtmagEyR8RCoBIy?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
 - Breakcore
-  - <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ILLO4blVTqacQP69hbsrc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7ILLO4blVTqacQP69hbsrc?utm_source=generator&theme=0" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
