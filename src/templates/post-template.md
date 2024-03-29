@@ -8,4 +8,5 @@ image:
     alt: 'Image Description'
 layout: ../../layouts/BlogLayout.astro
 draft: true
+unlisted: true
 ---
