@@ -7,4 +7,5 @@ image:
     alt: 'Image Description'
 layout: ../../layouts/ProjectLayout.astro
 draft: true
+unlisted: true
 ---
