@@ -3,14 +3,14 @@ import '../styles/index.css';
 import Layout from '../layouts/MainLayout.astro';
 export async function getLatestProject() {
     const allPosts = await Astro.glob('./projects/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
 const latestProject = await getLatestProject();
 export async function getLatestPost() {
     const allPosts = await Astro.glob('./posts/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
