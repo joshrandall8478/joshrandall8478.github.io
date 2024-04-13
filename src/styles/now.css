@@ -925,6 +925,7 @@ main section hr {
   font-size: 1.4rem;
 }
 .blog__content li, .now-content li {
+  margin-left: 15px;
   font-size: 1.4rem;
 }
 .blog__content li li, .now-content li li {
