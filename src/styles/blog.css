@@ -506,6 +506,7 @@ main section hr {
   font-size: 1.4rem;
 }
 .blog__content li {
+  margin-left: 2cqb;
   font-size: 1.4rem;
 }
 .blog__content li li {

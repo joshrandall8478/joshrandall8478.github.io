@@ -3,14 +3,14 @@ import '../styles/index.css';
 import Layout from '../layouts/MainLayout.astro';
 export async function getLatestProject() {
     const allPosts = await Astro.glob('./projects/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
 const latestProject = await getLatestProject();
 export async function getLatestPost() {
     const allPosts = await Astro.glob('./posts/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft)
+    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
@@ -40,7 +40,7 @@ const currentPath = Astro.url.pathname;
                     <li><a href="mailto:contact@joshrandall.net" class="fa-solid fa-envelope "></a></li>
                     <!-- <li><a class="fa-brands fa-discord"></a></li> -->
                 </ul>
-                <a id="main_button" href="/now">New "now" page</a>
+                <!-- <a id="main_button" href="/now">New "now" page</a> -->
                 <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
                 <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p>
             </div>
