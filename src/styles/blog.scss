@@ -105,6 +105,10 @@
             transition: all 0.3s ease;
         }
     }
+    video{
+        width:"320";
+        height:"240";
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -176,6 +180,13 @@
 //         }
 //     }
 // }
+@media screen and (max-width: 620px){
+    .blog__content{
+        video{
+            width: 80vw;
+        }
+    }
+}
 @media screen and (max-width: 550px) {
     .blog-info{
         h1{
@@ -199,6 +210,7 @@
         li{
             font-size: 1.2rem;
         }
+        
     }
     .main__content {
         .not-found-header{

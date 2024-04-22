@@ -551,6 +551,10 @@ main section hr {
   color: #c1e1c1;
   transition: all 0.3s ease;
 }
+#back__container video {
+  width: "320";
+  height: "240";
+}
 
 @media screen and (max-width: 1000px) {
   .blog__content {
@@ -585,6 +589,11 @@ main section hr {
   }
   .main__content .not-found-image, .blog__container .not-found-image {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .blog__content video {
+    width: 80vw;
   }
 }
 @media screen and (max-width: 550px) {
