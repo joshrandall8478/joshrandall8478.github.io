@@ -1,5 +1,5 @@
 ---
-date: "4/17/24"
+date: "4/22/24"
 image:
     url: 'https://media.istockphoto.com/id/1085051682/photo/computer-on-fire.jpg?s=612x612&w=0&k=20&c=m_2YbqFG6vKjoLTAi8bd6MNOOQBcyVN84_pJB0cIh4I='
     alt: 'Man burning computer'
