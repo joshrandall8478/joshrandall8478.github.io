@@ -1,8 +1,8 @@
 ---
 date: "4/17/24"
 image:
-    url: '/assets/IMG_5174.jpg'
-    alt: 'Me and GF :3'
+    url: 'https://media.istockphoto.com/id/1085051682/photo/computer-on-fire.jpg?s=612x612&w=0&k=20&c=m_2YbqFG6vKjoLTAi8bd6MNOOQBcyVN84_pJB0cIh4I='
+    alt: 'Man burning computer'
 layout: ../layouts/NowLayout.astro
 ---
 
