@@ -1003,15 +1003,16 @@ main section hr {
   .blog__content hr, .now-content hr {
     width: 100%;
   }
-  .blog__content video, .now-content video {
-    width: 320px;
-    height: 240px;
-  }
   .main__content .not-found-header, .blog__container .not-found-header {
     font-size: 3rem;
   }
   .main__content .not-found-image, .blog__container .not-found-image {
     max-width: 400px;
+  }
+}
+@media screen and (max-width: 620px) {
+  .blog__content video, .now-content video {
+    width: 80vw;
   }
 }
 @media screen and (max-width: 550px) {
