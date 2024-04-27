@@ -11,6 +11,8 @@ draft: false
 unlisted: false
 ---
 
+> UPDATE 4/27/24: Meloetta is currently being hosted on cloud, and will remain up during the duration of the downtime
+
 Many JRH services will go down as I physically move servers back home from college. This type of move / downtime happens twice every year, and is usually brief. Here is our current movement plan and what services will be affected:
 
 ## Services Affected
