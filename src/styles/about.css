@@ -509,6 +509,10 @@ html {
   text-align: left;
 }
 
+#intro {
+  margin: 15px 0px 15px 0px;
+}
+
 .paragraph {
   text-align: right;
   font-size: 1.3rem;
@@ -729,6 +733,9 @@ hr {
   }
   h3 {
     font-size: 1rem;
+  }
+  #intro {
+    font-size: 1.5rem;
   }
   .adobe__attribution {
     font-size: 1rem;
