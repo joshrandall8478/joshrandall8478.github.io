@@ -238,7 +238,7 @@ html {
 }
 
 #pagination {
-  background: #242424;
+  background: rgba(36, 36, 36, 0.7);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -657,7 +657,7 @@ html {
 }
 
 #pagination {
-  background: #242424;
+  background: rgba(36, 36, 36, 0.7);
   height: 80px;
   display: flex;
   justify-content: center;

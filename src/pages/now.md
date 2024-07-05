@@ -1,21 +1,14 @@
 ---
-date: "4/22/24"
+date: "7/4/24"
 image:
-    url: 'https://media.istockphoto.com/id/1085051682/photo/computer-on-fire.jpg?s=612x612&w=0&k=20&c=m_2YbqFG6vKjoLTAi8bd6MNOOQBcyVN84_pJB0cIh4I='
-    alt: 'Man burning computer'
+    url: '/assets/Screenshot_20240704_235824.png'
+    alt: 'Arch KDE Plasma Desktop'
 layout: ../layouts/NowLayout.astro
 ---
 
-Mainly preparing + studying for **final exams Winter 2024**.
-
 ## <i class="fa-solid fa-terminal"></i> Coding Projects
 
-- Projects for School
-  - ~~Wiring lists outputting to truth tables~~
-  - ~~Evaluating Logical Expressions~~
-  - ~~IJVM Counting Program~~
-  - ~~10x10 Matrix Analyzer~~
-- Some of my Personal Projects
+- Personal Projects
   - [Meloetta](/projects/meloetta) - A Discord bot that plays music
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
@@ -24,17 +17,16 @@ Mainly preparing + studying for **final exams Winter 2024**.
 - PHP
 - R and Statistics
 - Headless content management
-- Java (JVM) Assembly
-- Microcode
+- ~~Java (JVM) Assembly~~
+- ~~Microcode~~
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
-- Virtual Machines (now that I have more than 16GB of RAM)
-- Managing [JRH](https://services.joshrandall.net)
+- Virtual Machines and **[GPU Passthrough](https://gitlab.joshrandall.net/josh/kvm-gpu-scripts)**
+- Managing my own personal homelab services
 - Optimizing Arch <img id=icon src="https://avatars.githubusercontent.com/u/4673648?s=280&v=4">
-- Attempting to maintain grades above a 3.5 GPA
-- Attempting to get an internship
-- Messing around with AI image generation
-- Potentially may work with AI voice generation
+- ~~Attempting to maintain grades above a 3.5 GPA~~
+- Still attempting to get an internship
+- ~~Messing around with AI image generation~~
 
 ## <i class="fa-solid fa-gamepad"></i> Games I'm Playing
 - Persona 3 Reload
@@ -43,6 +35,14 @@ Mainly preparing + studying for **final exams Winter 2024**.
 - Valorant
 - Titanfall 2
 - Rainbow Six Siege
+- XDefiant
+- Dead cells
+- Doom Eternal
+
+## <i class="fa-brands fa-youtube"></i> Content Focuses
+Some content ideas are in the works.
+- Learning Davinci Resolve
+- Learning KdenLive
 
 <!-- ## <i class="fa-solid fa-tv"></i> What I'm Watching
 *Anything crossed out I recently completed*

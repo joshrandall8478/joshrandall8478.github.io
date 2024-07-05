@@ -272,7 +272,8 @@ html {
 
 
 #pagination {
-	background: #242424;
+	background: rgba(36,36,36,0.8);
+	backdrop-filter: blur(5px);
 	height: 80px;
 	display: flex;
 	justify-content: center;
