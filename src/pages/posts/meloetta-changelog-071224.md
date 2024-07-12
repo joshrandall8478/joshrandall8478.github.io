@@ -22,4 +22,4 @@ Fortunately, someone was able to create a [merge request](https://github.com/pyt
 - [x] Meloetta will now use the OPUS voice connectivity library, and should work on any CPU architecture with the docker container.
 - [x] *Temporarily* fixed major issues with `pytube`
 
-You can learn more or add meloetta to your server by [clicking here](/projects/meloetta). A fully designed site will be in the works soon, stay tuned.
+You can learn more or add Meloetta to your server by [clicking here](/projects/meloetta). A fully designed site will be in the works soon, stay tuned.
