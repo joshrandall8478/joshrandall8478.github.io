@@ -17,8 +17,10 @@ draft: false
 As many in the linux community know, [Wayland](https://wayland.freedesktop.org/) is "the future" of displaying content to linux desktops. However, my desktop environment at the time ([KDE Plasma](https://kde.org/plasma-desktop)) does not have the best compatibility with wayland.
 
 Here are a couple of visuals that represent what I was dealing with, just to show a few examples:
+
 ![Cursed cursor](https://i.redd.it/mzvaqc66vrp91.jpg)
 ![Cursed Dolphin](https://preview.redd.it/hiv7e3cfajl81.png?width=1336&format=png&auto=webp&s=a3118c09701c6c2d3fbfc85291a99ba8eeeea07f)
+
 Many applications would also break within KDE wayland, and the taskbar (probably one of the more important parts of the desktop for me) would freeze every 10-30 minutes, where I would have to run a hotkey to refresh the desktop.
 
 ## The solution:
