@@ -1,6 +1,7 @@
 ---
 title: 'Title'
 date: "M/DD/YY"
+originalDate: "M/DD/YY"
 subtitle: "Subtitle"
 image:
     url: 'Image URL'

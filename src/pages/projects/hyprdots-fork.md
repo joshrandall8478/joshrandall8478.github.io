@@ -1,6 +1,7 @@
 ---
 title: 'Hyprdots Fork'
 date: "1/13/24"
+originalDate: "1/13/24"
 subtitle: "My custom fork of the Hyprdots project"
 image:
     url: '/assets/240113_15h58m10s_screenshot.png'

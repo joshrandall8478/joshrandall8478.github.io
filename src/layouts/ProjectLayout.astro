@@ -4,6 +4,11 @@ import "../styles/blog.css";
 const { frontmatter } = Astro.props;
 let metaTitle = "Joshua Randall - " + frontmatter.title;
 let currentPath = frontmatter.url.currentPath;
+const originalDate = frontmatter.originalDate;
+var originalDateTag;
+if (frontmatter.date != originalDate) {
+  originalDateTag = "Project Posted On: " + originalDate;
+}
 import TopBar from '../components/topbar.astro';
 ---
 
@@ -50,6 +55,7 @@ import TopBar from '../components/topbar.astro';
                 <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.subtitle}</h2>
             <h3>Page Last Updated: {frontmatter.date}</h3>
+            <h3>{originalDateTag}</h3>
             <div class="blog-image-container">
                 <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
             </div>
@@ -60,7 +66,7 @@ import TopBar from '../components/topbar.astro';
       </div>
     </section>
   </main>
-  <script src="../scripts/app.js"></script>
+  <script src="../scripts/app.js"></>
   </body>
   <!-- ... -->
 </html>
