@@ -112,8 +112,14 @@
 }
 
 @media screen and (max-width: 1000px) {
+    // .main{
+    //     .section{
+    //         padding: 15px 0px;
+    //     }
+    // }
     .blog__content{
-        max-width: 80vw;
+        // max-width: 80vw;
+        
         h1{
             font-size: 3rem;
         }
@@ -128,7 +134,7 @@
             max-width: 100%;
         }
         p{
-            max-width: 90%;
+            // max-width: 90%;
             font-size: 1.4rem;
         }
         li{
