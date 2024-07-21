@@ -3,6 +3,7 @@ const menuLinks = document.querySelector('.navbar_menu')
 const topbar = document.querySelector('#topbar');
 
 topbar.classList.remove('blur');
+topbar.classList.add('top-of-page');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
