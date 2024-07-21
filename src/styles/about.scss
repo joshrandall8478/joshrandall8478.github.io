@@ -195,7 +195,7 @@ hr {
 	animation: 0.7s ease 1s 1 easeInToRight;
 	animation-fill-mode: forwards;
 }
-.adobe__attribution {
+.category__subtitles {
 	opacity: 0;
 	font-size: 1.5rem;
 	a {
@@ -206,7 +206,7 @@ hr {
         }
 	}
 }
-.adobe__attribution.active {
+.category__subtitles.active {
 	animation: 0.7s ease 1s 1 easeInToTop;
 	animation-fill-mode: forwards;
 }

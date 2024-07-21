@@ -303,7 +303,7 @@ main section {
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding: 0 50px;
+  padding: 0 25px;
 }
 main section h1 {
   font-size: 3rem;
@@ -724,7 +724,7 @@ main section {
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding: 0 50px;
+  padding: 0 25px;
 }
 main section h1 {
   font-size: 3rem;
@@ -980,9 +980,6 @@ main section hr {
 }
 
 @media screen and (max-width: 1000px) {
-  .blog__content, .now-content {
-    max-width: 80vw;
-  }
   .blog__content h1, .now-content h1 {
     font-size: 3rem;
   }
@@ -997,7 +994,6 @@ main section hr {
     max-width: 100%;
   }
   .blog__content p, .now-content p {
-    max-width: 90%;
     font-size: 1.4rem;
   }
   .blog__content li, .now-content li {

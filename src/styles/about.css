@@ -303,7 +303,7 @@ main section {
   z-index: 1;
   width: 100%;
   max-width: 1300px;
-  padding: 0 50px;
+  padding: 0 25px;
 }
 main section h1 {
   font-size: 3rem;
@@ -624,19 +624,19 @@ hr {
   animation-fill-mode: forwards;
 }
 
-.adobe__attribution {
+.category__subtitles {
   opacity: 0;
   font-size: 1.5rem;
 }
-.adobe__attribution a {
+.category__subtitles a {
   color: #77dd77;
 }
-.adobe__attribution a:hover {
+.category__subtitles a:hover {
   color: #c1e1c1;
   transition: all 0.2s ease;
 }
 
-.adobe__attribution.active {
+.category__subtitles.active {
   animation: 0.7s ease 1s 1 easeInToTop;
   animation-fill-mode: forwards;
 }

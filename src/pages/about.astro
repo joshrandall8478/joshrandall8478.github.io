@@ -16,7 +16,7 @@ const currentPath = Astro.url.pathname;
                 
             </div>
             <div class="paragraph">
-                <h4>Last updated: 7/15/24</h4>
+                <h4>Last updated: 7/20/24</h4>
                 <p>
                     <h3 id="intro">Hi! I'm Josh, and I am <span id="age"></span> years old.</h3>
                     I am an aspiring software engineer + designer. I have started to learn professional languages
@@ -171,7 +171,7 @@ const currentPath = Astro.url.pathname;
                         <h2>Cockpit</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://f-droid.org/repo/org.jellyfin.mobile/en-US/icon_Y46m-eV538ASL9vG0piH5BI4dC1PHilt0tKyKCVp_F0=.png">
+                        <img src="https://static-00.iconduck.com/assets.00/jellyfin-icon-512x512-nqen54ln.png">
                         <h2>Jellyfin</h2>
                     </div>
                     <div class="skills__item">
@@ -289,7 +289,8 @@ const currentPath = Astro.url.pathname;
                 </div>
     
                 <h2 class="category__titles"><a class="fa-solid fa-wand-magic-sparkles"></a> Design</h2>
-                <div class="adobe__attribution"><p>Attribution: Adobe icons created by <a href="https://www.flaticon.com/authors/freepik" title="graphic design icons">Freepik</a></p></div>
+                <div class="category__subtitles"><p>I've started to move away from Adobe towards open source / free alternatives.
+                    <br> Adobe icons created by <a href="https://www.flaticon.com/authors/freepik" title="graphic design icons">Freepik</a>.</p></div>
                 <hr class="skills__divider">
                 <div class="skills__category">
                     <div class="skills__item">
@@ -307,6 +308,14 @@ const currentPath = Astro.url.pathname;
                     <div class="skills__item">
                         <img src="/assets/illustrator.png">
                         <h2>Illustrator</h2>
+                    </div>
+                    <div class="skills__item">
+                        <img src="https://www.svgrepo.com/show/424897/gimp-logo-editor-2.svg" alt="">
+                        <h2>Gimp</h2>
+                    </div>
+                    <div class="skills__item">
+                        <img src="https://static-00.iconduck.com/assets.00/resolve-icon-2039x2048-4vkuaciv.png" alt="">
+                        <h2>Davinci Resolve</h2>
                     </div>
                 </div>
 
@@ -338,7 +347,7 @@ const skills__title = document.querySelector('#skills__title');
 const hr = document.querySelectorAll('.skills__divider');
 const category__titles = document.querySelectorAll('.category__titles');
 const skills__item = document.querySelectorAll('.skills__item');
-const attribution = document.querySelector('.adobe__attribution');
+const subtitles = document.querySelectorAll('.category__subtitles');
 
 // Create the observer, same as before:
 const observer = new IntersectionObserver(entries => {
@@ -355,7 +364,9 @@ const observer = new IntersectionObserver(entries => {
         skills__item.forEach((element) => {
             element.classList.add('active');
         })
-        attribution.classList.add('active');
+        subtitles.forEach((element) => {
+            element.classList.add('active');
+        })
         return;
     }
     });
