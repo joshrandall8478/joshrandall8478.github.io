@@ -158,7 +158,6 @@ html {
 }
 
 #topbar {
-  background: rgba(36, 36, 36, 0.7568627451);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -169,15 +168,21 @@ html {
   width: 100%;
   z-index: 999;
   margin-bottom: 0px;
-  transition: -webkit-backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.solid {
+  background: #242424;
+  transition: background 0.5s ease;
 }
 
 .blur {
-  transition: -webkit-backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  background: rgba(36, 36, 36, 0.7568627451);
+  transition: background 0.5s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -594,7 +599,6 @@ html {
 }
 
 #topbar {
-  background: rgba(36, 36, 36, 0.7568627451);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -605,15 +609,21 @@ html {
   width: 100%;
   z-index: 999;
   margin-bottom: 0px;
-  transition: -webkit-backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.solid {
+  background: #242424;
+  transition: background 0.5s ease;
 }
 
 .blur {
-  transition: -webkit-backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease;
-  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+  background: rgba(36, 36, 36, 0.7568627451);
+  transition: background 0.5s ease, -webkit-backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease;
+  transition: background 0.5s ease, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }

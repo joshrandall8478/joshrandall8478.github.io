@@ -197,7 +197,7 @@ html {
 
 
 #topbar {
-	background: #242424c1;
+	
 	height: 80px;
 	display: flex;
 	justify-content: center;
@@ -208,17 +208,22 @@ html {
 	width: 100%;
 	z-index: 999;
 	margin-bottom: 0px;
-	transition: backdrop-filter 0.3s ease;
+	transition: background 0.5s ease, backdrop-filter 0.3s ease;
+	
+}
+
+
+
+.solid {
+	background: #242424;
+	transition: background 0.5s ease
 }
 
 .blur{
-	transition: backdrop-filter 0.3s ease;
+	background: #242424c1;
+	transition: background 0.5s ease, backdrop-filter 0.3s ease;
 	backdrop-filter:blur(10px);
 }
-
-// .solid{
-// 	background: #242424;
-// }
 
 .navbar_container {
 	display: flex;

@@ -5,13 +5,21 @@ const topbar = document.querySelector('#topbar');
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
-    topbar.classList.toggle('blur');
+
+    // check if topbar has top-of-page class
+    if(topbar.classList.contains("top-of-page")){
+        topbar.classList.toggle('solid');
+    }else{
+        topbar.classList.toggle('blur');
+        topbar.classList.toggle('solid');
+    }
     menuLinks.classList.toggle('blur');
     if (menu.classList.contains('is-active')) {
         return disableScroll();
     }
         return enableScroll();
 })
+
 
 // window.addEventListener('scroll', () => {
 //     if (window.scrollY > 50) {
