@@ -193,6 +193,9 @@ html {
 	background-color: $background-color_1;
 	overflow-x: hidden;
 }
+
+
+
 #topbar {
 	background: #242424c1;
 	height: 80px;
@@ -205,9 +208,17 @@ html {
 	width: 100%;
 	z-index: 999;
 	margin-bottom: 0px;
+	transition: backdrop-filter 0.3s ease;
+}
+
+.blur{
+	transition: backdrop-filter 0.3s ease;
 	backdrop-filter:blur(10px);
 }
 
+// .solid{
+// 	background: #242424;
+// }
 
 .navbar_container {
 	display: flex;
@@ -387,11 +398,11 @@ main {
 		top: 100%;
 		left: 1000px;
 		position: absolute;
-		transition: left 0.5s, opacity 0.5s ;
+		transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
 		opacity: 0;
 		height: 80vh;
 		z-index: -1;
-		background: rgba(36,36,36,0.8);
+		background: #242424c1;
 	}
 
 	.navbar_menu.active {
@@ -401,10 +412,11 @@ main {
 		opacity: 1;
 		position: absolute;
 		z-index: 10;
-		transition: left 0.5s, opacity 0.5s ;
+		transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
 		height: 80vh;
 		font-size: 1.6rem;
-		background: rgba(36,36,36,0.8);
+		background: #242424c1;
+		// backdrop-filter: blur(10px);
 	}
 	#navbar_logo {
 		padding-left: 25px;

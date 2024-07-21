@@ -169,6 +169,15 @@ html {
   width: 100%;
   z-index: 999;
   margin-bottom: 0px;
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.blur {
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -237,12 +246,6 @@ html {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
-}
-
-#mobile__nav {
-  background: rgba(36, 36, 36, 0.7568627451);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 #pagination {
@@ -336,10 +339,6 @@ main section hr {
 }
 
 @media screen and (max-width: 960px) {
-  #topbar:before {
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-  }
   .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -356,11 +355,13 @@ main section hr {
     top: 100%;
     left: 1000px;
     position: absolute;
-    transition: left 0.5s opacity 0.5s;
+    transition: left 0.5s, opacity 0.5s, -webkit-backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
     opacity: 0;
     height: 80vh;
     z-index: -1;
-    background: rgba(36, 36, 36, 0.9);
+    background: rgba(36, 36, 36, 0.7568627451);
   }
   .navbar_menu.active {
     display: grid;
@@ -369,10 +370,12 @@ main section hr {
     opacity: 1;
     position: absolute;
     z-index: 10;
-    transition: left 0.5s opacity 0.5s;
+    transition: left 0.5s, opacity 0.5s, -webkit-backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
     height: 80vh;
     font-size: 1.6rem;
-    background: rgba(36, 36, 36, 0.9);
+    background: rgba(36, 36, 36, 0.7568627451);
   }
   #navbar_logo {
     padding-left: 25px;
@@ -602,6 +605,15 @@ html {
   width: 100%;
   z-index: 999;
   margin-bottom: 0px;
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
+}
+
+.blur {
+  transition: -webkit-backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease;
+  transition: backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
 }
@@ -670,12 +682,6 @@ html {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
-}
-
-#mobile__nav {
-  background: rgba(36, 36, 36, 0.7568627451);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
 }
 
 #pagination {
@@ -769,10 +775,6 @@ main section hr {
 }
 
 @media screen and (max-width: 960px) {
-  #topbar:before {
-    -webkit-backdrop-filter: blur(10px);
-            backdrop-filter: blur(10px);
-  }
   .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -789,11 +791,13 @@ main section hr {
     top: 100%;
     left: 1000px;
     position: absolute;
-    transition: left 0.5s opacity 0.5s;
+    transition: left 0.5s, opacity 0.5s, -webkit-backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
     opacity: 0;
     height: 80vh;
     z-index: -1;
-    background: rgba(36, 36, 36, 0.9);
+    background: rgba(36, 36, 36, 0.7568627451);
   }
   .navbar_menu.active {
     display: grid;
@@ -802,10 +806,12 @@ main section hr {
     opacity: 1;
     position: absolute;
     z-index: 10;
-    transition: left 0.5s opacity 0.5s;
+    transition: left 0.5s, opacity 0.5s, -webkit-backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
+    transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease, -webkit-backdrop-filter 0.3s ease;
     height: 80vh;
     font-size: 1.6rem;
-    background: rgba(36, 36, 36, 0.9);
+    background: rgba(36, 36, 36, 0.7568627451);
   }
   #navbar_logo {
     padding-left: 25px;
