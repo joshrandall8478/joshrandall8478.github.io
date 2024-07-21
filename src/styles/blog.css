@@ -158,7 +158,7 @@ html {
 }
 
 #topbar {
-  background: #242424;
+  background: rgba(36, 36, 36, 0.7568627451);
   height: 80px;
   display: flex;
   justify-content: center;
@@ -169,6 +169,8 @@ html {
   width: 100%;
   z-index: 999;
   margin-bottom: 0px;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 .navbar_container {
@@ -235,6 +237,12 @@ html {
   color: #c1e1c1;
   border: 3px #c1e1c1 solid;
   transition: all 0.3s ease;
+}
+
+#mobile__nav {
+  background: rgba(36, 36, 36, 0.7568627451);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
 }
 
 #pagination {
@@ -328,6 +336,10 @@ main section hr {
 }
 
 @media screen and (max-width: 960px) {
+  #topbar:before {
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+  }
   .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -339,28 +351,28 @@ main section hr {
   .navbar_menu {
     display: grid;
     grid-template-columns: auto;
-    background: #242424;
     margin: 0;
     width: 100%;
     top: 100%;
     left: 1000px;
     position: absolute;
-    transition: left 0.5s, opacity 0.5s;
+    transition: left 0.5s opacity 0.5s;
     opacity: 0;
     height: 80vh;
     z-index: -1;
+    background: rgba(36, 36, 36, 0.9);
   }
   .navbar_menu.active {
     display: grid;
-    background: #242424;
     top: 100%;
     left: 0px;
     opacity: 1;
     position: absolute;
     z-index: 10;
-    transition: left 0.5s, opacity 0.5s;
+    transition: left 0.5s opacity 0.5s;
     height: 80vh;
     font-size: 1.6rem;
+    background: rgba(36, 36, 36, 0.9);
   }
   #navbar_logo {
     padding-left: 25px;
