@@ -17,7 +17,7 @@ export async function getLatestPost() {
 const latestPost = await getLatestPost();
 const currentPath = Astro.url.pathname;
 ---
-<Layout title="Main" currentPath={currentPath}>
+<Layout title="Home" currentPath={currentPath}>
     <!-- Mastodon Verification-->
     <link rel="me" href="https://hachyderm.io/@pursuit"></link>
     <!--<link rel="me" href="https://allthingstech.social/@josh"></link>
