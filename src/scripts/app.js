@@ -1,9 +1,12 @@
 const menu = document.querySelector('#mobile-menu')
 const menuLinks = document.querySelector('.navbar_menu')
+const topbar = document.querySelector('#topbar');
 
 menu.addEventListener('click', function() {
     menu.classList.toggle('is-active');
     menuLinks.classList.toggle('active');
+    topbar.classList.toggle('blur');
+    menuLinks.classList.toggle('blur');
     if (menu.classList.contains('is-active')) {
         return disableScroll();
     }
