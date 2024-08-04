@@ -6,8 +6,10 @@ let metaTitle = "Joshua Randall - " + frontmatter.title;
 let currentPath = frontmatter.url.currentPath;
 const originalDate = frontmatter.originalDate;
 var originalDateTag;
+var updatedDateTag;
+originalDateTag = "Project Posted On: " + originalDate;
 if (frontmatter.date != originalDate) {
-  originalDateTag = "Project Posted On: " + originalDate;
+  updatedDateTag = "Page Last Updated: " + frontmatter.date;
 }
 import TopBar from '../components/topbar.astro';
 import { tools } from '../maps/tools.json';
@@ -55,7 +57,7 @@ import { tools } from '../maps/tools.json';
             <div class="blog-info">
                 <h1>{frontmatter.title}</h1>
             <h2>{frontmatter.subtitle}</h2>
-            <h3>Page Last Updated: {frontmatter.date}</h3>
+            <h3>{updatedDateTag}</h3>
             <h3>{originalDateTag}</h3>
             {frontmatter.tools.length > 0 && (
               <h3 class="tools">Languages/Tools: <br>
