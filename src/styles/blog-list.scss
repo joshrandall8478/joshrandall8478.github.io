@@ -85,7 +85,18 @@
     }
 }
 
+.tools{
+    i{
+       font-size: 1.5rem;
+    }
+}
+
 @media screen and (max-width: 500px) {
+    .tools{
+        i{
+           font-size: 1.2rem;
+        }
+    }
     .blog__list{
         .blog__item{
             height:fit-content;

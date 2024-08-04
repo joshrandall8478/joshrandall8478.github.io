@@ -7,7 +7,9 @@ image:
     url: '/assets/240113_15h58m10s_screenshot.png'
     alt: 'Screenshot of Hyprland Desktop'
 layout: ../../layouts/ProjectLayout.astro
+tools: ['shell', 'linux', 'github']
 draft: false
+unlisted: false
 ---
 
 <a class=button href="https://github.com/joshrandall8478/hyprdots">Visit the Repository</a>

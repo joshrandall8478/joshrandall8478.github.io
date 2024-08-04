@@ -6,7 +6,10 @@ subtitle: 'A Lightweight Music Discord Bot'
 image:
     url: 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/648.png'
     alt: 'Meloetta Art'
+tools: ['python', 'docker', 'gitlab', 'discord']
 layout: ../../layouts/ProjectLayout.astro
+draft: false
+unlisted: false
 ---
 
 <a href="https://discord.com/api/oauth2/authorize?client_id=922939931729469471&permissions=414501375040&scope=bot"  class=button>Invite Meloetta</a>
