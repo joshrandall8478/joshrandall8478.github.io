@@ -1,8 +1,8 @@
 ---
-title: 'Roommate PC Build'
+title: 'Micro ATX PC Build'
 date: "8/04/24"
 originalDate: "8/04/24"
-subtitle: "Micro ATX PC build"
+subtitle: "PC build for my roommate"
 image:
     url: '/assets/IMG_0544%201.jpeg'
     alt: 'Picture of PC build'
