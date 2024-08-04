@@ -7,7 +7,7 @@ image:
     url: 'Image URL'
     alt: 'Image Description'
 layout: ../../layouts/ProjectLayout.astro
-tools: ['docker']
+tools: []
 draft: true
 unlisted: false
 ---

@@ -35,10 +35,12 @@ import { tools } from '../../maps/tools.json';
                             {post.frontmatter.subtitle}
                         </h3>
                         <h3>Date: {post.frontmatter.date}</h3>
-                        <h3 class="tools">Languages/Tools: <br>
-                        {post.frontmatter.tools.map((tool) => (
-                            <i class={tools[tool]}></i><span>&nbsp; </span>
-                        ))}</h3>
+                        {post.frontmatter.tools.length > 0 && (
+                            <h3 class="tools">Languages/Tools: <br>
+                            {post.frontmatter.tools.map((tool) => (
+                                <i class={tools[tool]}></i><span>&nbsp; </span>
+                            ))}</h3>
+                        )}
                         </div>
                         <div>
                             <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>

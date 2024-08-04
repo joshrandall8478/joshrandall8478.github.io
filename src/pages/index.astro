@@ -70,10 +70,12 @@ import { tools } from '../maps/tools.json';
                     <h3>{latestProject.frontmatter.title}</h3>
                     <h4>Date: {latestProject.frontmatter.date}</h4>
                     <p>{latestProject.frontmatter.subtitle}</p>
-                    <h4 class="tools">Languages/Tools: <br>
+                    {latestProject.frontmatter.tools.length > 0 && (
+                        <h4 class="tools">Languages/Tools: <br>
                         {latestProject.frontmatter.tools.map((tool) => (
                             <i class={tools[tool]}></i><span>&nbsp; </span>
                         ))}</h4>
+                    )}
                     <br>
                     <a class="button" href={latestProject.url}> Click here to learn more</a>
                 </div>
