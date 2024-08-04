@@ -16,6 +16,7 @@ export async function getLatestPost() {
 }
 const latestPost = await getLatestPost();
 const currentPath = Astro.url.pathname;
+import { tools } from '../maps/tools.json';
 ---
 <Layout title="Home" currentPath={currentPath}>
     <!-- Mastodon Verification-->
@@ -69,6 +70,10 @@ const currentPath = Astro.url.pathname;
                     <h3>{latestProject.frontmatter.title}</h3>
                     <h4>Date: {latestProject.frontmatter.date}</h4>
                     <p>{latestProject.frontmatter.subtitle}</p>
+                    <h4 class="tools">Languages/Tools: <br>
+                        {latestProject.frontmatter.tools.map((tool) => (
+                            <i class={tools[tool]}></i><span>&nbsp; </span>
+                        ))}</h4>
                     <br>
                     <a class="button" href={latestProject.url}> Click here to learn more</a>
                 </div>
