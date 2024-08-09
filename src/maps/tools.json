@@ -1,0 +1,25 @@
+{
+    "tools":{
+        "java":"fa-brands fa-java",
+        "python":"fa-brands fa-python",
+        "shell":"fa-solid fa-terminal",
+        "astro":"fa-solid fa-rocket",
+        "docker":"fa-brands fa-docker",
+        "js":"fa-brands fa-square-js",
+        "html":"fa-brands fa-html5",
+        "css":"fa-brands fa-css3",
+        "c":"fa-brands fa-c",
+        "cpp":"fa-brands fa-cpp",
+        "csharp":"fa-brands fa-csharp",
+        "go":"fa-brands fa-go",
+        "nodejs":"fa-brands fa-node-js",
+        "vue":"fa-brands fa-vuejs",
+        "react":"fa-brands fa-react",
+        "scss":"fa-brands fa-sass",
+        "sass":"fa-brands fa-sass",
+        "linux":"fa-brands fa-linux",
+        "gitlab":"fa-brands fa-gitlab",
+        "github":"fa-brands fa-github",
+        "discord":"fa-brands fa-discord"
+    }
+}

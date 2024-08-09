@@ -43,7 +43,8 @@
         border-radius: 25px;
         height: auto;
         border: 3px solid $color_1;
-        max-width: 75%;
+        max-width: 50vw;
+        max-height: 70vh;
     }
     .emote{
         max-width: none;
@@ -72,6 +73,10 @@
     .button{
         display:inline-block;
         margin: 5px auto;
+    }
+    video{
+        // max-height: 50vh;
+        width: 50vw;
     }
 }
 
@@ -105,10 +110,7 @@
             transition: all 0.3s ease;
         }
     }
-    video{
-        width:"320";
-        height:"240";
-    }
+    
 }
 
 @media screen and (max-width: 1000px) {

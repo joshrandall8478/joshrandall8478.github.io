@@ -22,25 +22,25 @@ For mobile, it is best to create an account and use the [AnkiWeb client](https:/
 ## Importing a deck
 Once you open Anki, you can simply import a deck (an `.apkg` file) by either dragging and dropping, or using the global menu options (File -> Import)
 
-<video width="600" height="300" controls muted>
+<video controls muted>
 <source src="/assets/Anki Tutorial/1.mp4" type="video/mp4"></video>
 
 ## Resetting deck due dates
 
 Anki uses an intelligent "due date" system for studying flashcards. Meaning when you import the flashcards, it could appear that the pack is empty. All we have to do is set the due date to today. CLick on the desired deck, click browse, select all the cards that appear, and right click "Set Due Date". Then, we set the due date to "0", meaning today.
 
-<video width="600" height="300" controls muted>
+<video controls muted>
 <source src="/assets/Anki Tutorial/2.mp4" type="video/mp4"></video>
 
 ## Accessing AnkiWeb from any device
 First, go to [ankiweb.net](https://ankiweb.net/) and create an account. Once that is done, make sure to link your account in your Ank desktop application:
 
-<video width="600" height="300" controls muted>
+<video controls muted>
 <source src="/assets/Anki Tutorial/4.mp4" type="video/mp4"></video>
 
 Next, login to [ankiweb.net](https://ankiweb.net/). Your flashcard packs should be synced.
 
-<video width="600" height="300" controls muted>
+<video controls muted>
 <source src="/assets/Anki Tutorial/3.mp4" type="video/mp4"></video>
 
 Now you can study on any device from the website, including mobile platforms such as iOS and Android.
