@@ -21,6 +21,7 @@ Many JRH services will go down as I physically move servers to my new apartment.
 The following services will be affected by this downtime:
 - [Jellyseerr](https://jellyseerr.joshrandall.net)
 - [FreshRSS](https://rss.joshrandall.net)
+- [Bookstack](https://wiki.joshrandall.net)
 - Experimental Minecraft Server
 
 ---
