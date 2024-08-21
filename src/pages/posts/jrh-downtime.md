@@ -35,6 +35,8 @@ The following services will be affected by this downtime:
 ### Authentik
 [Authentik](https://sso.joshrandall.net) will be in maintenance mode on August 21st, 2024, and will be back online same day. We are transferring the service temporarily to another off site node during the duration of the move. There will be another short maintenance period after our downtime to update its main node with data changes.
 
+---
+
 All other services not listed here will not be affected by this downtime. If you have any questions or concerns, please reach out to me on the [JRH Discord](https://discord.gg/SvPDTBUgpm) or in [my contact section](/#contact).
 
 We are glad that you are enjoying JRH services. Thank you for your patience, support, and understanding!
