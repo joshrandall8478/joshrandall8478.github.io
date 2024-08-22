@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/MainLayout.astro';
+const currentPath = Astro.url.pathname;
+// import { tools } from '../maps/tools.json';
+---
+<Layout title="Maintenance" currentPath={currentPath}>
+    <div class="container">
+        <i style="font-size: 5em;padding: 5px;" class="fa-solid fa-server"></i>
+        <h2 style="padding: 5px;">This service is currently under scheduled maintenance.</h2>
+        <h3 style="padding: 5px;" >Check our <a class=link href="https://status.joshrandall.net">status page</a> for more information.</h3>
+    </div>
+    <style>
+        .container{
+            margin: 0 auto;
+            position: relative;
+            /* display: block; */
+            align-items: center;
+            justify-content: center;
+            /* width: 50%; */
+            /* padding: 10px; */
+            text-align: center;
+            padding: 70px 0;
+            height: 50vh;
+            top: 25vh;
+        }
+    </style>
+</Layout>
