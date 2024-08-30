@@ -952,7 +952,8 @@ main section hr {
   border-radius: 25px;
   height: auto;
   border: 3px solid whitesmoke;
-  max-width: 75%;
+  max-width: 50vw;
+  max-height: 70vh;
 }
 .blog__content .emote, .now-content .emote {
   max-width: none;
@@ -981,6 +982,9 @@ main section hr {
 .blog__content .button, .now-content .button {
   display: inline-block;
   margin: 5px auto;
+}
+.blog__content video, .now-content video {
+  width: 50vw;
 }
 
 #back__container {
@@ -1013,10 +1017,6 @@ main section hr {
   border: 3px solid #77dd77;
   color: #c1e1c1;
   transition: all 0.3s ease;
-}
-#back__container video {
-  width: "320";
-  height: "240";
 }
 
 @media screen and (max-width: 1000px) {
