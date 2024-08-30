@@ -18,7 +18,7 @@ const currentPath = Astro.url.pathname;
             <div class="paragraph">
                 <h4>Last updated: 8/9/24</h4>
                 <p>
-                    <h3 id="intro">Hi! I'm Josh, and I am <span id="age"></span> years old.</h3>
+                    <h3 id="intro">Hi! I'm Josh.</h3>
                     I am an aspiring software engineer + designer. I have started to learn professional languages
                     since 2019-2020, but have had an interest for programming since early high school. I am proficient in
                     Windows, macOS, and Linux systems. I run Arch linux + Windows 11 on my main desktop, and I run an Apple ecosystem
@@ -331,23 +331,23 @@ const currentPath = Astro.url.pathname;
             </div>
     <!-- <script src="../scripts/app.js"></script> -->
     <script>
-// Get how old I am in years
-function diff_years(dt2, dt1) 
-{
-  // Calculate the difference in milliseconds between the two dates
-  var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-  // Convert the difference from milliseconds to days
-  diff /= (60 * 60 * 24);
-  // Calculate the approximate number of years by dividing the difference in days by the average number of days in a year (365.25)
-//   return Math.abs(Math.round(diff / 365));
-    return Math.abs(Math.trunc(diff/365.25));
-}
-var currentDate = new Date(); // November 2, 2014
-const birthDate = new Date(2003, 2, 4); // March 4, 2003 (month goes from 0-11)
+// // Get how old I am in years
+// function diff_years(dt2, dt1) 
+// {
+//   // Calculate the difference in milliseconds between the two dates
+//   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+//   // Convert the difference from milliseconds to days
+//   diff /= (60 * 60 * 24);
+//   // Calculate the approximate number of years by dividing the difference in days by the average number of days in a year (365.25)
+// //   return Math.abs(Math.round(diff / 365));
+//     return Math.abs(Math.trunc(diff/365.25));
+// }
+// var currentDate = new Date(); // November 2, 2014
+// const birthDate = new Date(2003, 2, 4); // March 4, 2003 (month goes from 0-11)
 
-var ageElement = document.getElementById("age");
-var age = diff_years(birthDate, currentDate);
-ageElement.innerHTML = age.toString();
+// var ageElement = document.getElementById("age");
+// var age = diff_years(birthDate, currentDate);
+// ageElement.innerHTML = age.toString();
 
         // Remove the transition class
 const divider = document.querySelector('#divider');
