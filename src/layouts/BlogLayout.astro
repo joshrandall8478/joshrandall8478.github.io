@@ -5,6 +5,12 @@ const { frontmatter } = Astro.props;
 let metaTitle = "Joshua Randall - " + frontmatter.title;
 let currentPath = frontmatter.url.currentPath;
 import TopBar from '../components/topbar.astro';
+import countapi from 'countapi-js';
+let viewCount;
+countapi.hit('joshrandall.net', currentPath).then((result) => {
+  viewCount = result.value;
+  console.log(result);
+});
 ---
 
 <html>
@@ -34,15 +40,6 @@ import TopBar from '../components/topbar.astro';
     <!-- FontAwesome Javascript Link -->
     <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
     <title>{metaTitle}</title>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-J470W803CJ');
-    </script>
 </head>
   <body>
     <!-- Navbar -->
@@ -59,6 +56,7 @@ import TopBar from '../components/topbar.astro';
                 <h1>{frontmatter.title}</h1>
             <h2>Published: {frontmatter.date}</h2>
             <h3>Author: {frontmatter.author}</h3>
+            <h4>Views: {viewCount}</h4>
             <div class="blog-image-container">
                 <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
             </div>
