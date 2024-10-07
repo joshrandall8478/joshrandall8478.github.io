@@ -29,6 +29,7 @@ My main goal at this point is to get my health back together, as I've been strug
 
 ## <i class="fa-solid fa-gamepad"></i> Games I'm Playing
 - Inscryption
+- God of War
 - Persona 3 Reload
 - Nier Automata
 - Overwatch
