@@ -1,7 +1,7 @@
 ---
-date: "7/4/24"
+date: "10/6/24"
 image:
-    url: '/assets/Screenshot_20240704_235824.png'
+    url: '/assets/Screenshot_20241006_132716.png'
     alt: 'Arch KDE Plasma Desktop'
 layout: ../layouts/NowLayout.astro
 ---
@@ -9,40 +9,41 @@ layout: ../layouts/NowLayout.astro
 ## <i class="fa-solid fa-terminal"></i> Coding Projects
 
 - Personal Projects
-  - [Meloetta](/projects/meloetta) - A Discord bot that plays music
+  - ~~[Meloetta](/projects/meloetta) - A Discord bot that plays music~~ (On hold atm)
+  - Configuring NixOS on my Nextcloud server (Blog post coming soon)
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
-- ~~Boolean Algebra~~
-- ~~Logic Gates~~
+- SQL
+- React
 - PHP
 - R and Statistics
 - Headless content management
-- ~~Java (JVM) Assembly~~
-- ~~Microcode~~
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
 - Virtual Machines and **[GPU Passthrough](https://gitlab.joshrandall.net/josh/kvm-gpu-scripts)**
 - Managing my own personal homelab services
-- Optimizing Arch <img id=icon src="https://avatars.githubusercontent.com/u/4673648?s=280&v=4">
-- ~~Attempting to maintain grades above a 3.5 GPA~~
-- Still attempting to get an internship
-- ~~Messing around with AI image generation~~
+- Optimizing Arch
+- Nix and NixOS (and it's documentation hellscape)
+
+My main goal at this point is to get my health back together, as I've been struggling with severe asthma (eosiniophilic asthma). Luckily the new biologic I've been taking has been helping a ton, so I'm hoping to be feeling much better within the next couple of weeks 🙏.
 
 ## <i class="fa-solid fa-gamepad"></i> Games I'm Playing
+- Inscryption
+- God of War
 - Persona 3 Reload
-- Persona 5 Royal
+- Nier Automata
 - Overwatch
 - Valorant
 - Titanfall 2
-- Rainbow Six Siege
-- XDefiant
+- Cult of the Lamb
 - Dead cells
 - Doom Eternal
+- Bloodborne
 
-## <i class="fa-brands fa-youtube"></i> Content Focuses
+<!-- ## <i class="fa-brands fa-youtube"></i> Content Focuses
 Some content ideas are in the works.
 - Learning Davinci Resolve
-- Learning KdenLive
+- Learning KdenLive -->
 
 <!-- ## <i class="fa-solid fa-tv"></i> What I'm Watching
 *Anything crossed out I recently completed*

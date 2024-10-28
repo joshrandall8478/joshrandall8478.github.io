@@ -15,9 +15,9 @@ This brief article aims to show you how to import Anki flashcards. I use this as
 
 If you have not downloaded Anki before, you can download the application for your desktop/laptop [here](https://apps.ankiweb.net/). It is available for Windows, macOS, and Linux.
 
-> On the off chance you are using linux, it may be best to download and install from Anki's website as they supply a binary that has support for Qt6. This mainly affects KDE Plasma 6 users, or individuals using `qt6ct`.
+> UPDATE 10/19/24: For Linux: Anki has been updated to work with Plasma 6 in some distro repositories. If you are using a distro that has not updated Anki to QT6, you can download the latest version from the Anki website.
 
-For mobile, it is best to create an account and use the [AnkiWeb client](https://ankiweb.net/about). You can then link your account to the Anki desktop application, so that your imported decks will reflect the web application. Otherwise, you can use the mobile app. There is a paid iOS version and an independent Android version.
+Anki is desktop first. Mobile applications act as a companion for the desktop app. For mobile, it is best to create an account and use the [AnkiWeb client](https://ankiweb.net/about). You can then link your account to the Anki desktop application, so that your imported decks will reflect the web application. Otherwise, you can use the mobile app. There is a paid iOS version and an independent Android version.
 
 ## Importing a deck
 Once you open Anki, you can simply import a deck (an `.apkg` file) by either dragging and dropping, or using the global menu options (File -> Import)
