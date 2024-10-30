@@ -3,7 +3,7 @@
         "java":"fa-brands fa-java",
         "python":"fa-brands fa-python",
         "shell":"fa-solid fa-terminal",
-        "astro":"fa-solid fa-rocket",
+        "astro":"fa-solid fa-user-astronaut",
         "docker":"fa-brands fa-docker",
         "js":"fa-brands fa-square-js",
         "html":"fa-brands fa-html5",
@@ -20,6 +20,9 @@
         "linux":"fa-brands fa-linux",
         "gitlab":"fa-brands fa-gitlab",
         "github":"fa-brands fa-github",
-        "discord":"fa-brands fa-discord"
+        "discord":"fa-brands fa-discord",
+        "database":"fa-solid fa-database",
+        "php":"fa-brands fa-php",
+        "fork":"fa-solid fa-code-fork"
     }
 }
