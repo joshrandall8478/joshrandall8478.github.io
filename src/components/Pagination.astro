@@ -29,7 +29,7 @@ const paginationList = Array.from({length: length}, (_, i) => i + 1);
         )}
         
         {
-            paginationList.map((num) => ((num < currentPage + 3 && num > currentPage - 3) ? (
+            paginationList.map((num) => ((num < currentPage + 4 && num > currentPage - 4) ? (
                 <a href={`${firstUrl}${num == 1 ? "" : '/'+(num)}`} class={`pagination__link ${currentPage == num ? "disabled active" : ""}`}>
                     {num}
                 </a>
