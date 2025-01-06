@@ -145,6 +145,7 @@ $font-family_1: "Poppins", sans-serif;
         border-radius: 15px;
         padding: 10px;
         code {
+			// max-width: 80vw;
             word-wrap:break-word;
             background: none;
             span{
@@ -387,6 +388,20 @@ main {
 
 // MOBILE ADJUSTMENTS
 @media screen and (max-width: 960px) {
+	code{
+		font-size: 0.9rem;
+	}
+	.astro-code{
+		width: 80vw;
+	}
+	ul{
+		.astro-code{
+			width: 70vw;
+		}
+	}
+	blockquote{
+		width: 80vw;
+	}
 	.navbar_container {
 		display: flex;
 		justify-content: space-between;

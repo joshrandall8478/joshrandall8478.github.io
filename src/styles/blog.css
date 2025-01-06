@@ -344,6 +344,12 @@ main section hr {
 }
 
 @media screen and (max-width: 960px) {
+  .astro-code {
+    width: 80vw;
+  }
+  blockquote {
+    width: 70vw;
+  }
   .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -499,6 +505,7 @@ main section hr {
   border: 3px solid grey;
   margin: 15px 0;
   border-radius: 25px;
+  width: 50%;
 }
 .blog__content a {
   color: #77dd77;
