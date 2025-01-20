@@ -104,6 +104,7 @@
   }
 }
 .astro-code {
+  max-width: 75%;
   border: 2px solid #77dd77;
   border-radius: 15px;
   padding: 10px;

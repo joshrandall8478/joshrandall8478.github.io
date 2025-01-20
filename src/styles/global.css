@@ -344,6 +344,18 @@ main section hr {
 }
 
 @media screen and (max-width: 960px) {
+  code {
+    font-size: 0.9rem;
+  }
+  .astro-code {
+    width: 80vw;
+  }
+  ul .astro-code {
+    width: 70vw;
+  }
+  blockquote {
+    width: 80vw;
+  }
   .navbar_container {
     display: flex;
     justify-content: space-between;

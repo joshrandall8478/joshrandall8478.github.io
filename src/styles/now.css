@@ -104,6 +104,7 @@
   }
 }
 .astro-code {
+  max-width: 75%;
   border: 2px solid #77dd77;
   border-radius: 15px;
   padding: 10px;
@@ -545,6 +546,7 @@ main section hr {
   }
 }
 .astro-code {
+  max-width: 75%;
   border: 2px solid #77dd77;
   border-radius: 15px;
   padding: 10px;
@@ -895,6 +897,7 @@ main section hr {
   max-width: fit-content;
 }
 .blog__content .astro-code, .now-content .astro-code {
+  max-width: 75%;
   border: 2px solid #77dd77;
   border-radius: 15px;
   padding: 10px;
