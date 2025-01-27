@@ -174,7 +174,7 @@ html {
 }
 
 .solid {
-  background: rgba(60, 64, 74, 0.8470588235);
+  background: #3c404a;
   transition: background 0.5s ease;
 }
 
@@ -378,7 +378,7 @@ main section hr {
     opacity: 0;
     height: 80vh;
     z-index: -1;
-    background: rgba(60, 64, 74, 0.8470588235);
+    background: #3c404a;
   }
   .navbar_menu.active {
     display: grid;
@@ -627,7 +627,7 @@ html {
 }
 
 .solid {
-  background: rgba(60, 64, 74, 0.8470588235);
+  background: #3c404a;
   transition: background 0.5s ease;
 }
 
@@ -831,7 +831,7 @@ main section hr {
     opacity: 0;
     height: 80vh;
     z-index: -1;
-    background: rgba(60, 64, 74, 0.8470588235);
+    background: #3c404a;
   }
   .navbar_menu.active {
     display: grid;
