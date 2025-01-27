@@ -69,8 +69,8 @@
 	animation-fill-mode: forwards;
 	transition: all 0.3s ease;
 	&:hover {
-		color: white;
-		border: 3px white solid;
+		color: $color_1;
+		border: 3px $color_1 solid;
 		font-size: 2.5em;
 		transition: all 0.3s ease;
 		background-color: black;
@@ -153,13 +153,13 @@
 	animation-fill-mode: forwards;
 	a {
 		color: $color_1;
-		fill: var(--main-fg-color);
+		fill: $color_1;
 		margin: 0 10px;
 		transition: all 0.3s ease;
 		text-decoration: none;
 		&:hover {
-			color: $color_2;
-			fill: var(--main-hover-color);
+			color: $color_3;
+			fill: $color_3;
 			transition: all 0.3s ease;
 			transform: scale(1.5);
 			padding: 0 10px;
@@ -168,7 +168,7 @@
 }
 
 hr {
-	border: 3px solid whitesmoke;
+	border: 3px solid $color_1;
 	border-radius: 7px 7px 7px 7px;
 	justify-content: center;
 	align-items: center;

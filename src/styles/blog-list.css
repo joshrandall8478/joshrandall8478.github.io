@@ -100,12 +100,11 @@
     background-color: black;
   }
   100% {
-    background-color: #131313;
+    background-color: #3E363F;
   }
 }
 .astro-code {
-  max-width: 75%;
-  border: 2px solid #77dd77;
+  border: 2px solid #7A9E7E;
   border-radius: 15px;
   padding: 10px;
 }
@@ -131,7 +130,7 @@ code {
 }
 
 blockquote {
-  border-left: 5px solid #77dd77;
+  border-left: 5px solid #7A9E7E;
   background-color: rgba(81, 80, 80, 0.5);
   padding-left: 10px;
   margin-left: 10px;
@@ -146,15 +145,15 @@ blockquote {
 }
 *::-moz-selection {
   color: black;
-  background: #77dd77;
+  background: #7A9E7E;
 }
 *::selection {
   color: black;
-  background: #77dd77;
+  background: #7A9E7E;
 }
 
 html {
-  background-color: #131313;
+  background-color: #3E363F;
   overflow-x: hidden;
 }
 
@@ -200,7 +199,7 @@ html {
 }
 
 #navbar_logo {
-  fill: whitesmoke;
+  fill: #F7F9F9;
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -209,7 +208,7 @@ html {
   transform: translate(0px, 10px);
 }
 #navbar_logo:hover {
-  fill: #c1e1c1;
+  fill: #C08552;
   transition: all 0.3s ease;
 }
 
@@ -225,7 +224,7 @@ html {
 }
 
 .navbar_links {
-  color: #77dd77;
+  color: #7A9E7E;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -234,23 +233,23 @@ html {
   height: 100%;
 }
 .navbar_links:hover {
-  color: #c1e1c1;
+  color: #C08552;
   transition: all 0.3s ease;
 }
 
 .button {
-  border: 3px #77dd77 solid;
+  border: 3px #7A9E7E solid;
   border-radius: 25px;
   background: none;
-  color: #77dd77;
+  color: #7A9E7E;
   padding: 10px 20px;
   text-decoration: none;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button:hover {
-  color: #c1e1c1;
-  border: 3px #c1e1c1 solid;
+  color: #C08552;
+  border: 3px #C08552 solid;
   transition: all 0.3s ease;
 }
 
@@ -274,13 +273,13 @@ html {
 }
 
 .pagination__link {
-  color: whitesmoke;
+  color: #F7F9F9;
   text-decoration: none;
   padding: 8px;
 }
 
 .pagination__link:hover {
-  color: #c1e1c1;
+  color: #C08552;
   transition: all 0.3s ease;
 }
 
@@ -289,7 +288,7 @@ html {
 }
 
 .pagination__link.active {
-  color: #77dd77;
+  color: #7A9E7E;
 }
 
 .emote {
@@ -298,16 +297,16 @@ html {
 }
 
 .link {
-  color: #77dd77;
+  color: #7A9E7E;
 }
 .link:hover {
-  color: #c1e1c1;
+  color: #C08552;
   transition: all 0.3s ease;
 }
 
 main {
   margin-top: 75px;
-  color: whitesmoke;
+  color: #F7F9F9;
 }
 main section {
   display: grid;
@@ -339,12 +338,24 @@ main section p {
   margin-bottom: 15px;
 }
 main section hr {
-  border: 3px solid grey;
+  border: 3px solid #400406;
   margin: 15px 0;
   border-radius: 25px;
 }
 
 @media screen and (max-width: 960px) {
+  code {
+    font-size: 0.9rem;
+  }
+  .astro-code {
+    width: 80vw;
+  }
+  ul .astro-code {
+    width: 70vw;
+  }
+  blockquote {
+    width: 80vw;
+  }
   .navbar_container {
     display: flex;
     justify-content: space-between;
@@ -441,12 +452,12 @@ main section hr {
   }
 }
 .blog__list {
-  color: whitesmoke;
+  color: #F7F9F9;
 }
 .blog__list .blog__item {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  border: 2px solid whitesmoke;
+  border: 2px solid #F7F9F9;
   border-radius: 25px;
   margin: 10px;
   padding: 10px 15px;
@@ -456,7 +467,7 @@ main section hr {
   height: fit-content;
 }
 .blog__list .blog__item:hover {
-  border: 2px solid #c1e1c1;
+  border: 2px solid #C08552;
   transition: all 0.3s ease;
 }
 .blog__list h3 {
@@ -473,10 +484,10 @@ main section hr {
 }
 .blog__list li a {
   text-decoration: none;
-  color: whitesmoke;
+  color: #F7F9F9;
 }
 .blog__list li a:hover {
-  color: #c1e1c1;
+  color: #C08552;
   transition: all 0.3s ease;
 }
 .blog__list li img {
@@ -527,7 +538,7 @@ main section hr {
     font-size: 1.2rem;
   }
   .blog__list {
-    color: whitesmoke;
+    color: #F7F9F9;
   }
   .blog__list .blog__item {
     height: -moz-fit-content;
@@ -547,10 +558,10 @@ main section hr {
   }
   .blog__list li a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #F7F9F9;
   }
   .blog__list li a:hover {
-    color: #c1e1c1;
+    color: #C08552;
     transition: all 0.3s ease;
   }
   .blog__list li img {

@@ -1,11 +1,14 @@
 // * VARIABLES
 // * COLORS
-$color_1: whitesmoke;
-$color_2: #c1e1c1;
-$color_3: #77dd77;
-$color_4: grey;
-$color_5: B7C4AA;
-$background-color_1: #131313;
+$color_1: #F7F9F9;
+$color_2: #d9e4f8;
+$color_3: #B4C5E4;
+$color_4: #F7F9F9;
+$color_5: #6E6362;
+$background-color_1: #252935;
+$navbar-background-solid: #3c404ad8;
+$navbar-background-transparent: #3c404ad8;
+$pagination-background: #394053c1;
 // * FONTS
 $font-family_1: "Poppins", sans-serif;
 
@@ -216,12 +219,12 @@ html {
 
 
 .solid {
-	background: #242424;
+	background: $navbar-background-solid;
 	transition: background 0.5s ease
 }
 
 .blur{
-	background: #242424c1;
+	background: $navbar-background-transparent;
 	transition: background 0.5s ease, backdrop-filter 0.3s ease;
 	backdrop-filter:blur(10px);
 }
@@ -291,7 +294,7 @@ html {
 
 
 #pagination {
-	background: rgba(36,36,36,0.8);
+	background: $pagination-background;
 	backdrop-filter: blur(5px);
 	height: 80px;
 	display: flex;
@@ -422,7 +425,7 @@ main {
 		opacity: 0;
 		height: 80vh;
 		z-index: -1;
-		background: #242424c1;
+		background: $navbar-background-transparent;
 	}
 
 	.navbar_menu.active {
@@ -435,7 +438,7 @@ main {
 		transition: left 0.5s, opacity 0.5s, backdrop-filter 0.3s ease;
 		height: 80vh;
 		font-size: 1.6rem;
-		background: #242424c1;
+		background: $navbar-background-solid;
 		// backdrop-filter: blur(10px);
 	}
 	#navbar_logo {
