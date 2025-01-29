@@ -1,7 +1,7 @@
 ---
-date: "10/6/24"
+date: "1/28/25"
 image:
-    url: '/assets/Screenshot_20241006_132716.png'
+    url: '/assets/image (4).png'
     alt: 'Arch KDE Plasma Desktop'
 layout: ../layouts/NowLayout.astro
 ---
@@ -11,12 +11,16 @@ layout: ../layouts/NowLayout.astro
 - Personal Projects
   - ~~[Meloetta](/projects/meloetta) - A Discord bot that plays music~~ (On hold atm)
   - Configuring NixOS on my Nextcloud server (Blog post coming soon)
+- Academic Projects
+  - [Drone Project](/projects/drone) - A drone project for my Database class
+  - Engage (Post coming soon)
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
 - SQL
 - React
-- PHP
-- R and Statistics
+- Vite
+- Nix
+- Gentoo (soon, placing this here as a reminder)
 - Headless content management
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
@@ -25,20 +29,18 @@ layout: ../layouts/NowLayout.astro
 - Optimizing Arch
 - Nix and NixOS (and it's documentation hellscape)
 
-My main goal at this point is to get my health back together, as I've been struggling with severe asthma (eosiniophilic asthma). Luckily the new biologic I've been taking has been helping a ton, so I'm hoping to be feeling much better within the next couple of weeks 🙏.
 
 ## <i class="fa-solid fa-gamepad"></i> Games I'm Playing
-- Inscryption
+- ~~Inscryption~~ Mostly completed
 - God of War
 - Persona 3 Reload
 - Nier Automata
-- Overwatch
-- Valorant
+- ~~Overwatch~~
+- Valorant (On and off)
 - Titanfall 2
 - Cult of the Lamb
 - Dead cells
 - Doom Eternal
-- Bloodborne
 
 <!-- ## <i class="fa-brands fa-youtube"></i> Content Focuses
 Some content ideas are in the works.

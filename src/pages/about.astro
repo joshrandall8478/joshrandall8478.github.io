@@ -2,6 +2,9 @@
 import '../styles/about.css';
 import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
+
+// ! Update this variable EVERY TIME this page is updated
+const dateUpdated = "1/28/25"
 ---
 
 <Layout title="About" currentPath={currentPath}>
@@ -16,19 +19,18 @@ const currentPath = Astro.url.pathname;
                 
             </div>
             <div class="paragraph">
-                <h4>Last updated: 10/6/24</h4>
+                <h4>Last updated: {dateUpdated}</h4>
                 <p>
                     <h3 id="intro">Hi! I'm Josh.</h3>
                     I am an aspiring software engineer + designer. I have started to learn professional languages
                     since 2019-2020, but have had an interest for programming since early high school. I am proficient in
-                    Windows, macOS, and Linux systems. I run Arch linux + Windows 11 on my main desktop, and I run an Apple ecosystem
-                    for school and software development. I attend Eastern Michigan University, currently studying Computer
-                    Science.
+                    Windows, macOS, and Linux systems. I run Arch linux on my main desktop (since 2022), and I run an Apple ecosystem
+                    for school. I use both of these systems for software development purposes. I attend Eastern Michigan University, currently studying Computer Science.
                     <br>
                     <br>
-                    Besides coding and technology: I drive stick-shift/manual transmission, I like graphic/motion design + video editing (have been using Adobe since 2014),
+                    Besides coding and technology: I drive stick-shift/manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
                     and I have played violin for 6 years before the COVID-19 pandemic. I also play PC and switch games 
-                    such as Titanfall 2, Overwatch, and Valorant. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and Cult of the Lamb.
+                    such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, Cult of the Lamb, and Persona 3.
                     <br>
                     <br>
                     My <a class=link href="/now">Now Page</a> consists of what my current projects and focuses are, and would highly recommend taking a look.
@@ -78,10 +80,6 @@ const currentPath = Astro.url.pathname;
                         <h2>Fedora</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://cdn.icon-icons.com/icons2/2248/PNG/512/gentoo_icon_138537.png">
-                        <h2>Gentoo</h2>
-                    </div>
-                    <div class="skills__item">
                         <img src="https://static-00.iconduck.com/assets.00/distributor-logo-linux-mint-icon-512x446-l6do6zt7.png">
                         <h2>Linux Mint</h2>
                     </div>
@@ -124,7 +122,7 @@ const currentPath = Astro.url.pathname;
                         <h2>Markdown</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://cdn.icon-icons.com/icons2/3911/PNG/512/astro_logo_icon_247543.png">
+                        <img src="/assets/1_nLbfO_PdTSpeCdZQuUr8RQ.png">
                         <h2>Astro</h2>
                     </div>
                     <div class="skills__item">
@@ -148,7 +146,7 @@ const currentPath = Astro.url.pathname;
                         <h2>Vue JS</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://cdn.icon-icons.com/icons2/3915/PNG/512/vite_logo_icon_249258.png" alt="">
+                        <img src="/assets/vite_logo_icon_249258.png" alt="">
                         <h2>Vite</h2>
                     </div>
                     <div class="skills__item">
@@ -180,37 +178,37 @@ const currentPath = Astro.url.pathname;
                 <h2 class="category__titles"><a class="fa-solid fa-server"></a> Homelab</h2>
                 <hr class="skills__divider">
                 <div class="skills__category">
-                    <div class="skills__item">
+                    <!-- <div class="skills__item">
                         <img src="https://idroot.us/wp-content/uploads/2018/06/Cockpit-logo.png">
                         <h2>Cockpit</h2>
+                    </div> -->
+                    <div class="skills__item">
+                        <img src="/assets/82976448.png" alt="">
+                        <h2>Authentik</h2>
                     </div>
                     <div class="skills__item">
                         <img src="https://static-00.iconduck.com/assets.00/jellyfin-icon-512x512-nqen54ln.png">
                         <h2>Jellyfin</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/bitwarden_logo_icon_170473.png">
+                        <img src="/assets/bitwarden-icon-512x512-qdi0py2h.png">
                         <h2>Bitwarden</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/nextcloud_logo_icon_168948.png">
+                        <img src="/assets/nextcloud.svg">
                         <h2>Nextcloud</h2>
                     </div>
                     <div class="skills__item">
                         <i class="fa-brands fa-gitlab"></i>
                         <h2>Gitlab</h2>
                     </div>
-                    <div class="skills__item">
+                    <!-- <div class="skills__item">
                         <img src="https://nextcord.dev/icon.png">
                         <h2>Nextcord</h2>
-                    </div>
+                    </div> -->
                     <div class="skills__item">
                         <img style="filter: grayscale(1) brightness(1)" src="https://static-00.iconduck.com/assets.00/uptime-kuma-icon-512x469-ce3ut52z.png">
                         <h2>Uptime Kuma</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://seeklogo.com/images/W/wireguard-logo-259B3D155A-seeklogo.com.png">
-                        <h2>Wireguard</h2>
                     </div>
                     <div class="skills__item">
                         <img src="/assets/sonarr.png">
@@ -298,7 +296,7 @@ const currentPath = Astro.url.pathname;
                     </div>
                 </div>
     
-                <h2 class="category__titles"><a class="fa-solid fa-wand-magic-sparkles"></a> Design</h2>
+                <h2 class="category__titles"><a class="fa-solid fa-wand-magic-sparkles"></a> Design + Video Production</h2>
                 <div class="category__subtitles"><p>I've started to move away from Adobe towards open source / free alternatives.
                     <br> Adobe icons created by <a href="https://www.flaticon.com/authors/freepik" title="graphic design icons">Freepik</a>.</p></div>
                 <hr class="skills__divider">
