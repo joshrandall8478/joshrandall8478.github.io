@@ -1,4 +1,4 @@
-@import "./global.scss";
+@use 'global.scss' as *;
 .blog__list {
     .blog__item{
         display: grid;

@@ -1,5 +1,5 @@
-@import "./global.scss";
-@import "./blog.scss";
+@use 'global.scss' as *;
+@use 'blog.scss' as *;
 #now-img {
     margin: auto;
     border-radius: 25px;

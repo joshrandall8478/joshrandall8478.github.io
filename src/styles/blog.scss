@@ -1,4 +1,4 @@
-@import "./global.scss";
+@use 'global.scss' as *;
 
 .blog-image{
     border-radius: 25px;
@@ -14,7 +14,7 @@
     text-align:left;
     // width: 100vw;
     max-width:fit-content;
-    @include formatting;
+    // @include formatting;
     h2{
         font-size: 2rem;
         margin-bottom: 15px;
