@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import '../styles/global.scss';
 const { length, currentUrl, currentPage, firstUrl, prevUrl, nextUrl, lastUrl } = Astro.props;
 const paginationList = Array.from({length: length}, (_, i) => i + 1);
 ---
