@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/MainLayout.astro';
+// import '../styles/now.css'
+const currentPath = Astro.url.pathname;
+// import { tools } from '../maps/tools.json';
+---
+<Layout title="Engage" currentPath={currentPath}>
+    <div class="container" style="padding: 15px; top:90px;">
+        <h1>Engage has now been redirected to our new domain:</h1>
+        <h1 style="font-size:3rem;"><a class=link href="https://ngage.lol">ngage.lol</a></h1>
+        <br>
+        <h2>Thank you for participating in our experimental barebones deployment!</h2>
+        <br>
+        <h3>We appreciate the support from our new and loyal users.
+            <br> Please continue to enjoy our developing web app on our new domain.</h3>
+    </div>
+    <style>
+        .container{
+            margin: 0 auto;
+            position: relative;
+            /* display: block; */
+            align-items: center;
+            justify-content: center;
+            /* width: 50%; */
+            /* padding: 10px; */
+            text-align: center;
+            padding: 20px 0;
+            height: 50vh;
+            top: 25vh;
+        }
+    </style>
+</Layout>
