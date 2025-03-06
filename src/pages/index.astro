@@ -98,11 +98,12 @@ import { tools } from '../maps/tools.json';
     <script>
         let folder = "/assets/backgrounds/gif/";
 
-        let limit = 77;
+        const limit = 81;
         const format = "gif";
 
-        let mainRandom = Math.floor( Math.random() * limit ) + 1 ;
+        const mainRandom = Math.floor( Math.random() * limit ) + 1 ;
         let image = folder + mainRandom + '.' + format;
+        {/* let image = folder + 81 + '.gif' */}
         document.getElementById("main-section").style.backgroundImage = "url('" + image + "')";
 
         // choose a DIFFERENT background for the contact section.
