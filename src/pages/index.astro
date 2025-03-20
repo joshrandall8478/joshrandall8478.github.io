@@ -28,30 +28,39 @@ import { tools } from '../maps/tools.json';
     <link rel="me" href="https://ohai.social/@pursuit"></link>
     <!-- Main Content -->
     <!-- <div class="warning-banner"><h2>JRH is currently in a downtime period from August 22nd until August 24th-25th. <a class=link href="/posts/jrh-downtime"> More information here.</a></h2></div> -->
-        <section id="main-section" class="background main-background-filter">
+        <section id="joanne-section" class="background main-background-filter">
             <div class="non-blurred container">
                 <div class="content">
-                <h1 id="main_title">Joshua Randall</h1>
-                <h2 id="main_subtitle"></h2>
-                <ul class="main_links">
-                    <li><a href="https://github.com/joshrandall8478" class="fa-brands fa-github"></a></li>
-                    <li><a href="https://gitlab.joshrandall.net/josh" class="fa-brands fa-gitlab"></a></li>
+                    <div class="joanne__photo">
+
+                    </div>
+                    <div class="joanne__info">
+                        <h1>Joanne Randall: In memorium</h1>
+                        <h2>December 18th, 1946 - XXXX</h2>
+                        <a id="main__button" href="xxxx">Learn More Here</a>
+                    </div>
+                    <!-- Main content, to be restored -->
+                <!-- <h1 id="main__title">Joshua Randall</h1> -->
+                <!-- <h2 id="main__subtitle"></h2> -->
+                <!-- <ul class="main__links"> -->
+                    <!-- <li><a href="https://github.com/joshrandall8478" class="fa-brands fa-github"></a></li> -->
+                    <!-- <li><a href="https://gitlab.joshrandall.net/josh" class="fa-brands fa-gitlab"></a></li> -->
                     <!-- <li><a href="https://www.youtube.com/channel/UCzrgSiEhhs4tcPaZobybY4A" class="fa-brands fa-youtube"></a></li> -->
-                    <li><a href="https://www.instagram.com/joshrandall8478/" class="fa-brands fa-instagram"></a></li>
+                    <!-- <li><a href="https://www.instagram.com/joshrandall8478/" class="fa-brands fa-instagram"></a></li> -->
                     <!-- <li><a rel="me" href="https://hachyderm.io/@pursuit" class="fa-brands fa-mastodon"></a></li> -->
                     <!-- <li><a href="https://threads.net/joshrandall8478" class="fa-brands fa-threads"></a></li> -->
-                    <li><a href="mailto:contact@joshrandall.net" class="fa-solid fa-envelope "></a></li>
+                    <!-- <li><a href="mailto:contact@joshrandall.net" class="fa-solid fa-envelope "></a></li> -->
                     <!-- <li><a class="fa-brands fa-discord"></a></li> -->
-                </ul>
-                <!-- <a id="main_button" href="/now">New "now" page</a> -->
+                <!-- </ul> -->
+                <!-- <a id="main__button" href="/now">New "now" page</a> -->
                 <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
-                <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p>
+                <!-- <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p> -->
             </div>
             
         </section>
         <!-- <hr> -->
-        <section id="latest-post" class="next_section align_left" >
-            <img class="section_image" src={latestPost.frontmatter.image.url} alt="Latest Post Image"/>
+        <!-- <section id="latest-post" class="next_section align_left" >
+            <img class="section__image" src={latestPost.frontmatter.image.url} alt="Latest Post Image"/>
             <div class="content">
                 <h2>Latest Post</h2>
                 <h3>{latestPost.frontmatter.title}</h3>
@@ -65,7 +74,7 @@ import { tools } from '../maps/tools.json';
     </section>
         <hr>
         <section id="latest-project" class="next_section align_right">
-            <img class="section_image" src={latestProject.frontmatter.image.url} alt="Latest Project Image"/>
+            <img class="section__image" src={latestProject.frontmatter.image.url} alt="Latest Project Image"/>
                 <div class="content">
                     <h2>Latest Project</h2>
                     <h3>{latestProject.frontmatter.title}</h3>
@@ -81,10 +90,10 @@ import { tools } from '../maps/tools.json';
                     <a class="button" href={latestProject.url}> Click here to learn more</a>
                 </div>
                     
-        </section>
+        </section> -->
     
 <!-- <hr> -->
-<section id=contact class="contact_section background background-filter">
+{/* <section id=contact class="contact__section background background-filter">
     <div class="content non-blurred">
         <h2></h2>
         <p>You can contact me by emailing me at <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a>.</p>
@@ -93,49 +102,11 @@ import { tools } from '../maps/tools.json';
         <br>
         <a id="contact_button" class="button" href="mailto:contact@joshrandall.net"><i class="fa-solid fa-paper-plane"></i> Email me here</a>
     </div>
-</section>
+</section> */}
     <script src="../scripts/dynamic-topbar-background.js"></script>
-    <script>
-        let folder = "/assets/backgrounds/gif/";
-
-        const limit = 81;
-        const format = "gif";
-
-        const mainRandom = Math.floor( Math.random() * limit ) + 1 ;
-        let image = folder + mainRandom + '.' + format;
-        {/* let image = folder + 81 + '.gif' */}
-        document.getElementById("main-section").style.backgroundImage = "url('" + image + "')";
-
-        // choose a DIFFERENT background for the contact section.
-        // In the rare case that they are the same, this will ensure different backgrounds.
-        let contactRandom = Math.floor( Math.random() * limit ) + 1 ;
-        let randomsDifferent = false;
-        while(!randomsDifferent){
-            // Adding an or condition of limit <= 1 makes sure the loop does not crash the site
-            if(mainRandom != contactRandom || limit <= 1){
-                randomsDifferent = true;
-            }
-            else{
-                console.log("Backgrounds are the same, shuffling again...");
-                contactRandom = Math.floor( Math.random() * limit ) + 1 ;
-            }
-        }
-        image = folder + contactRandom + '.' + format;
-        document.getElementById("contact").style.backgroundImage = "url('" + image + "')";
-    </script>
-    <script>
-        const arr = ["Full Time <a class=link href='https://archlinux.org/'>Arch Linux</a> User", "Computer Science Major", "Close to ditching <a class=link href='https://www.microsoft.com/en-us/windows'>Windows</a>", "<a class=link href='https://en.wikipedia.org/wiki/Linux'>Linux</a> Enthusiast", "<a class=link href='https://en.wikipedia.org/wiki/Apple_ecosystem'>Apple Ecosystem</a> Enthusiast", "Trying <a class=link href='https://www.gentoo.org/'>Gentoo</a>", "<a class=link href='https://translate.google.com/?sl=ja&tl=en&text=%E3%82%AB%E3%82%B8%E3%83%A5%E3%82%A2%E3%83%AB%E3%81%AA%E3%82%A2%E3%83%8B%E3%83%A1%E3%83%93%E3%83%A5%E3%83%BC%E3%82%A2&op=translate&hl=en'>カジュアルなアニメビューア</a>", "Custom PC Builder", "Casual <a class=link href='https://linuxhandbook.com/homelab/'>Homelabber</a>", "Uses <a class=link href='https://neovim.io/'>Neovim</a> Like Notepad", "<a class=link href='https://store.steampowered.com/app/1237970/Titanfall_2/'>Titanfall 2</a> Veteran", "Daily <a class=link href='https://en.wikipedia.org/wiki/Manual_transmission'>Stick Shift</a> Driver", "Web Developer", "Highly recommend <a class=link href='https://nextcloud.com/'>Nextcloud</a>", "Compile first, ask questions later."]
-
-        const random = Math.floor( Math.random() * arr.length );
-        document.getElementById("main_subtitle").innerHTML = arr[random];
-        // document.getElementById("main_subtitle").innerHTML = arr[arr.length - 1];
-    </script>
-    <script>
-        const arr = ["Get in contact.", "Have inquiries?", "Want to work together?", "Need help with something?", "Want to get in touch?", "Business idea?", "Project idea?"];
-        const random = Math.floor( Math.random() * arr.length );
-        document.getElementById("contact").getElementsByTagName("h2")[0].innerHTML = arr[random];
-    </script>
-
+    <script src="../scripts/joanne-background.js"></script>
+    <script src="../scripts/subtitle.js"></script>
+    <script src="../scripts/contact.js"></script>
     <script>
 const hr = document.querySelectorAll('hr');
 // Create the observer, same as before:
