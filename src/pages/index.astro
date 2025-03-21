@@ -54,7 +54,7 @@ import { tools } from '../maps/tools.json';
                 <!-- </ul> -->
                 <!-- <a id="main__button" href="/now">New "now" page</a> -->
                 <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
-                <!-- <p id="main_paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p> -->
+                <!-- <p id="main__paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p> -->
             </div>
             
         </section>
@@ -107,20 +107,5 @@ import { tools } from '../maps/tools.json';
     <script src="../scripts/joanne-background.js"></script>
     <script src="../scripts/subtitle.js"></script>
     <script src="../scripts/contact.js"></script>
-    <script>
-const hr = document.querySelectorAll('hr');
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        hr.forEach((element) => {
-            element.classList.add('active');
-        })
-        return;
-    }
-    });
-});
-
-observer.observe(document.querySelector('hr'));
-    </script>
+    <script src="../scripts/hr.js"></script>
 </Layout>
