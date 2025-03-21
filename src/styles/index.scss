@@ -26,11 +26,11 @@
 	animation-fill-mode: forwards;
 }
 
-#main_title {
+#main__title {
     font-size: 7rem;
     animation: 1s ease 0s 1 easeInToTop;
 }
-#main_subtitle {
+#main__subtitle {
     font-size: 3rem;
     opacity: 0;
     animation: 0.5s ease-out 1s 1 easeInToBottom;
@@ -47,7 +47,7 @@
 	animation-fill-mode: forwards;
 }
 
-#main_paragraph {
+#main__paragraph {
 	margin-top: 25px;
 	font-size: 2rem;
 	opacity: 0;
@@ -55,7 +55,7 @@
     animation-fill-mode: forwards;
 }
 
-#main_button {
+#main__button {
 	border: 3px $color_3 solid;
 	border-radius: 25px;
 	background: none;
@@ -77,7 +77,7 @@
 	}
 }
 
-#contact_button {
+#contact__button {
 	transition: all 0.3s ease;
 	&:hover {
 		color: #CF9FFF;
@@ -118,6 +118,13 @@
 	height: 110vh;
 }
 
+#joanne-section
+{
+	top: -90px;
+	position: absolute;
+	height: 110vh;
+}
+
 .background-filter{
 	position:relative;
 
@@ -138,7 +145,7 @@
 }
 
 
-.main_links {
+.main__links {
 	flex-wrap:wrap;
 	position: relative;
 	z-index: 2;
@@ -202,7 +209,7 @@ hr.active {
 }
 
 @mixin section{
-	.section_image{
+	.section__image{
 		border-radius: 25px;
         height: auto;
         // border: 3px solid $color_1;
@@ -241,7 +248,7 @@ hr.active {
 	@include section;
 }
 
-.contact_section{
+.contact__section{
 	@include section;
 }
 
@@ -252,13 +259,13 @@ hr.active {
 	hr{
 		width: 0;
 	}
-	#main_title{
+	#main__title{
 		font-size: 4rem;
 	}
-	#main_subtitle{
+	#main__subtitle{
 		font-size:2rem;
 	}
-	#main_paragraph {
+	#main__paragraph {
 		font-size: 1.5rem;
 	}
 	.next_section{
@@ -271,7 +278,7 @@ hr.active {
 		.content{
 			order: 2;
 		}
-		.section_image{
+		.section__image{
 			max-width: 40vh;
 			margin-top: 15px; 
 			align-items: center;
@@ -302,7 +309,7 @@ hr.active {
 			font-size: 1rem;
 		}
 	}
-	.contact_section{
+	.contact__section{
 		h2 {
 			font-size: 2.5rem;
 		}
@@ -313,13 +320,13 @@ hr.active {
 			font-size: 1.5rem;
 		}
 	}
-	#main_button{
+	#main__button{
 		font-size: 1em;
 		&:hover {
 			font-size: 1.5rem;
 		}
 	}
-	#contact_button{
+	#contact__button{
 		font-size: 1em;
 		&:hover {
 			font-size: 1.5rem;
