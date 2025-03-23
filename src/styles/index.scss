@@ -14,7 +14,7 @@
 		backdrop-filter: blur(5px) brightness(0%);
 	}
 	100% {
-		backdrop-filter: blur(5px) brightness(35%);
+		backdrop-filter: blur(1px) brightness(50%);
 	}
 
 }
@@ -274,9 +274,9 @@ hr.active {
 		max-width: 90vw;
 		.joanne__info{
 			h1{
-				font-size: 1rem;
+				font-size: 2rem;
 			}
-			h2{
+			h3{
 				font-size: 1rem;
 			}
 		}
