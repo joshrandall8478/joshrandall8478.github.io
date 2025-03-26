@@ -35,6 +35,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          lfs: true
       - name: Detect package manager
         id: detect-package-manager
         run: |
@@ -70,9 +72,9 @@ jobs:
             --site "${{ steps.pages.outputs.origin }}" \
             --base "${{ steps.pages.outputs.base_path }}"
         working-directory: ${{ env.BUILD_PATH }}
-      - name: Pull Git LFS files
-        run: git lfs pull
-        working-directory: ${{ env.BUILD_PATH }}
+      # - name: Pull Git LFS files
+      #   run: git lfs pull
+      #   working-directory: ${{ env.BUILD_PATH }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
