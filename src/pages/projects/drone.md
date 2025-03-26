@@ -45,6 +45,9 @@ Once the user has safely landed, the data collection will stop. The program will
 At the end of the Fall 2024 semester, we got the project to a point where we could start working on the web design and the in real life checkpoints for the drone. The PHP website directly connects to the MySQL database, and displays the data in a table format. The drone program has checkpoints that the pilot must fly to in the correct order to complete the course. If the pilot successfully completes the course: it will send the time and user data to the database and display the time on the website, which acts as our "leaderboard". 
 <video muted=true autoplay=true controls=true playInline=true loop=true src="/assets/Drone_Demo.mp4"></video>
 
+![Website](/assets/Screenshot_20250326_185055.png)
+<figcaption><i><a class=link href="https://drone.joshrandall.net">Website for leaderboard</a></i></figcaption>
+
 ---
 
 ## Symposium
