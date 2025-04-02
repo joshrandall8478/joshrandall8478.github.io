@@ -254,13 +254,56 @@ hr.active {
 #joanne__content{
 	display: grid;
 	max-width: 80vw;
-	grid-template-columns: 1fr 0.5fr;
-	#joanne_photo{
-		img{
-			max-width: 100%;
-			border: 3px solid $color_1;
-			border-radius: 25px;
-		}
+	grid-template-columns: 2fr 1fr;
+	
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+.joanne__info{
+	h1{
+		animation: 1s ease-in 0s fadeIn;
+	}
+	h3{
+		opacity: 0;
+		animation: 1s ease-in 0.5s fadeIn forwards;
+	}
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+}
+
+.joanne__photo{
+	img{
+		opacity: 0;
+		animation: 1s ease-out 0.4s fadeIn forwards;
+		width: 400px;
+		max-width: 60vw;
+		height: auto;
+		border: 3px solid $color_1;
+		border-radius: 25px;
+	}
+}
+@media screen and (max-width: 1200px) {
+	#main__button{
+		font-size: 1rem;
 	}
 }
 

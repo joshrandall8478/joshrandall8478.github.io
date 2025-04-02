@@ -1,0 +1,121 @@
+@use 'blog.scss' as *;
+
+.joanne__container{
+    display: flex;
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 25px 0px;
+}
+.joanne__img__container{
+    z-index:2;
+    border: 3px solid rgb(239, 236, 239);
+    border-radius: 25px;
+    background-color: transparent;
+}
+.joanne__img{
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+    width: 800px;
+    height: 500px;
+    border-radius: 25px;
+    background-color: transparent;
+    max-width: 80vw;
+    opacity: 0;
+    background-image: url('/assets/joanne/A170F83B-FCDC-467A-95C3-36612EB7FB19.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.joanne__img__background{
+    background-color: #000;
+    opacity: 1;
+}
+.cover{
+    opacity: 0;
+    background-color: black;
+}
+.fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+}
+
+.fade-out {
+    animation: fade-out 1s ease-in-out forwards;
+}
+.background-fade-in {
+    animation: background-fade-in 1s ease-in-out forwards;
+}
+
+.background-fade-out {
+    animation: background-fade-out 1s ease-in-out forwards;
+}
+
+@keyframes background-fade-in {
+    0% {
+        background-color: inherit;
+        background-image: inherit;
+    }
+    100% {
+        background-color: rgba(0, 0, 0, 0.8);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    }
+}
+
+@keyframes background-fade-out {
+    0% {
+        background-color: rgba(0, 0, 0, 0.8);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8));
+    }
+    100% {
+        background-color: inherit;
+        background-image: inherit;
+    }
+}
+
+@keyframes fade-in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.fade-in-black {
+    animation: fade-in-black 1s ease-in-out forwards;
+}
+
+.fade-out-black {
+    animation: fade-out-black 1s ease-in-out forwards;
+}
+
+@keyframes fade-in-black {
+    0% {
+        background-color: black;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes fade-out-black {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: black;
+    }
+}
