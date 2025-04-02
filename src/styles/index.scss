@@ -304,7 +304,7 @@ hr.active {
 }
 
 .right-side{
-	padding-top: 50px;
+	padding-top: 120px;
 }
 @media screen and (max-width: 1200px) {
 	#main__button{
@@ -317,6 +317,8 @@ hr.active {
 @media screen and (max-width: 960px) {
 	.right-side{
 		padding-top: 0px;
+		position: relative;
+		top: -50px;
 	}
 	.joanne__photo{
 		img{
