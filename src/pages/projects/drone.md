@@ -1,11 +1,11 @@
 ---
-title: 'Drone Project'
+title: 'Drone Racing Competition'
 date: "3/30/25"
 originalDate: "10/30/24"
-subtitle: "Database project for school"
+subtitle: "Real world database interaction project"
 image:
     url: '/assets/IMG_1280_preview.jpeg'
-    alt: 'Drone hovering'
+    alt: 'Group photo at the symposium'
 layout: ../../layouts/ProjectLayout.astro
 tools: ["python","github","docker","database","php"] # An array of used languages and coding tools
 draft: false
