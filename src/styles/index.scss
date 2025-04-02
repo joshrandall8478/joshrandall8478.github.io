@@ -277,11 +277,12 @@ hr.active {
 
 .joanne__info{
 	h1{
-		animation: 1s ease-in 0s fadeIn;
+		opacity: 0;
+		animation: 1s ease-in 0.4s fadeIn forwards;
 	}
 	h3{
 		opacity: 0;
-		animation: 1s ease-in 0.5s fadeIn forwards;
+		animation: 1s ease-in 0.8s fadeIn forwards;
 	}
 	display: flex;
 	flex-direction: column;
@@ -293,7 +294,7 @@ hr.active {
 .joanne__photo{
 	img{
 		opacity: 0;
-		animation: 1s ease-out 0.4s fadeIn forwards;
+		animation: 1s ease-out 0s fadeIn forwards;
 		width: 400px;
 		max-width: 60vw;
 		height: auto;
@@ -301,19 +302,34 @@ hr.active {
 		border-radius: 25px;
 	}
 }
+
+.right-side{
+	padding-top: 50px;
+}
 @media screen and (max-width: 1200px) {
 	#main__button{
-		font-size: 1rem;
+		font-size: 2rem;
 	}
 }
 
 
+
 @media screen and (max-width: 960px) {
+	.right-side{
+		padding-top: 0px;
+	}
+	.joanne__photo{
+		img{
+
+			max-width: 80vw;
+		}
+	}
 	#joanne__content{
 		// display: flex;
 		margin-top: 200px;
-		grid-template-columns: none;
-		grid-template-rows: 1fr 1fr;
+		display: flex;
+		flex-direction: column;
+
 		max-width: 90vw;
 		.joanne__info{
 			h1{
