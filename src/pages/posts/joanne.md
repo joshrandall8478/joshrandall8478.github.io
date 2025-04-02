@@ -1,6 +1,6 @@
 ---
 title: 'Joanne Randall'
-date: "3/31/25"
+date: "4/2/25"
 author: "Joshua Randall"
 description: "In memory of my grandmother"
 image:
