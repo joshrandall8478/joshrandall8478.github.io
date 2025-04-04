@@ -2,10 +2,11 @@
 
 .joanne__container{
     display: flex;
-    width: 80vw;
+    max-width: 80vw;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
     padding: 25px 0px;
 }
 .joanne__img__container{
