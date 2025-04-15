@@ -1,10 +1,14 @@
 ---
-date: "4/3/25"
+date: "4/15/25"
 image:
-    url: '/assets/Screenshot_20250403_092009.png'
-    alt: 'Gentoo desktop on Thinkpad'
+    url: '/assets/IMG_2015.png'
+    alt: 'Arch Desktop'
 layout: ../layouts/NowLayout.astro
 ---
+
+*"This too shall pass"*
+
+Pushing through the last final weeks of my last intensive semester.
 
 ## <i class="fa-solid fa-terminal"></i> Coding Projects
 
@@ -16,9 +20,12 @@ layout: ../layouts/NowLayout.astro
 - Academic Projects
   - [Engage](/projects/engage) - A short video sharing platform built with React
   - [Drone Racing Competition](/projects/drone) - Symposium project
+  - Eclipse - Group Unity Project
+  - ApproxTrain Presentations - Group project where we use approximate multipliers to train Deep Neural Networks.
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
 - SQL
+- Postgres (coming soon)
 - React
 - Vite
 - ~~Nix~~ Hell no
