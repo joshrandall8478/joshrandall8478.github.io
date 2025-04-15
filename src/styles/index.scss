@@ -14,7 +14,7 @@
 		backdrop-filter: blur(5px) brightness(0%);
 	}
 	100% {
-		backdrop-filter: blur(1px) brightness(50%);
+		backdrop-filter: blur(5px) brightness(35%);
 	}
 
 }
@@ -251,97 +251,8 @@ hr.active {
 .contact__section{
 	@include section;
 }
-#joanne__content{
-	display: grid;
-	max-width: 80vw;
-	grid-template-columns: 2fr 1fr;
-	
-}
-@keyframes fadeIn {
-	0% {
-		opacity: 0;
-	}
-	100% {
-		opacity: 1;
-	}
-}
-
-@keyframes fadeOut {
-	0% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
-}
-
-.joanne__info{
-	h1{
-		opacity: 0;
-		animation: 1s ease-in 0.4s fadeIn forwards;
-	}
-	h3{
-		opacity: 0;
-		animation: 1s ease-in 0.8s fadeIn forwards;
-	}
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-}
-
-.joanne__photo{
-	img{
-		opacity: 0;
-		animation: 1s ease-out 0s fadeIn forwards;
-		width: 400px;
-		max-width: 60vw;
-		height: auto;
-		border: 3px solid $color_1;
-		border-radius: 25px;
-	}
-}
-
-.right-side{
-	padding-top: 120px;
-}
-@media screen and (max-width: 1200px) {
-	#main__button{
-		font-size: 2rem;
-	}
-}
-
-
 
 @media screen and (max-width: 960px) {
-	.right-side{
-		padding-top: 0px;
-		position: relative;
-		top: -50px;
-	}
-	.joanne__photo{
-		img{
-
-			max-width: 80vw;
-		}
-	}
-	#joanne__content{
-		// display: flex;
-		margin-top: 200px;
-		display: flex;
-		flex-direction: column;
-
-		max-width: 90vw;
-		.joanne__info{
-			h1{
-				font-size: 2rem;
-			}
-			h3{
-				font-size: 1rem;
-			}
-		}
-	}
 	.background{
 		background-attachment: scroll;
 	}
