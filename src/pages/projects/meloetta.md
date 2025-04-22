@@ -1,5 +1,5 @@
 ---
-title: 'Project Meloetta'
+title: 'Project Meloetta (Deprecated)'
 date: "7/15/24"
 originalDate: "1/4/24"
 subtitle: 'A Lightweight Music Discord Bot'
@@ -9,7 +9,7 @@ image:
 tools: ['python', 'docker', 'gitlab', 'discord']
 layout: ../../layouts/ProjectLayout.astro
 draft: false
-unlisted: false
+unlisted: true
 ---
 
 <a href="https://discord.com/api/oauth2/authorize?client_id=922939931729469471&permissions=414501375040&scope=bot"  class=button>Invite Meloetta</a>
