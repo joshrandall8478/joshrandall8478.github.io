@@ -24,7 +24,7 @@ The game has 5 usable cards (with more to come later), with different special us
   - While bludgeoning breaks shield, it will still stun the opponent.
 
 The games aesthetics and mechanics were handled mostly individually:
-- Anjana was responsible mainly for the aesthetics and UI flow. This game was mainly her idea, as we were considering an open world game. Once we realized this was too ambitious, she redirected us to doing a card game. She set the aesthetic tone for the game, created the board, added background images, etc. She created the pause menu and the intial title screen layout. She was also responsible for adding 
+- Anjana was responsible mainly for the aesthetics and UI flow. This game was mainly her idea, as we were considering an open world game. Once we realized this was too ambitious, she redirected us to doing a card game. She set the aesthetic tone for the game, created the board, added background images, etc. She created the pause menu and the initial title screen layout.
 - James created the cards, and found the sound and music for the game. Him and I worked on getting the right sounds for each action, and making the game sounds feel engaging during play.
 - I was responsible for getting the core functionality of the game to work, determining most of the rules, and implementing how the enemy AI functions. I also created the animated title screen that is visible on the web build, compiling and deploying the web build, and extra branding assets for the game.
 
