@@ -8,9 +8,6 @@
         "js":"fa-brands fa-square-js",
         "html":"fa-brands fa-html5",
         "css":"fa-brands fa-css3",
-        "c":"fa-brands fa-c",
-        "cpp":"fa-brands fa-cpp",
-        "csharp":"fa-brands fa-csharp",
         "go":"fa-brands fa-go",
         "nodejs":"fa-brands fa-node-js",
         "vue":"fa-brands fa-vuejs",
@@ -23,6 +20,7 @@
         "discord":"fa-brands fa-discord",
         "database":"fa-solid fa-database",
         "php":"fa-brands fa-php",
-        "fork":"fa-solid fa-code-fork"
+        "fork":"fa-solid fa-code-fork",
+        "unity":"fab fa-unity"
     }
 }
