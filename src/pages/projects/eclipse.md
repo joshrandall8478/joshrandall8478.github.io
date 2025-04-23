@@ -7,7 +7,7 @@ image:
     url: '/assets/eclipse.png'
     alt: 'Eclipse Card game'
 layout: ../../layouts/ProjectLayout.astro
-tools: ["unity","html", "github"] # An array of used languages and coding tools
+tools: ["unity", "html", "js", "github"] # An array of used languages and coding tools
 draft: false
 unlisted: false
 ---
