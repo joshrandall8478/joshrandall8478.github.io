@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
 
 // ! Update this variable EVERY TIME this page is updated
-const dateUpdated = "3/13/25"
+const dateUpdated = "7/19/25"
 ---
 
 <Layout title="About" currentPath={currentPath}>
@@ -48,7 +48,7 @@ const dateUpdated = "3/13/25"
                 <hr class="skills__divider">
                 <div class="skills__category">
                     <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/arch-linux-icon-2048x2048-dt4u7yf0.png">
+                        <img src="/assets/arch-linux.png">
                         <h2>Arch Linux</h2>
                     </div>
                     <div class="skills__item">
@@ -66,30 +66,6 @@ const dateUpdated = "3/13/25"
                     <div class="skills__item">
                         <img src="https://freepngimg.com/save/71407-suse-get-started-button-opensuse-mate-linux/1024x1024" alt="">
                         <h2>openSUSE</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/nixos-icon-2048x1776-8czr8nir.png">
-                        <h2>NixOS</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/77/Rocky_Linux_logo.svg">
-                        <h2>Rocky Linux</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png">
-                        <h2>Ubuntu</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/linux-fedora-icon-1024x1024-mhu2qrjp.png">
-                        <h2>Fedora</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/distributor-logo-linux-mint-icon-512x446-l6do6zt7.png">
-                        <h2>Linux Mint</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/distributor-logo-endeavouros-icon-2048x1707-6lrk99z2.png">
-                        <h2>Endeavor</h2>
                     </div>
                     
                     <div class="skills__item">
@@ -138,7 +114,7 @@ const dateUpdated = "3/13/25"
                         <h2>R</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/programming-language-c-icon-1926x2048-3r58uty1.png" alt="">
+                        <img src="/assets/1200px-The_C_Programming_Language_logo.svg.png" alt="">
                         <h2>C</h2>
                     </div>
                     <div class="skills__item">
@@ -167,16 +143,16 @@ const dateUpdated = "3/13/25"
                 <hr class="skills__divider">
                 <div class="skills__category">
                     <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/node-js-icon-454x512-nztofx17.png" alt="">
-                        <h2>NodeJS</h2>
-                    </div>
-                    <div class="skills__item">
                         <i class="fa-brands fa-docker"></i>
                         <h2>Docker</h2>
                     </div>
                     <div class="skills__item">
                         <i class="fab fa-cloudflare"></i>
                         <h2>CloudFlare</h2>
+                    </div>
+                    <div class="skills__item">
+                        <img src="/assets/68747470733a2f2f63616464797365727665722e636f6d2f7265736f75726365732f696d616765732f66617669636f6e2e706e67" alt="">
+                        <h2>Caddy</h2>
                     </div>
                 </div>
                 <h2 class="category__titles"><a class="fa-solid fa-server"></a> Homelab</h2>
@@ -191,10 +167,6 @@ const dateUpdated = "3/13/25"
                         <h2>Authentik</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/jellyfin-icon-512x512-nqen54ln.png">
-                        <h2>Jellyfin</h2>
-                    </div>
-                    <div class="skills__item">
                         <img src="/assets/bitwarden-icon-512x512-qdi0py2h.png">
                         <h2>Bitwarden</h2>
                     </div>
@@ -205,26 +177,6 @@ const dateUpdated = "3/13/25"
                     <div class="skills__item">
                         <i class="fa-brands fa-gitlab"></i>
                         <h2>Gitlab</h2>
-                    </div>
-                    <!-- <div class="skills__item">
-                        <img src="https://nextcord.dev/icon.png">
-                        <h2>Nextcord</h2>
-                    </div> -->
-                    <div class="skills__item">
-                        <img style="filter: grayscale(1) brightness(1)" src="https://static-00.iconduck.com/assets.00/uptime-kuma-icon-512x469-ce3ut52z.png">
-                        <h2>Uptime Kuma</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/sonarr.png">
-                        <h2>Sonarr</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic-00.iconduck.com%2Fassets.00%2Fradarr-icon-462x512-bydv4e4f.png&f=1&nofb=1&ipt=b488fec2308e13bd245d814202065038a27d4b5fe4452ce8cafe4aee337793e2&ipo=images">
-                        <h2>Radarr</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/tailscale-icon-2048x2046-q4i0rfv1.png" alt="">
-                        <h2>Tailscale</h2>
                     </div>
                 </div>
                 <h2 class="category__titles"><a class="fa-solid fa-computer"></a> Main Desktop</h2>
@@ -255,48 +207,16 @@ const dateUpdated = "3/13/25"
                         <h2>32GB 3100hz</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/arch-linux-icon-2048x2048-dt4u7yf0.png">
-                        <h2>Dual-boot Arch</h2>
+                        <img src="/assets/arch-linux.png">
+                        <h2>Tri-boot Arch</h2>
+                    </div>
+                    <div class="skills__item">
+                        <img src="/assets/gentoo-icon-sm.png" alt="">
+                        <h2>Tri-boot Gentoo</h2>
                     </div>
                     <div class="skills__item">
                         <i class="fa-brands fa-microsoft"></i>
-                        <h2>Dual-boot Windows</h2>
-                    </div>
-                </div>
-                <h2 class="category__titles"><a class="fa-brands fa-apple"></a> Apple Ecosystem</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/iPhone 11 Pro Back.svg">
-                        <h2>iPhone 13 Pro</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/iPad.svg">
-                        <h2>iPad 9</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/Apple Watch Left.svg">
-                        <h2>Apple Watch SE 2</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/MacBook Air.svg">
-                        <h2>Macbook Air M1</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/Apple TV 4K.svg">
-                        <h2>Apple TV 4K</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/AirPods Pro.svg">
-                        <h2>AirPods Pro</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/Apple SVG/Beats.svg">
-                        <h2>Beats Solo<sup>3</sup></h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static.thenounproject.com/png/1122334-200.png">
-                        <h2>Homepod Mini</h2>
+                        <h2>Tri-boot Windows</h2>
                     </div>
                 </div>
     
@@ -324,10 +244,6 @@ const dateUpdated = "3/13/25"
                     <div class="skills__item">
                         <img src="https://www.svgrepo.com/show/424897/gimp-logo-editor-2.svg" alt="">
                         <h2>Gimp</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://static-00.iconduck.com/assets.00/resolve-icon-2039x2048-4vkuaciv.png" alt="">
-                        <h2>Davinci Resolve</h2>
                     </div>
                 </div>
 
