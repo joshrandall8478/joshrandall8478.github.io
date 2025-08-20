@@ -14,7 +14,7 @@ layout: ../layouts/NowLayout.astro
 - Academic Projects
   - [Engage](/projects/engage) - A short video sharing platform built with React
   - [Drone Racing Competition](/projects/drone) - Symposium project
-  - Eclipse - Group Unity Project
+  - [Eclipse](/projects/eclipse) - Group Unity Project
   - ApproxTrain Presentations - Group project where we use approximate multipliers to train Deep Neural Networks.
 
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
