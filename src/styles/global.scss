@@ -34,7 +34,7 @@
 // $navbar-background-transparent: #2c2c2cd8;
 
 // Black and Purple
-// $color_1: #e6e6fa; // Lavender
+// $color_1: whitesmoke; // Lavender
 // $color_2: #d8bfd8; // Thistle
 // $color_3: #9370db; // Medium Purple
 // $color_4: #F7F9F9; // Indigo
@@ -43,7 +43,7 @@
 // $navbar-background-solid: #1a1a1a; // Dark Gray
 // $navbar-background-transparent: #1a1a1ad8; // Dark Gray with Transparency
 
-//  Gray and pastel red
+// //  Gray and pastel red
 $color_1: whitesmoke;
 $color_2: #e9abab;
 $color_3: #ec6868; 
@@ -188,7 +188,7 @@ $font-family_1: "Poppins", sans-serif;
 	}
 }
 
-@mixin formatting{
+@mixin formatting {
 	.astro-code {
         // max-width: 75%;
         border: 2px solid $color_3;
@@ -225,7 +225,7 @@ $font-family_1: "Poppins", sans-serif;
     }
 }
 
-// @include formatting;
+@include formatting;
 
 // * MAIN STYLING
 * {
