@@ -1,8 +1,8 @@
 ---
-title: 'Git Interactive Rebasing'
+title: 'Editing Commits with Git Interactive Rebasing'
 date: "9/1/25"
 author: "Joshua Randall"
-description: "More information on interactive rebasing with git"
+description: "How to edit commits with interactive rebasing in git"
 image:
     url: 'https://github.blog/wp-content/uploads/2024/06/AI-DarkMode-4.png?resize=800%2C425'
     alt: 'Github'
