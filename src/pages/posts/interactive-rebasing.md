@@ -24,7 +24,7 @@ git rebase -i 54ae342~
 ```
 ![](/assets/Screenshot_20250901_100035.png)
 
-This is because `~` represents the **range of commits** for rebasing. Once we make our modifications, we can follow up with `git commit --amend`. To remove a commit like this, force pushing is required. Make sure to talk with everyone involved in the project + review all changes before force pushing.
+This is because `~` represents the **range of commits** for rebasing. Once we make our modifications, we can follow up with `git commit --amend`. To edit/remove a commit like this, force pushing is required. Make sure to talk with everyone involved in the project + review all changes before force pushing.
 
 Here is an example video.
 <br>
