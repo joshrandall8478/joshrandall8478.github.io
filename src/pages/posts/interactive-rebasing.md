@@ -1,6 +1,6 @@
 ---
 title: 'Editing Commits with Git Interactive Rebasing'
-date: "9/1/25"
+date: "9/7/25"
 author: "Joshua Randall"
 description: "How to edit commits with interactive rebasing in git."
 image:
@@ -11,6 +11,10 @@ draft: false
 unlisted: false
 ---
 I cannot find any other resources that cover this part of git rebasing, but this is important.
+
+Sometimes while working on a project, another project member or yourself may commit and push something accidentally that you didn't want to have added to the repository. This can be something sensitive like API secrets, plain text credentials, or other sensitive information. Removing these secrets and making a new commit may not be enough, since the secret is permanent in the git commit history. How do we effectively rewrite history itself, and remove the secret completely from the repository's commit history?
+
+Enter **git interactive rebasing**.
 
 Say if you want to edit a **specific** commit and use `git rebase -i` to do so, you may find that the commit that you
 select won't be added in the list of commits to edit.
