@@ -1,7 +1,7 @@
 {
   "name": "joshrandallsite",
   "type": "module",
-  "version": "2025.10.31",
+  "version": "2025.12.01",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

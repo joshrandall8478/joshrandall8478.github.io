@@ -44,14 +44,24 @@
 // $navbar-background-transparent: #1a1a1ad8; // Dark Gray with Transparency
 
 // //  Gray and pastel red
-$color_1: whitesmoke;
-$color_2: #e9abab;
-$color_3: #ec6868; 
-$color_4: #f9f7f7; 
-$color_5: #540808;
-$background-color_1: #0d0d0d; // Almost Black
-$navbar-background-solid: #1a1a1a; // Dark Gray
-$navbar-background-transparent: #1a1a1ad8; // Dark Gray with Transparency
+// $color_1: whitesmoke;
+// $color_2: #e9abab;
+// $color_3: #ec6868;
+// $color_4: #f9f7f7;
+// $color_5: #540808;
+// $background-color_1: #0d0d0d; // Almost Black
+// $navbar-background-solid: #1a1a1a; // Dark Gray
+// $navbar-background-transparent: #1a1a1ad8; // Dark Gray with Transparency
+
+// Rust
+$color_1: #f5f5f0; // Warm Off-White
+$color_2: #f4a261; // Sandy Orange
+$color_3: #e76f51; // Rust Orange
+$color_4: #fefae0; // Cream
+$color_5: #8b4513; // Saddle Brown
+$background-color_1: #1a1512; // Deep Brown-Black
+$navbar-background-solid: #2a1f1a; // Dark Warm Gray
+$navbar-background-transparent: #2a1f1ad8; // Dark Warm Gray with Transparency
 
 
 $pagination-background: $navbar-background-transparent;
