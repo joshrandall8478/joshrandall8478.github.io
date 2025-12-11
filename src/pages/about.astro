@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
 
 // ! Update this variable EVERY TIME this page is updated
-const dateUpdated = "7/19/25"
+const dateUpdated = "12/10/25"
 ---
 
 <Layout title="About" currentPath={currentPath}>
@@ -24,8 +24,8 @@ const dateUpdated = "7/19/25"
                     <h3 id="intro">Hi! I'm Josh.</h3>
                     I am an aspiring software engineer + designer. I have started to learn professional languages
                     since 2019-2020, but have had an interest for programming since early high school. I am proficient in
-                    Windows, macOS, and Linux systems. I run Arch linux on my main desktop (since 2022), and I run an Apple ecosystem
-                    for school. I use both of these systems for software development purposes. I attend Eastern Michigan University, currently studying Computer Science.
+                    Windows, macOS, and Linux systems. I run Gentoo Linux on my main desktop (since 2025), and I run homelabs for school. 
+                    I use both of these systems for software development purposes. I attend Eastern Michigan University, currently studying Computer Science.
                     <br>
                     <br>
                     Besides coding and technology: I drive stick-shift/manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
@@ -48,12 +48,12 @@ const dateUpdated = "7/19/25"
                 <hr class="skills__divider">
                 <div class="skills__category">
                     <div class="skills__item">
-                        <img src="/assets/arch-linux.png">
-                        <h2>Arch Linux</h2>
-                    </div>
-                    <div class="skills__item">
                         <img src="/assets/gentoo-icon-sm.png" alt="">
                         <h2>Gentoo</h2>
+                    </div>
+                    <div class="skills__item">
+                        <img src="/assets/arch-linux.png">
+                        <h2>Arch Linux</h2>
                     </div>
                     <div class="skills__item">
                         <i class="fa-brands fa-microsoft"></i>
@@ -67,12 +67,6 @@ const dateUpdated = "7/19/25"
                         <img src="https://freepngimg.com/save/71407-suse-get-started-button-opensuse-mate-linux/1024x1024" alt="">
                         <h2>openSUSE</h2>
                     </div>
-                    
-                    <div class="skills__item">
-                        <img src="/assets/debian.svg" alt="">
-                        <h2>Debian</h2>
-                    </div>
-
                 </div>
                 <h2 class="category__titles"><a class="fa-solid fa-code"></a> Languages</h2>
                 <hr class="skills__divider">
@@ -207,16 +201,8 @@ const dateUpdated = "7/19/25"
                         <h2>32GB 3100hz</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="/assets/arch-linux.png">
-                        <h2>Tri-boot Arch</h2>
-                    </div>
-                    <div class="skills__item">
                         <img src="/assets/gentoo-icon-sm.png" alt="">
-                        <h2>Tri-boot Gentoo</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-microsoft"></i>
-                        <h2>Tri-boot Windows</h2>
+                        <h2>Gentoo</h2>
                     </div>
                 </div>
     
