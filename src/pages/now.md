@@ -1,16 +1,18 @@
 ---
-date: "8/17/25"
+date: "1/13/26"
 image:
-    url: '/assets/desktop.png'
+    url: 'https://github.com/joshrandall8478/dotfiles/raw/main/assets/desktop.png'
     alt: 'Gentoo Desktop'
 layout: ../layouts/NowLayout.astro
 ---
+
+🎊 Graduated! 🎊
 
 ## <i class="fa-solid fa-terminal"></i> Coding Projects
 
 - Personal Projects
   - Gentoo
-  - Servers
+  - [Homelab](https://sso.joshrandall.net)
 - Academic Projects
   - [Engage](/projects/engage) - A short video sharing platform built with React
   - [Drone Racing Competition](/projects/drone) - Symposium project
@@ -20,12 +22,13 @@ layout: ../layouts/NowLayout.astro
 ## <i class="fa-solid fa-pencil"></i> Concepts I'm Learning
 - Postgres
 - Gentoo
-- ~~Headless content management~~ (hopefully soon?)
+- Ghost CMS
 - traefik
 - nushell
-- rust (hopefully soon)
-- go (hopefully soon)
-- Hosting forgejo runners
+- Rust
+- Go (hopefully soon)
+- C#
+- .NET
 
 ## <i class="fa-brands fa-space-awesome"></i> Personal Endeavors
 - Virtual Machines and **[GPU Passthrough](https://gitlab.joshrandall.net/josh/kvm-gpu-scripts)**
@@ -43,6 +46,7 @@ layout: ../layouts/NowLayout.astro
 - Titanfall 2
 - Cult of the Lamb
 - Dead cells
+- Hades I/II
 
 <!-- ## <i class="fa-brands fa-youtube"></i> Content Focuses
 Some content ideas are in the works.
