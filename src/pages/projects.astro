@@ -1,22 +1,16 @@
 ---
 // pages/blog/[...page].astro
 // https://docs.astro.build/en/core-concepts/routing/#pagination
-import '../../styles/blog-list.scss';
-import Layout from '../../layouts/MainLayout.astro';
-export async function getStaticPaths({ paginate }) {
-  // Generate pages from our array of astronauts, with 2 to a page
-  const allPosts = await Astro.glob('../projects/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
-    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-  return paginate(nonDraftPosts, { pageSize: 4 });
-}
-import Pagination from '../../components/Pagination.astro';
+import '../styles/blog-list.scss';
+import Layout from '../layouts/MainLayout.astro';
+const allPosts = await Astro.glob('./projects/*.md');
+const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
+const posts = nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 // All paginated data is passed on the "page" prop
 const { page } = Astro.props;
-const { prev, next} = page.url;
 const currentPath = Astro.url.pathname;
 
-import { tools } from '../../maps/tools.json';
+import { tools } from '../maps/tools.json';
 ---
 
 <Layout title="Projects" currentPath={currentPath}>
@@ -24,7 +18,7 @@ import { tools } from '../../maps/tools.json';
             <div class="container">
                 <div class="content">
                 <ul class="blog__list">
-                    {page.data.map((post) => <li>
+                    {posts.map((post) => <li>
                     <a href={post.url}>
                     <div class="blog__item">
                         <div>
@@ -52,15 +46,6 @@ import { tools } from '../../maps/tools.json';
                     </ul>
                 </div>
             </div>
-<Pagination 
-    length={page.lastPage} 
-    currentUrl={page.url.current} 
-    currentPage={page.currentPage} 
-    firstUrl="/projects" 
-    prevUrl={prev} 
-    nextUrl={next} 
-    lastUrl={"/projects/" + page.lastPage}
-/>
         </section>
 
     
