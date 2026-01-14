@@ -4,7 +4,7 @@ import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
 
 // ! Update this variable EVERY TIME this page is updated
-const dateUpdated = "12/10/25"
+const dateUpdated = "01/13/26"
 ---
 
 <Layout title="About" currentPath={currentPath}>
@@ -15,22 +15,26 @@ const dateUpdated = "12/10/25"
                 <img src="/assets/Joshua-Randall-pfp.jpg">
                 <h1 id="main__title">About</h1>
                 <h2 id="main__subtitle">Joshua Randall</h2>
-                <h3>Computer Science Major<br> Graphic Designer<br> Tech Enthusiast</h3>
+                <h3>Computer Science Graduate<br> Software/Web Developer<br> Linux/Tech Enthusiast</h3>
                 
             </div>
             <div class="paragraph">
                 <h4>Last updated: {dateUpdated}</h4>
                 <p>
                     <h3 id="intro">Hi! I'm Josh.</h3>
-                    I am an aspiring software engineer + designer. I have started to learn professional languages
-                    since 2019-2020, but have had an interest for programming since early high school. I am proficient in
-                    Windows, macOS, and Linux systems. I run Gentoo Linux on my main desktop (since 2025), and I run homelabs for school. 
-                    I use both of these systems for software development purposes. I attend Eastern Michigan University, currently studying Computer Science.
+                    I am an aspiring DevOps/Software Engineer. I have started to learn professional languages
+                    since 2019-2020, but have had an interest for programming since early high school. I take special
+                    interest in Linux/UNIX based systems. I currently run Gentoo Linux on my main desktop (since 2025), and
+                    I run a small homelab cluster that used to be used for school.
+                    I use both of these systems for software development purposes.
+                    I graduated Eastern Michigan University in December 2025.
                     <br>
                     <br>
-                    Besides coding and technology: I drive stick-shift/manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
-                    and I have played violin for 6 years before the COVID-19 pandemic. I also play PC and switch games 
-                    such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, Cult of the Lamb, and Persona 3.
+                    Besides coding and technology: I drive manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
+                    and I have played violin for 6 years before the COVID-19 pandemic. I also play PC games 
+                    such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and Persona 3.
+                    Due to the rise and accessibility of the Steam Deck (and similar portable handhelds), 
+                    I've started to take special interest in the roguelike genre that has started to rise in the early 2020s, such as Hades I/II, Cult of the Lamb, Megabonk, Balatro, Inscryption, and more.
                     <br>
                     <br>
                     My <a class=link href="/now">Now Page</a> consists of what my current projects and focuses are, and would highly recommend taking a look.
@@ -43,7 +47,7 @@ const dateUpdated = "12/10/25"
         <br>
 
             <div class="skills">
-                <h1 id="skills__title">Skills</h1>
+                <h1 id="skills__title">Technologies</h1>
                 <h2 class="category__titles"><a class="fa-solid fa-compact-disc"></a> Operating Systems</h2>
                 <hr class="skills__divider">
                 <div class="skills__category">
@@ -104,10 +108,6 @@ const dateUpdated = "12/10/25"
                         <h2>SASS/SCSS</h2>
                     </div>
                     <div class="skills__item">
-                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcreazilla-store.fra1.digitaloceanspaces.com%2Ficons%2F3244383%2Fr-icon-md.png&f=1&nofb=1&ipt=a87adb9768a68b58ce8aef34635df1c495eb106634df63b6835fd804db879819&ipo=images">
-                        <h2>R</h2>
-                    </div>
-                    <div class="skills__item">
                         <img src="/assets/1200px-The_C_Programming_Language_logo.svg.png" alt="">
                         <h2>C</h2>
                     </div>
@@ -126,6 +126,10 @@ const dateUpdated = "12/10/25"
                     <div class="skills__item">
                         <i class="fa-brands fa-react"></i>
                         <h2>React</h2>
+                    </div>
+                    <div class="skills__item">
+                        <i class="fa-brands fa-rust"></i>
+                        <h2>Rust</h2>
                     </div>
                     <div class="skills__item">
                         <i class="fa-solid fa-terminal"></i>
@@ -203,33 +207,6 @@ const dateUpdated = "12/10/25"
                     <div class="skills__item">
                         <img src="/assets/gentoo-icon-sm.png" alt="">
                         <h2>Gentoo</h2>
-                    </div>
-                </div>
-    
-                <h2 class="category__titles"><a class="fa-solid fa-wand-magic-sparkles"></a> Design + Video Production</h2>
-                <div class="category__subtitles"><p>I've started to move away from Adobe towards open source / free alternatives.
-                    <br> Adobe icons created by <a href="https://www.flaticon.com/authors/freepik" title="graphic design icons">Freepik</a>.</p></div>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <img src="/assets/premiere-pro.png">
-                        <h2>Premiere Pro</h2>
-                    </div>
-                    <div class="skills__item" id="After Effects">
-                        <img src="/assets/after-effects.png">
-                        <h2>After Effects</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/photoshop.png">
-                        <h2>Photoshop</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/illustrator.png">
-                        <h2>Illustrator</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://www.svgrepo.com/show/424897/gimp-logo-editor-2.svg" alt="">
-                        <h2>Gimp</h2>
                     </div>
                 </div>
 
