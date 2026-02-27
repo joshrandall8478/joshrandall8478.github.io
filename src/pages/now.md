@@ -1,15 +1,14 @@
 ---
-date: "1/13/26"
+date: "2/26/26"
 image:
     url: 'https://github.com/joshrandall8478/dotfiles/raw/main/assets/desktop.png'
     alt: 'Gentoo Desktop'
 layout: ../layouts/NowLayout.astro
 ---
 
-🎊 Graduated! 🎊
+I am now employed 💼
 
 ## <i class="fa-solid fa-terminal"></i> Coding Projects
-
 - Personal Projects
   - Gentoo
   - [Homelab](https://sso.joshrandall.net)
