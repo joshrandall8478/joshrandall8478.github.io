@@ -3,7 +3,7 @@
 // https://docs.astro.build/en/core-concepts/routing/#pagination
 import '../styles/blog-list.scss';
 import Layout from '../layouts/MainLayout.astro';
-const allPosts = await Astro.glob('./projects/*.md');
+const allPosts = import.meta.glob('./projects/*.md');
 const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
 const posts = nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 // All paginated data is passed on the "page" prop

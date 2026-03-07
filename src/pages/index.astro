@@ -1,22 +1,38 @@
 ---
 import '../styles/index.scss';
 import Layout from '../layouts/MainLayout.astro';
+
+interface MarkdownPost {
+    frontmatter: {
+        draft?: boolean;
+        unlisted?: boolean;
+        date: string;
+        title: string;
+        description?: string;
+        author?: string;
+        image?: { url: string };
+        subtitle?: string;
+        tools?: string[];
+    };
+    url: string;
+}
+
 export async function getLatestProject() {
-    const allPosts = await Astro.glob('./projects/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
+    const allPosts = await import.meta.glob<MarkdownPost>('./projects/*.md', { eager: true });
+    const nonDraftPosts = Object.values(allPosts).filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
 const latestProject = await getLatestProject();
 export async function getLatestPost() {
-    const allPosts = await Astro.glob('./posts/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
+    const allPosts = await import.meta.glob<MarkdownPost>('./posts/*.md', { eager: true });
+    const nonDraftPosts = Object.values(allPosts).filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
     nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
     return nonDraftPosts[0];
 }
 const latestPost = await getLatestPost();
 const currentPath = Astro.url.pathname;
-import { tools } from '../maps/tools.json';
+// import { tools } from '../maps/tools.json';
 ---
 <Layout title="Home" currentPath={currentPath}>
     <!-- Mastodon Verification-->
@@ -53,37 +69,37 @@ import { tools } from '../maps/tools.json';
                 <h4>Date: {latestPost.frontmatter.date}</h4>
                 <h4>Author: {latestPost.frontmatter.author}</h4>
                 <p>{latestPost.frontmatter.description}</p>
-                <br>
+                <br />
                 <a class="button" href={latestPost.url}> Click here to learn more</a>
             </div>
                 
     </section>
         <hr>
         <section id="latest-project" class="next_section align_right">
-            <img class="section__image" src={latestProject.frontmatter.image.url}/>
+            <!-- <img class="section__image" src={latestProject.frontmatter.image.url}/>
                 <div class="content">
                     <h2>Latest Project</h2>
                     <h3>{latestProject.frontmatter.title}</h3>
                     <h4>Date: {latestProject.frontmatter.date}</h4>
                     <p>{latestProject.frontmatter.subtitle}</p>
                     {latestProject.frontmatter.tools.length > 0 && (
-                        <h4 class="tools">Languages/Tools: <br>
+                        <h4 class="tools">Languages/Tools: <br />
                         {latestProject.frontmatter.tools.map((tool) => (
                             <i class={tools[tool]}></i><span>&nbsp; </span>
                         ))}</h4>
                     )}
-                    <br>
+                    <br />
                     <a class="button" href={latestProject.url}> Click here to learn more</a>
-                </div>
+                </div> -->
                     
         </section>
 <section id="contact" class="contact__section background background-filter">
     <div class="content non-blurred">
         <h2></h2>
         <p>You can contact me by emailing me at <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a>.</p>
-        <br>
-        <p>Messaging me there will separate your contact request from my inbox,<br> allowing me to respond quick and appropriately.</p>
-        <br>
+        <br />
+        <p>Messaging me there will separate your contact request from my inbox,<br /> allowing me to respond quick and appropriately.</p>
+        <br />
         <a id="contact_button" class="button" href="mailto:contact@joshrandall.net"><i class="fa-solid fa-paper-plane"></i> Email me here</a>
     </div>
 </section>
