@@ -2,7 +2,7 @@
 date: "2/26/26"
 image:
     url: 'https://github.com/joshrandall8478/dotfiles/raw/main/assets/desktop.png'
-    alt: 'Gentoo Desktop'
+    alt: 'CachyOS Desktop'
 layout: ../layouts/NowLayout.astro
 ---
 
