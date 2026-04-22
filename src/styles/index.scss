@@ -90,12 +90,16 @@
 }
 
 .warning-banner{
+	color: $color_1;
 	position:relative;
 	z-index: 44;
 	background-color:#C65050;
 	top:0px;
 	text-align:center;
 	padding:10px;
+	.link {
+		color: $color_1;
+	}
 }
 
 .background{
