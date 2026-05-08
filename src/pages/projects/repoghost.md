@@ -57,7 +57,7 @@ Each of these agents is a node in the Jac graph. Edges define what data flows wh
 
 Jaseci's design goal is ambitious: one language that compiles to frontend, backend, and native binaries simultaneously. Here's what that looks like in practice — this is a canonical Jac todo app that shows the full-stack model:
 
-```jac
+```
 node Todo {
     has title: str, category: str = "other", done: bool = False;
 }
