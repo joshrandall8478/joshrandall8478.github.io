@@ -51,7 +51,7 @@
 	margin-top: 25px;
 	font-size: 2rem;
 	opacity: 0;
-	animation: 0.5s ease-out 2s 1 easeInToBottom, 0.5s ease-out 5s 1 easeOutToBottom;;
+	animation: 0.5s ease-out 1.5s 1 easeInToBottom, 0.5s ease-out 5s 1 easeOutToBottom;;
     animation-fill-mode: forwards;
 }
 
@@ -160,7 +160,7 @@
 	justify-content: center;
 	font-size: 3rem;
 	opacity: 0;
-	animation: 0.5s ease-out 1.5s 1 easeInToBottom;
+	animation: 0.5s ease-out 1s 1 easeInToBottom;
 	animation-fill-mode: forwards;
 	a {
 		color: $color_1;
