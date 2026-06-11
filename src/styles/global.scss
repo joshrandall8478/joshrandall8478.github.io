@@ -461,9 +461,14 @@ img {
 		border-bottom-color: $line-soft;
 	}
 
+	// While the menu is open the bar is solid, so the blur is not needed —
+	// and it must be off: backdrop-filter turns the nav into the containing
+	// block for the fixed menu panel, clipping it to the bar's height.
 	&.is-open {
 		background: #070a08;
 		border-bottom-color: $line-soft;
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
 	}
 }
 
