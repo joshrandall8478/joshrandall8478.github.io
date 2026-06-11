@@ -1,58 +1,81 @@
 @use 'global.scss' as *;
 @use 'blog.scss' as *;
-#now-img {
-    margin: auto;
-    border-radius: 25px;
-    height: auto;
-    border: 3px solid $color_1;
-    max-width: 60%;
+
+.now {
+	padding-bottom: 70px;
 }
 
-#now-title{
-    margin-top: 10px;
+.now__inner {
+	max-width: 900px;
 }
 
-.now-content{
-    @extend .blog__content;
-    padding-bottom: 20px;
-    text-align: left;
-    h2 {
-        display: inline-block;
-        border-bottom: 2px solid $color_1;
-        padding-bottom: 2px;
-        border-bottom-style: dashed;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
-    @media screen and (max-width: 1000px){
-        h2{
-            display: block;
-        }
-    }
-    #icon {
-		// Filter converts images to whitesmoke (approximately)
-		filter: brightness(0) invert(95%);
-		width: auto;
-		height: 25px;
-        border-radius: 0px;
-        // height: auto;
-        border: none;
-        max-width: none;
-        padding: 0;
-        margin: 0;
+.now__accent {
+	color: $green;
+	font-family: $font-mono;
+	font-weight: 500;
+}
+
+.now__updated {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin-top: 18px;
+	color: $muted;
+	font-size: 0.95rem;
+}
+
+.now__cover {
+	margin: 10px 0 26px;
+
+	img {
+		width: 100%;
+		height: auto;
+		max-height: 460px;
+		object-fit: cover;
+		border-radius: var(--r-lg);
+		border: 1px solid $line-soft;
+		box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.8);
 	}
 }
 
-@media screen and (max-width: 1000px){
-    #now-title{
-        font-size: 2rem;
-    }
-    #now-img{
-        max-width: 70vw;
-    }
-    .now-content{
-        h2{
-            font-size: 1.6rem;
-        }
-    }
+.now__note {
+	font-size: 0.98rem;
+}
+
+.now-content {
+	padding-bottom: 20px;
+
+	h2 {
+		display: flex;
+		align-items: center;
+		gap: 14px;
+		border-bottom: none;
+		padding-bottom: 0;
+		margin-top: 2.2em;
+
+		i {
+			color: $green;
+			font-size: 0.85em;
+		}
+
+		&::after {
+			content: "";
+			flex: 1;
+			height: 1px;
+			background: linear-gradient(90deg, $line, transparent);
+		}
+	}
+
+	#icon {
+		@include green-tint;
+		display: inline-block;
+		width: auto;
+		height: 25px;
+		border-radius: 0;
+		border: none;
+		max-width: none;
+		padding: 0;
+		margin: 0;
+		vertical-align: -0.3em;
+	}
 }

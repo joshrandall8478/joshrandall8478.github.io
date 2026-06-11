@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/MainLayout.astro';
+---
+<Layout title="Page Not Found" currentPath="/404" description="Page not found.">
+    <section class="status-page">
+        <div class="status-page__grid" aria-hidden="true"></div>
+        <div class="wrap status-page__content">
+            <p class="eyebrow"><span class="prompt">~$</span> cd /this/page</p>
+            <p class="status-page__code">404</p>
+            <p class="status-page__msg">bash: cd: /this/page: No such file or directory</p>
+            <p>The page you're looking for doesn't exist, or it moved somewhere else.</p>
+            <div class="status-page__actions">
+                <a class="button button--solid" href="/"><i class="fa-solid fa-house" aria-hidden="true"></i> Back home</a>
+                <a class="button" href="/posts">Read posts</a>
+            </div>
+        </div>
+    </section>
+</Layout>

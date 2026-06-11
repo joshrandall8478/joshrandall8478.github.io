@@ -1,0 +1,43 @@
+---
+import { tools as toolMap } from '../maps/tools.json';
+import { formatDate } from '../utils/content.js';
+
+const {
+    url,
+    title,
+    image,
+    date,
+    description,
+    tools = [],
+    badge,
+    readTime,
+    eager = false,
+} = Astro.props;
+---
+<a class="article-card" href={url} data-reveal>
+    <div class="article-card__media">
+        <img
+            src={image?.url}
+            alt={image?.alt || title}
+            loading={eager ? "eager" : "lazy"}
+            decoding="async"
+        />
+        {badge && <span class="article-card__badge">{badge}</span>}
+    </div>
+    <div class="article-card__body">
+        <p class="article-card__meta">
+            <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>{formatDate(date)}</span>
+            {readTime && <span><i class="fa-regular fa-clock" aria-hidden="true"></i>{readTime} min read</span>}
+        </p>
+        <h3 class="article-card__title">{title}</h3>
+        {description && <p class="article-card__desc">{description}</p>}
+        {tools.length > 0 && (
+            <p class="article-card__tools">
+                {tools.map((tool) => (
+                    <i class={toolMap[tool]} title={tool} aria-label={tool}></i>
+                ))}
+            </p>
+        )}
+        <span class="article-card__more">Read more <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+    </div>
+</a>

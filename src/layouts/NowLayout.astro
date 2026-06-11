@@ -1,58 +1,52 @@
 ---
 import '../styles/now.scss';
+import BaseHead from '../components/BaseHead.astro';
 import TopBar from '../components/topbar.astro';
+import Footer from '../components/Footer.astro';
+import { formatDate } from '../utils/content.js';
+
 const { frontmatter } = Astro.props;
-let metaTitle = "Joshua Randall - Now";
-let currentPath = "/now";
+const currentPath = "/now";
 ---
 <!DOCTYPE html>
 <html id="mainHTML" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Data -->
-    <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content={metaTitle}>
-    <meta property="og:type" content="website">
-    <meta property="og:image" content={frontmatter.image.url}>
-    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
-    <meta property="og:description" content="Main website for Joshua Randall">
-    <!-- <meta name="theme-color" content="#77DD77"> -->
-
-    <!-- Stylesheet and Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Javascript Link -->
-    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>{metaTitle}</title>
+    <BaseHead
+        title="Now"
+        description="What Joshua Randall is working on, learning, and playing right now."
+        image={frontmatter.image?.url}
+        path={currentPath}
+    />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
-<script src="./analytics.js"></script>
 <body>
     <!-- Navbar -->
-    <TopBar/>
+    <TopBar currentPath={currentPath} />
     <!-- Main Content -->
-    <main>
-        <section>
-            <h1 id="now-title">What I'm doing now...</h1>
-            <img style="margin-bottom: 15px;" id="now-img" src={frontmatter.image.url} alt={frontmatter.image.alt}>
-            <p>Last updated: {frontmatter.date}</p>
-            <blockquote style="text-align:left; padding: 5px; margin: 10px;">This is <a class="link" href="https://nownownow.com/about">a now page</a>. If you have your own site, you should make one too.</blockquote>
-            <hr>
-            <div class="now-content">
-                <slot />
+    <main class="site-main">
+        <article class="now">
+            <div class="wrap now__inner">
+                <header class="page-head">
+                    <p class="eyebrow"><span class="prompt">~$</span> cat now.md</p>
+                    <h1>What I'm doing <span class="now__accent">now</span></h1>
+                    <p class="now__updated mono">
+                        <span class="pulse-dot" aria-hidden="true"></span>
+                        Last updated {formatDate(frontmatter.date)}
+                    </p>
+                </header>
+                <figure class="now__cover" data-reveal>
+                    <img id="now-img" src={frontmatter.image?.url} alt={frontmatter.image?.alt} />
+                </figure>
+                <blockquote class="now__note">
+                    This is <a class="link" href="https://nownownow.com/about">a now page</a>.
+                    If you have your own site, you should make one too.
+                </blockquote>
+                <div class="now-content prose">
+                    <slot />
+                </div>
             </div>
-        </section>
+        </article>
     </main>
-    
-    
+    <Footer />
+    <script src="../scripts/reveal.js"></script>
 </body>
 </html>

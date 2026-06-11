@@ -1,7 +1,7 @@
 {
   "name": "joshrandallsite",
   "type": "module",
-  "version": "2026.05.14",
+  "version": "2026.06.11",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,9 +10,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.1.10"
+    "astro": "^6.4.6"
   },
   "devDependencies": {
-    "sass": "^1.85.0"
+    "sass": "^1.100.0"
   }
 }

@@ -1,0 +1,21 @@
+---
+const { class: className = "" } = Astro.props;
+const socials = [
+    { href: "https://github.com/joshrandall8478", icon: "fa-brands fa-github", label: "GitHub" },
+    { href: "https://gitlab.joshrandall.net/josh", icon: "fa-brands fa-gitlab", label: "GitLab" },
+    { href: "https://www.linkedin.com/in/joshrandall8478/", icon: "fa-brands fa-linkedin", label: "LinkedIn" },
+    { href: "https://www.youtube.com/channel/UCzrgSiEhhs4tcPaZobybY4A", icon: "fa-brands fa-youtube", label: "YouTube" },
+    { href: "https://www.instagram.com/joshrandall8478/", icon: "fa-brands fa-instagram", label: "Instagram" },
+    { href: "https://bsky.app/profile/joshrandall.net", icon: "fa-brands fa-bluesky", label: "Bluesky" },
+    { href: "https://ohai.social/@pursuit", icon: "fa-brands fa-mastodon", label: "Mastodon", me: true },
+];
+---
+<ul class={`social-links ${className}`.trim()}>
+    {socials.map((s) => (
+        <li>
+            <a href={s.href} aria-label={s.label} title={s.label} rel={s.me ? "me" : undefined}>
+                <i class={s.icon}></i>
+            </a>
+        </li>
+    ))}
+</ul>

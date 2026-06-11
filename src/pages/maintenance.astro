@@ -1,27 +1,18 @@
 ---
 import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
-// import { tools } from '../maps/tools.json';
 ---
 <Layout title="Maintenance" currentPath={currentPath}>
-    <div class="container">
-        <i style="font-size: 5em;padding: 5px;" class="fa-solid fa-server"></i>
-        <h2 style="padding: 5px;">This service is currently under maintenance.</h2>
-        <h3 style="padding: 5px;" >Check our <a class=link href="https://status.joshrandall.net">status page</a> for more information.</h3>
-    </div>
-    <style>
-        .container{
-            margin: 0 auto;
-            position: relative;
-            /* display: block; */
-            align-items: center;
-            justify-content: center;
-            /* width: 50%; */
-            /* padding: 10px; */
-            text-align: center;
-            padding: 20px 0;
-            height: 50vh;
-            top: 25vh;
-        }
-    </style>
+    <section class="status-page">
+        <div class="status-page__grid" aria-hidden="true"></div>
+        <div class="wrap status-page__content">
+            <i class="status-page__icon fa-solid fa-server" aria-hidden="true"></i>
+            <h1>This service is currently under maintenance.</h1>
+            <p>It should be back shortly. Check the status page for live updates on all JRH services.</p>
+            <div class="status-page__actions">
+                <a class="button button--solid" href="https://status.joshrandall.net"><i class="fa-solid fa-tower-broadcast" aria-hidden="true"></i> View status page</a>
+                <a class="button" href="/">Back home</a>
+            </div>
+        </div>
+    </section>
 </Layout>

@@ -1,87 +1,62 @@
 ---
 import "../styles/blog.scss";
+import BaseHead from '../components/BaseHead.astro';
+import TopBar from '../components/topbar.astro';
+import Footer from '../components/Footer.astro';
+import { tools } from '../maps/tools.json';
+import { formatDate } from '../utils/content.js';
 
 const { frontmatter } = Astro.props;
-let metaTitle = "Joshua Randall - " + frontmatter.title;
-let currentPath = frontmatter.url.currentPath;
-const originalDate = frontmatter.originalDate;
-var originalDateTag;
-var updatedDateTag;
-originalDateTag = "Project Posted On: " + originalDate;
-if (frontmatter.date != originalDate) {
-  updatedDateTag = "Page Last Updated: " + frontmatter.date;
-}
-import TopBar from '../components/topbar.astro';
-import { tools } from '../maps/tools.json';
+const currentPath = frontmatter.url ?? "";
+const updated = frontmatter.date !== frontmatter.originalDate ? frontmatter.date : null;
 ---
-
-<html>
-  <!-- ... -->
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Data -->
-    <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content={metaTitle} >
-    <meta property="og:type" content="website">
-    <meta property="og:image" content={frontmatter.image.url}>
-    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
-    <meta property="og:description" content={frontmatter.subtitle}>
-    <!-- <meta name="theme-color" content="#77DD77"> -->
-
-    <!-- Stylesheet and Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-
-    <!-- Fediverse Credits -->
-     <meta name="fediverse:creator" content="@pursuit@ohai.social">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Javascript Link -->
-    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>{metaTitle}</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <BaseHead
+        title={frontmatter.title}
+        description={frontmatter.subtitle}
+        image={frontmatter.image?.url}
+        path={currentPath}
+    />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
-<script src="./analytics.js"></script>
-  <body>
+<body>
     <!-- Navbar -->
-    <TopBar/>
-  <main>
-    <section>
-        
-      <div class="blog__container">
-        <div id="back__container">
-            <a href="/projects"><i class="fa fa-arrow-left"></i> <span>Back to Projects</span></a>
-        </div>
-        <div class="blog__content">
-            <div class="blog-info">
-                <h1>{frontmatter.title}</h1>
-            <h2>{frontmatter.subtitle}</h2>
-            <h3>{updatedDateTag}</h3>
-            <h3>{originalDateTag}</h3>
-            {frontmatter.tools.length > 0 && (
-              <h3 class="tools">Languages/Tools: <br>
-              {frontmatter.tools.map((tool) => (
-                  <i class={tools[tool]}></i><span>&nbsp; </span>
-              ))}</h3>
-          )}
-            <div class="blog-image-container">
-                <img class="blog-image" src={frontmatter.image.url} alt={frontmatter.image.alt}>
+    <TopBar currentPath="/projects" />
+    <div class="read-progress" aria-hidden="true"><span id="read-progress-bar"></span></div>
+    <main class="site-main">
+        <article class="article">
+            <div class="wrap article__inner">
+                <a class="back-link" href="/projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a>
+                <header class="article__head">
+                    <p class="article__subtitle eyebrow">{frontmatter.subtitle}</p>
+                    <h1 class="article__title">{frontmatter.title}</h1>
+                    <div class="article__meta">
+                        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>Posted {formatDate(frontmatter.originalDate)}</span>
+                        {updated && <span><i class="fa-solid fa-rotate" aria-hidden="true"></i>Updated {formatDate(updated)}</span>}
+                    </div>
+                    {frontmatter.tools?.length > 0 && (
+                        <div class="article__tools">
+                            {frontmatter.tools.map((tool) => (
+                                <span class="chip"><i class={tools[tool]} aria-hidden="true"></i>{tool}</span>
+                            ))}
+                        </div>
+                    )}
+                    <figure class="article__cover">
+                        <img src={frontmatter.image?.url} alt={frontmatter.image?.alt ?? frontmatter.title} />
+                    </figure>
+                </header>
+                <div class="blog__content prose">
+                    <slot />
+                </div>
+                <footer class="article__foot">
+                    <a class="button" href="/projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to all projects</a>
+                </footer>
             </div>
-            </div>
-            <hr>
-            <slot />
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="../scripts/app.js"></script>
-  </body>
-  <!-- ... -->
+        </article>
+    </main>
+    <Footer />
+    <button id="to-top" type="button" aria-label="Back to top"><i class="fa-solid fa-angle-up" aria-hidden="true"></i></button>
+    <script src="../scripts/article.js"></script>
+</body>
 </html>

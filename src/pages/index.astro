@@ -1,102 +1,210 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import '../styles/index.scss';
 import Layout from '../layouts/MainLayout.astro';
-export async function getLatestProject() {
-    const allPosts = await Astro.glob('./projects/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
-    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-    return nonDraftPosts[0];
-}
-const latestProject = await getLatestProject();
-export async function getLatestPost() {
-    const allPosts = await Astro.glob('./posts/*.md');
-    const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
-    nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-    return nonDraftPosts[0];
-}
-const latestPost = await getLatestPost();
+import SocialLinks from '../components/SocialLinks.astro';
+import ArticleCard from '../components/ArticleCard.astro';
+import { published, readingTime } from '../utils/content.js';
+
+const posts = published(import.meta.glob('./posts/*.md', { eager: true }));
+const projects = published(import.meta.glob('./projects/*.md', { eager: true }));
+const latestPost = posts[0];
+const latestProject = projects[0];
 const currentPath = Astro.url.pathname;
-import { tools } from '../maps/tools.json';
+
+// Hero backdrop slideshow: gather the background GIFs at build time,
+// skipping the heaviest ones to keep the rotation light on bandwidth.
+// Resolved from the project root — page code is bundled elsewhere at build.
+const MAX_GIF_BYTES = 4 * 1024 * 1024;
+let heroGifs = [];
+try {
+    const gifDir = path.join(process.cwd(), 'public/assets/backgrounds/gif');
+    heroGifs = fs
+        .readdirSync(gifDir)
+        .filter((file) => file.endsWith('.gif'))
+        .filter((file) => fs.statSync(path.join(gifDir, file)).size <= MAX_GIF_BYTES)
+        .map((file) => `/assets/backgrounds/gif/${file}`);
+} catch {
+    // Without the folder the hero simply renders without the slideshow.
+}
 ---
-<Layout title="Home" currentPath={currentPath}>
+<Layout title="Home" currentPath={currentPath} flush>
     <!-- Mastodon Verification-->
-    <link rel="me" href="https://hachyderm.io/@pursuit"></link>
-    <!--<link rel="me" href="https://allthingstech.social/@josh"></link>
-    <link rel="me" href="https://urusai.social/@josh"></link> -->
-    <link rel="me" href="https://emich.social/@jranda10"></link>
-    <link rel="me" href="https://social.joshrandall.net/@josh"></link>
-    <link rel="me" href="https://ohai.social/@pursuit"></link>
-    <!-- Main Content -->
-    <!-- <div class="warning-banner"><h2>JRH services may go down unexpectedly from 5/8 to 5/15, as electrical problems in the apartment are fixed and handled. I apologize for the inconvenience.</h2></div> -->
-    <section id="main-section" class="background main-background-filter">
-            <div class="non-blurred container">
-                <div class="content">
-                <h1 id="main__title">Joshua Randall</h1>
-                <!-- <h2 id="main__subtitle"></h2> -->
-                <ul class="main__links">
-                    <li><a href="https://github.com/joshrandall8478" class="fa-brands fa-github"></a></li>
-                    <li><a href="https://gitlab.joshrandall.net/josh" class="fa-brands fa-gitlab"></a></li>
-                    <li><a href="https://www.linkedin.com/in/joshrandall8478/" class="fa-brands fa-linkedin"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCzrgSiEhhs4tcPaZobybY4A" class="fa-brands fa-youtube"></a></li>
-                    <li><a href="https://www.instagram.com/joshrandall8478/" class="fa-brands fa-instagram"></a></li>
-                    <li><a href="https://bsky.app/profile/joshrandall.net" class="fa-brands fa-bluesky"></a></li>
-                    <li><a rel="me" href="https://ohai.social/@pursuit" class="fa-brands fa-mastodon"></a></li>
-                    <!-- <li><a href="https://threads.net/joshrandall8478" class="fa-brands fa-threads"></a></li> -->
-                    <!-- <li><a href="mailto:contact@joshrandall.net" class="fa-solid fa-envelope "></a></li> -->
-                    <!-- <li><a class="fa-brands fa-discord"></a></li> -->
-                </ul>
-                <!-- <a id="main__button" href="/now">New "now" page</a> -->
-                <!-- <p id="main__paragraph">Site under construction, check back later ;)</p> -->
-                <p id="main__paragraph"><i class="fa-solid fa-angle-down"></i> Scroll for more <i class="fa-solid fa-angle-down"></i></p>
+    <link rel="me" href="https://hachyderm.io/@pursuit" />
+    <link rel="me" href="https://emich.social/@jranda10" />
+    <link rel="me" href="https://social.joshrandall.net/@josh" />
+    <link rel="me" href="https://ohai.social/@pursuit" />
+
+    <!-- Hero -->
+    <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true" data-gifs={JSON.stringify(heroGifs)}>
+            <div class="hero__bg-layer"></div>
+            <div class="hero__bg-layer"></div>
+        </div>
+        <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        <div class="hero__grid" aria-hidden="true"></div>
+        <div class="hero__glow" aria-hidden="true"></div>
+        <div class="wrap hero__content">
+            <p class="hero__eyebrow eyebrow"><span class="prompt">~$</span> whoami</p>
+            <h1 class="hero__title">Joshua Randall</h1>
+            <p class="hero__type mono">
+                <span id="typed" data-phrases='["Software Developer", "DevOps Engineer", "Linux Enthusiast", "Homelab Operator"]'></span><span class="hero__caret" aria-hidden="true"></span>
+            </p>
+            <p class="hero__tagline">
+                I build software and run infrastructure — from web apps and hackathon
+                projects to a self-hosted homelab, mostly from a terminal.
+            </p>
+            <div class="hero__cta">
+                <a class="button button--solid" href="/projects">View projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="button" href="/about">More about me</a>
             </div>
-            
-        </section>
-        <!-- <hr> -->
-        <section id="latest-post" class="next_section align_left" >
-            <img class="section__image" src={latestPost.frontmatter.image.url}/>
-            <div class="content">
-                <h2>Latest Post</h2>
-                <h3>{latestPost.frontmatter.title}</h3>
-                <h4>Date: {latestPost.frontmatter.date}</h4>
-                <h4>Author: {latestPost.frontmatter.author}</h4>
-                <p>{latestPost.frontmatter.description}</p>
-                <br>
-                <a class="button" href={latestPost.url}> Click here to learn more</a>
-            </div>
-                
+            <SocialLinks class="hero__social" />
+        </div>
+        <a class="hero__scroll" href="#featured" aria-label="Scroll down for more">
+            <span class="mono">scroll</span>
+            <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+        </a>
     </section>
-        <hr>
-        <section id="latest-project" class="next_section align_right">
-            <img class="section__image" src={latestProject.frontmatter.image.url}/>
-                <div class="content">
-                    <h2>Latest Project</h2>
-                    <h3>{latestProject.frontmatter.title}</h3>
-                    <h4>Date: {latestProject.frontmatter.date}</h4>
-                    <p>{latestProject.frontmatter.subtitle}</p>
-                    {latestProject.frontmatter.tools.length > 0 && (
-                        <h4 class="tools">Languages/Tools: <br>
-                        {latestProject.frontmatter.tools.map((tool) => (
-                            <i class={tools[tool]}></i><span>&nbsp; </span>
-                        ))}</h4>
-                    )}
-                    <br>
-                    <a class="button" href={latestProject.url}> Click here to learn more</a>
+
+    <!-- What I do -->
+    <section class="home-section" id="featured">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <p class="eyebrow"><span class="prompt">~$</span> ls focus/</p>
+                <h2>What I do</h2>
+            </div>
+            <div class="focus-grid" data-reveal-stagger>
+                <article class="focus-card">
+                    <span class="focus-card__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                    <h3>Software &amp; Web</h3>
+                    <p>
+                        Full-stack development across Python, Java, JavaScript, and Astro —
+                        from coursework and hackathon builds to this very site.
+                    </p>
+                </article>
+                <article class="focus-card">
+                    <span class="focus-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+                    <h3>DevOps &amp; Homelab</h3>
+                    <p>
+                        A self-hosted cluster running Jellyfin, Nextcloud, GitLab, and more —
+                        deployed with Docker, fronted by Caddy, secured behind Authentik SSO.
+                    </p>
+                </article>
+                <article class="focus-card">
+                    <span class="focus-card__icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                    <h3>Linux &amp; Open Source</h3>
+                    <p>
+                        Daily-driving Gentoo, maintaining dotfiles, experimenting with GPU
+                        passthrough, and sharing what breaks along the way.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest activity -->
+    <section class="home-section home-section--alt" id="latest">
+        <div class="wrap">
+            <div class="section-head section-head--row" data-reveal>
+                <div>
+                    <p class="eyebrow"><span class="prompt">~$</span> tail activity.log</p>
+                    <h2>Latest activity</h2>
                 </div>
-                    
-        </section>
-<section id="contact" class="contact__section background background-filter">
-    <div class="content non-blurred">
-        <h2></h2>
-        <p>You can contact me by emailing me at <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a>.</p>
-        <br>
-        <p>Messaging me there will separate your contact request from my inbox,<br> allowing me to respond quick and appropriately.</p>
-        <br>
-        <a id="contact_button" class="button" href="mailto:contact@joshrandall.net"><i class="fa-solid fa-paper-plane"></i> Email me here</a>
-    </div>
-</section>
-    <script src="../scripts/dynamic-topbar-background.js"></script>
-    <script src="../scripts/background.js"></script>
-    {/* <script src="../scripts/subtitle.js"></script> */}
-    <script src="../scripts/contact.js"></script>
-    <script src="../scripts/hr.js"></script>
+                <div class="section-head__links">
+                    <a class="link-arrow" href="/posts">All posts</a>
+                    <a class="link-arrow" href="/projects">All projects</a>
+                </div>
+            </div>
+            <div class="latest-grid" data-reveal-stagger>
+                <ArticleCard
+                    badge="Latest post"
+                    url={latestPost.url}
+                    title={latestPost.frontmatter.title}
+                    image={latestPost.frontmatter.image}
+                    date={latestPost.frontmatter.date}
+                    description={latestPost.frontmatter.description}
+                    readTime={readingTime(latestPost)}
+                    eager
+                />
+                <ArticleCard
+                    badge="Latest project"
+                    url={latestProject.url}
+                    title={latestProject.frontmatter.title}
+                    image={latestProject.frontmatter.image}
+                    date={latestProject.frontmatter.date}
+                    description={latestProject.frontmatter.subtitle}
+                    tools={latestProject.frontmatter.tools}
+                    eager
+                />
+            </div>
+            <a class="now-banner" href="/now" data-reveal>
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span class="now-banner__text"><strong>now</strong> — see what I'm currently building, learning, and playing.</span>
+                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="home-section contact-section" id="contact">
+        <div class="wrap">
+            <div class="contact-card" data-reveal="zoom">
+                <p class="eyebrow"><span class="prompt">~$</span> mail josh</p>
+                <h2 id="contact-heading">Want to get in touch?</h2>
+                <p>
+                    Email <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a> —
+                    it keeps your message separate from my main inbox, so I can respond
+                    quickly and appropriately.
+                </p>
+                <a class="button button--solid" href="mailto:contact@joshrandall.net">
+                    <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Email me
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="../scripts/hero.js"></script>
+    <script src="../scripts/hero-bg.js"></script>
+    <script>
+        // Typewriter for the hero role line.
+        const typed = document.getElementById('typed');
+        const phrases = JSON.parse(typed.dataset.phrases);
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            typed.textContent = phrases[0];
+        } else {
+            let phrase = 0;
+            let chars = 0;
+            let deleting = false;
+            const tick = () => {
+                const current = phrases[phrase];
+                chars += deleting ? -1 : 1;
+                typed.textContent = current.slice(0, chars);
+                let delay = deleting ? 38 : 70;
+                if (!deleting && chars === current.length) {
+                    delay = 2100;
+                    deleting = true;
+                } else if (deleting && chars === 0) {
+                    deleting = false;
+                    phrase = (phrase + 1) % phrases.length;
+                    delay = 420;
+                }
+                setTimeout(tick, delay);
+            };
+            setTimeout(tick, 900);
+        }
+
+        // Rotating contact heading.
+        const headings = [
+            'Get in contact.',
+            'Have inquiries?',
+            'Want to work together?',
+            'Need help with something?',
+            'Want to get in touch?',
+            'Business idea?',
+            'Project idea?',
+        ];
+        document.getElementById('contact-heading').textContent =
+            headings[Math.floor(Math.random() * headings.length)];
+    </script>
 </Layout>

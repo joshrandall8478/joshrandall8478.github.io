@@ -1,74 +1,51 @@
 ---
-// import '../styles/global.scss';
+import "../styles/joanne.scss";
+import BaseHead from '../components/BaseHead.astro';
 import TopBar from '../components/topbar.astro';
+import Footer from '../components/Footer.astro';
+import { formatDate } from '../utils/content.js';
 
 const { frontmatter } = Astro.props;
-let metaTitle = "Joshua Randall - " + frontmatter.title;
-let currentPath = frontmatter.url.currentPath;
-import "../styles/joanne.scss";
+const currentPath = frontmatter.url ?? "";
 ---
 <!DOCTYPE html>
-<html id="mainHTML" lang="en">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Data -->
-    <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content={metaTitle}>
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/preview.png">
-    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
-    <meta property="og:description" content="Main website for Joshua Randall">
-    <!-- <meta name="theme-color" content="#77DD77"> -->
-
-    <!-- Stylesheet and Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Javascript Link -->
-    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>{metaTitle}</title>
+    <BaseHead
+        title={frontmatter.title}
+        description={frontmatter.description}
+        image={frontmatter.image?.url}
+        path={currentPath}
+    />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
-<script src="./analytics.js"></script>
 <body>
     <!-- Navbar -->
-    <TopBar/>
-    <!-- Main Content -->
-    <main>
-        <section>
-            <div class="blog__container">
-                <div id="back__container">
-                    <a href="/posts"><i class="fa fa-arrow-left"></i> <span>Back to Posts</span></a>
-                </div>
-                
-                <div class="joanne__container">
-                    <div class="joanne__img__container">
-                        <div class="joanne__img"></div>
-                        <div class="joanne__img__background"></div>
+    <TopBar currentPath="/posts" />
+    <main class="site-main">
+        <article class="article joanne">
+            <div class="wrap article__inner">
+                <a class="back-link" href="/posts"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All posts</a>
+                <header class="article__head">
+                    <p class="joanne__memoriam">{frontmatter.description}</p>
+                    <h1 class="article__title">{frontmatter.title}</h1>
+                    <div class="article__meta">
+                        <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>Published {formatDate(frontmatter.date)}</span>
+                        <span><i class="fa-regular fa-user" aria-hidden="true"></i>{frontmatter.author}</span>
                     </div>
-
-                        <!-- <img src="/assets/joanne/A170F83B-FCDC-467A-95C3-36612EB7FB19.jpeg" class="joanne__img"> -->
-                    </div>
-                </div>
-                <h3 style="text-align: left;">Published: {frontmatter.date}</h3>
-                <div class="blog__content">
+                </header>
+                <figure class="joanne__frame">
+                    <div class="joanne__img" role="img" aria-label={frontmatter.image?.alt}></div>
+                </figure>
+                <div class="blog__content prose">
                     <slot />
                 </div>
+                <footer class="article__foot">
+                    <a class="button" href="/posts"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Back to all posts</a>
+                </footer>
             </div>
-
-        </section>
-        
-        
+        </article>
     </main>
-    
+    <Footer />
+    <script src="../scripts/joanne-post.js"></script>
 </body>
-<script src="../scripts/joanne-post.js"></script>
 </html>
