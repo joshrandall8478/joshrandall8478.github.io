@@ -1,0 +1,46 @@
+---
+// Shared <head> content for every layout.
+const {
+    title,
+    description = "Joshua Randall — software developer, DevOps engineer, and Linux enthusiast.",
+    image = "/assets/preview.png",
+    path = "",
+} = Astro.props;
+const metaTitle = "Joshua Randall - " + title;
+const url = "https://joshrandall.net" + path;
+---
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content={description}>
+<meta name="theme-color" content="#080b09">
+
+<!-- Open Graph Data -->
+<meta name="og:site_name" content="Joshua Randall">
+<meta property="og:title" content={metaTitle}>
+<meta property="og:type" content="website">
+<meta property="og:image" content={image}>
+<meta property="og:url" content={url}>
+<meta property="og:description" content={description}>
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Fediverse Credits -->
+<meta name="fediverse:creator" content="@pursuit@ohai.social">
+
+<!-- Favicon, canonical, feeds -->
+<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+<link rel="canonical" href={url}>
+<link rel="alternate" type="application/rss+xml" title="Joshua Randall — Posts" href="/rss.xml">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- FontAwesome Javascript Link -->
+<script is:inline src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
+<title>{metaTitle}</title>
+
+<!-- Google tag (gtag.js) -->
+<script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
+<script src="../layouts/analytics.js"></script>

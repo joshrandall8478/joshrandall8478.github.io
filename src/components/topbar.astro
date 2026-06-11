@@ -1,52 +1,71 @@
 ---
 import '../styles/global.scss';
----
-<nav id="topbar" class="blur">
-    <div class="navbar_container">
-    <!-- SVG Logo -->
-    <a href="/">
-        <svg id="navbar_logo" data-name="J Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 609.91 670.89">
-            <defs>
-            </defs>
-                <path class="cls-1" d="M708.63,469.83a22.72,22.72,0,0,0-22.72,22.72v66.07c0,117.72,96.31,216,214,216,118.07,0,214.15-96,214.15-214.07V319.34a33.86,33.86,0,0,0-33.86-33.86H708.63a22.72,22.72,0,0,0-22.72,22.72h0a22.72,22.72,0,0,0,22.72,22.72h359.95a.07.07,0,0,1,.07.07V560.56c0,92-74,167-165.65,168.61-94.58,1.66-171.65-75.77-171.65-170.36V492.55A22.72,22.72,0,0,0,708.63,469.83Z" transform="translate(-595.04 -194.61)"/>
-                <path class="cls-1" d="M595,194.61V421.79H977.78V560.56a77.78,77.78,0,0,1-155.56,0v-68a22.72,22.72,0,0,0-22.72-22.72h0a22.72,22.72,0,0,0-22.72,22.72v66.53c0,69.15,56.29,125.88,125.43,124.66a123.35,123.35,0,0,0,121-123.18V411.34a35,35,0,0,0-35-35H640.48V240.05h519V560.56c0,143.09-116.42,259.51-259.52,259.51S640.48,703.65,640.48,560.56v-68a22.72,22.72,0,0,0-45.44,0v68C595,729,731.57,865.5,900,865.5a305,305,0,0,0,305-304.94V194.61Z" transform="translate(-595.04 -194.61)"/>
-        </svg>
-    </a>
+import Logo from './Logo.astro';
 
-        <div class="navbar_toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-        <ul class="navbar_menu">
-            <li class="navbar_item">
-                <a href="/" class="navbar_links">Home</a>
-            </li>
-            <li class="navbar_item">
-                <a href="/about" class="navbar_links">About</a>
-            </li>
-            <li class="navbar_item">
-                <a href="/now" class="navbar_links">Now</a>
-            </li>
-            <li class="navbar_item">
-                <a href="/posts" class="navbar_links">Posts</a>
-            </li>
-            <li class="navbar_item">
-                <a href="/projects" class="navbar_links">Projects</a>
-            </li>
-            <li class="navbar_item">
-                <a href="https://sso.joshrandall.net" class="navbar_links">Services</a>
-            </li>
-            <li class="navbar_item">
-                <a href="https://status.joshrandall.net" class="navbar_links">Uptime</a>
-            </li>
-            <!-- <li class="navbar_item">
-                <a href="https://github.com/joshrandall8478/joshrandall8478.github.io" class="navbar_links">Site Github Repo</a>
-            </li> -->
-            <!-- <li class="navbar__btn">
-                <a class="button">Contact</a>
-            </li> -->
+const { currentPath = "" } = Astro.props;
+const links = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/now", label: "Now" },
+    { href: "/posts", label: "Posts" },
+    { href: "/projects", label: "Projects" },
+    { href: "https://sso.joshrandall.net", label: "Services", external: true },
+    { href: "https://status.joshrandall.net", label: "Uptime", external: true },
+];
+const normalize = (p) => (p.length > 1 ? p.replace(/\/+$/, "") : p);
+const isActive = (href) => {
+    if (href.startsWith("http")) return false;
+    const path = normalize(currentPath || "");
+    if (href === "/") return path === "/" || path === "";
+    return path === href || path.startsWith(href + "/");
+};
+---
+<header id="topbar" class="site-nav">
+    <div class="wrap site-nav__inner">
+        <a class="site-nav__brand" href="/" aria-label="Home">
+            <Logo />
+            <span class="site-nav__wordmark">joshrandall<span class="tld">.net</span></span>
+        </a>
+        <button class="site-nav__toggle" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav-links">
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="site-nav__links" id="site-nav-links">
+            {links.map((link, i) => (
+                <li style={`--i: ${i}`}>
+                    <a
+                        href={link.href}
+                        class:list={[{ "is-active": isActive(link.href) }]}
+                        aria-current={isActive(link.href) ? "page" : undefined}
+                    >
+                        {link.label}
+                        {link.external && <i class="ext fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>}
+                    </a>
+                </li>
+            ))}
         </ul>
     </div>
-    <script src="../scripts/app.js"></script>
-</nav>
+</header>
+
+<script>
+    const nav = document.getElementById('topbar');
+    const toggle = nav.querySelector('.site-nav__toggle');
+    const links = nav.querySelector('.site-nav__links');
+
+    const setScrolled = () => nav.classList.toggle('is-scrolled', window.scrollY > 24);
+    setScrolled();
+    window.addEventListener('scroll', setScrolled, { passive: true });
+
+    const setOpen = (open) => {
+        links.classList.toggle('is-open', open);
+        nav.classList.toggle('is-open', open);
+        toggle.setAttribute('aria-expanded', String(open));
+        document.body.classList.toggle('nav-locked', open);
+    };
+
+    toggle.addEventListener('click', () => setOpen(!links.classList.contains('is-open')));
+    links.addEventListener('click', (e) => {
+        if (e.target.closest('a')) setOpen(false);
+    });
+    window.matchMedia('(min-width: 921px)').addEventListener('change', () => setOpen(false));
+</script>

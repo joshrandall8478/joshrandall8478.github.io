@@ -1,52 +1,38 @@
 ---
-// pages/blog/[...page].astro
-// https://docs.astro.build/en/core-concepts/routing/#pagination
 import '../styles/blog-list.scss';
 import Layout from '../layouts/MainLayout.astro';
-const allPosts = await Astro.glob('./posts/*.md');
-const nonDraftPosts = allPosts.filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
-const posts = nonDraftPosts.sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
-// import Pagination from '../components/Pagination.astro';
-// All paginated data is passed on the "page" prop
+import ArticleCard from '../components/ArticleCard.astro';
+import { published, readingTime } from '../utils/content.js';
+
+const posts = published(import.meta.glob('./posts/*.md', { eager: true }));
 const currentPath = Astro.url.pathname;
-const { page } = Astro.props;
-// const { prev, next} = page.url;
-
 ---
-
-<Layout title="Posts" currentPath={currentPath}>
-        <section>
-            <div class="container">
-                <div class="content">
-                <ul class="blog__list">
-                    {posts.map((post) => <li>
-                    <a href={post.url}>
-                    <div class="blog__item">
-                        <div>
-                        <h2>
-                            {post.frontmatter.title}
-                        </h2>
-                        <h3>
-                            Date: {post.frontmatter.date}
-                        </h3>
-                        <h4>
-                            Author: {post.frontmatter.author}
-                        </h4>
-                        <p>
-                            {post.frontmatter.description}
-                            </p>
-                        </div>
-                        <div>
-                            <img src={post.frontmatter.image.url} alt={post.frontmatter.image.alt}>
-                        </div>
-                        </div>
-                    </a>
-                    </li>
-                    )}
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-    
+<Layout
+    title="Posts"
+    currentPath={currentPath}
+    description="Posts on Linux, homelab, self-hosting, and software by Joshua Randall."
+>
+    <section class="wrap">
+        <header class="page-head">
+            <p class="eyebrow"><span class="prompt">~$</span> ls posts/ | wc -l</p>
+            <h1>Posts</h1>
+            <p class="page-head__sub">
+                {posts.length} posts on Linux, homelab adventures, self-hosting, and
+                whatever I'm building or breaking at the moment.
+            </p>
+        </header>
+        <div class="card-grid" data-reveal-stagger>
+            {posts.map((post, i) => (
+                <ArticleCard
+                    url={post.url}
+                    title={post.frontmatter.title}
+                    image={post.frontmatter.image}
+                    date={post.frontmatter.date}
+                    description={post.frontmatter.description}
+                    readTime={readingTime(post)}
+                    eager={i < 6}
+                />
+            ))}
+        </div>
+    </section>
 </Layout>

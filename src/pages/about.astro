@@ -7,263 +7,215 @@ const currentPath = Astro.url.pathname;
 const dateUpdated = "01/13/26"
 ---
 
-<Layout title="About" currentPath={currentPath}>
-    <!-- Main Content -->
-
-        <div class="container">
-            <div class="content">
-                <img src="/assets/Joshua-Randall-pfp.jpg">
-                <h1 id="main__title">About</h1>
-                <h2 id="main__subtitle">Joshua Randall</h2>
-                <h3>Computer Science Graduate<br> Software/Web Developer<br> Linux/Tech Enthusiast</h3>
-                
-            </div>
-            <div class="paragraph">
-                <h4>Last updated: {dateUpdated}</h4>
-                <p>
-                    <h3 id="intro">Hi! I'm Josh.</h3>
-                    I am an aspiring DevOps/Software Engineer. I have started to learn professional languages
-                    since 2019-2020, but have had an interest for programming since early high school. I take special
-                    interest in Linux/UNIX based systems. I currently run Gentoo Linux on my main desktop (since 2025), and
-                    I run a small homelab cluster that used to be used for school.
-                    I use both of these systems for software development purposes.
-                    I graduated Eastern Michigan University in December 2025.
-                    <br>
-                    <br>
-                    Besides coding and technology: I drive manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
-                    and I have played violin for 6 years before the COVID-19 pandemic. I also play PC games 
-                    such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and Persona 3.
-                    Due to the rise and accessibility of the Steam Deck (and similar portable handhelds), 
-                    I've started to take special interest in the roguelike genre that has started to rise in the early 2020s, such as Hades I/II, Cult of the Lamb, Megabonk, Balatro, Inscryption, and more.
-                    <br>
-                    <br>
-                    My <a class=link href="/now">Now Page</a> consists of what my current projects and focuses are, and would highly recommend taking a look.
+<Layout
+    title="About"
+    currentPath={currentPath}
+    description="About Joshua Randall — computer science graduate, software/web developer, and Linux enthusiast."
+>
+    <!-- Intro -->
+    <section class="about-hero">
+        <div class="wrap about-hero__grid">
+            <div class="about-hero__text">
+                <p class="eyebrow"><span class="prompt">~$</span> cat about.md</p>
+                <h1>Hi! I'm Josh.</h1>
+                <p class="about-hero__roles">
+                    Computer Science Graduate · Software/Web Developer · Linux/Tech Enthusiast
                 </p>
+                <div class="about-hero__copy">
+                    <p>
+                        I am an aspiring DevOps/Software Engineer. I have started to learn professional languages
+                        since 2019-2020, but have had an interest for programming since early high school. I take special
+                        interest in Linux/UNIX based systems. I currently run Gentoo Linux on my main desktop (since 2025), and
+                        I run a small homelab cluster that used to be used for school.
+                        I use both of these systems for software development purposes.
+                        I graduated Eastern Michigan University in December 2025.
+                    </p>
+                    <p>
+                        Besides coding and technology: I drive manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
+                        and I have played violin for 6 years before the COVID-19 pandemic. I also play PC games
+                        such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and Persona 3.
+                        Due to the rise and accessibility of the Steam Deck (and similar portable handhelds),
+                        I've started to take special interest in the roguelike genre that has started to rise in the early 2020s, such as Hades I/II, Cult of the Lamb, Megabonk, Balatro, Inscryption, and more.
+                    </p>
+                    <p>
+                        My <a class="link" href="/now">Now Page</a> consists of what my current projects and focuses are, and would highly recommend taking a look.
+                    </p>
+                </div>
+                <div class="about-hero__cta">
+                    <a class="button button--solid" href="/now"><i class="fa-solid fa-bolt" aria-hidden="true"></i> See what I'm up to now</a>
+                    <a class="button" href="mailto:contact@joshrandall.net"><i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Email me</a>
+                </div>
+                <p class="about-hero__updated mono">Last updated: {dateUpdated}</p>
+            </div>
+            <figure class="about-hero__photo" data-reveal="right">
+                <img src="/assets/Joshua-Randall-pfp.jpg" alt="Joshua Randall" />
+            </figure>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section class="skills">
+        <div class="wrap">
+            <div class="section-head" data-reveal>
+                <p class="eyebrow"><span class="prompt">~$</span> ls skills/</p>
+                <h2>Technologies</h2>
+            </div>
+
+            <h3 class="category__titles"><i class="fa-solid fa-compact-disc" aria-hidden="true"></i> Operating Systems</h3>
+            <div class="skills__category" data-reveal-stagger>
+                <div class="skills__item">
+                    <img src="/assets/gentoo-icon-sm.png" alt="">
+                    <h4>Gentoo</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/arch-linux.png" alt="">
+                    <h4>Arch Linux</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-microsoft" aria-hidden="true"></i>
+                    <h4>Windows</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-apple" aria-hidden="true"></i>
+                    <h4>macOS</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="https://freepngimg.com/save/71407-suse-get-started-button-opensuse-mate-linux/1024x1024" alt="">
+                    <h4>openSUSE</h4>
+                </div>
+            </div>
+
+            <h3 class="category__titles"><i class="fa-solid fa-code" aria-hidden="true"></i> Languages</h3>
+            <div class="skills__category" data-reveal-stagger>
+                <div class="skills__item">
+                    <i class="fa-brands fa-python" aria-hidden="true"></i>
+                    <h4>Python</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-java" aria-hidden="true"></i>
+                    <h4>Java</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                    <h4>CSS</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-html5" aria-hidden="true"></i>
+                    <h4>HTML</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-square-js" aria-hidden="true"></i>
+                    <h4>JavaScript</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-markdown" aria-hidden="true"></i>
+                    <h4>Markdown</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/1_nLbfO_PdTSpeCdZQuUr8RQ.png" alt="">
+                    <h4>Astro</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-sass" aria-hidden="true"></i>
+                    <h4>SASS/SCSS</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/1200px-The_C_Programming_Language_logo.svg.png" alt="">
+                    <h4>C</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-php" aria-hidden="true"></i>
+                    <h4>PHP</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-vuejs" aria-hidden="true"></i>
+                    <h4>Vue JS</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/vite_logo_icon_249258.png" alt="">
+                    <h4>Vite</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-react" aria-hidden="true"></i>
+                    <h4>React</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-rust" aria-hidden="true"></i>
+                    <h4>Rust</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+                    <h4>Shell Script</h4>
+                </div>
+            </div>
+
+            <h3 class="category__titles"><i class="fa-solid fa-rocket" aria-hidden="true"></i> Deployment</h3>
+            <div class="skills__category" data-reveal-stagger>
+                <div class="skills__item">
+                    <i class="fa-brands fa-docker" aria-hidden="true"></i>
+                    <h4>Docker</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fab fa-cloudflare" aria-hidden="true"></i>
+                    <h4>CloudFlare</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/68747470733a2f2f63616464797365727665722e636f6d2f7265736f75726365732f696d616765732f66617669636f6e2e706e67" alt="">
+                    <h4>Caddy</h4>
+                </div>
+            </div>
+
+            <h3 class="category__titles"><i class="fa-solid fa-server" aria-hidden="true"></i> Homelab</h3>
+            <div class="skills__category" data-reveal-stagger>
+                <div class="skills__item">
+                    <img src="/assets/82976448.png" alt="">
+                    <h4>Authentik</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/bitwarden-icon-512x512-qdi0py2h.png" alt="">
+                    <h4>Bitwarden</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/nextcloud.svg" alt="">
+                    <h4>Nextcloud</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-brands fa-gitlab" aria-hidden="true"></i>
+                    <h4>Gitlab</h4>
+                </div>
+            </div>
+
+            <h3 class="category__titles"><i class="fa-solid fa-computer" aria-hidden="true"></i> Main Desktop</h3>
+            <div class="skills__category" data-reveal-stagger>
+                <div class="skills__item">
+                    <i class="fa-solid fa-microchip" aria-hidden="true"></i>
+                    <h4>AMD Ryzen 5 5600X</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3716/3716996.png" alt="">
+                    <h4>NVIDIA RTX 3060 12GB</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3962/3962832.png" alt="">
+                    <h4>GIGABYTE B450 AORUS ELITE</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/4529/4529469.png" alt="">
+                    <h4>2x Samsung 970 EVO</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="https://images.vexels.com/media/users/3/153161/isolated/preview/138505dfa285ee9c13107adbad9a7a0e-gaming-monitor-stroke-icon.png" alt="">
+                    <h4>1080p 165hz</h4>
+                </div>
+                <div class="skills__item">
+                    <i class="fa-solid fa-memory" aria-hidden="true"></i>
+                    <h4>32GB 3100hz</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/gentoo-icon-sm.png" alt="">
+                    <h4>Gentoo</h4>
+                </div>
             </div>
         </div>
-        <br>
-        <br>
-        <hr id="divider">
-        <br>
-
-            <div class="skills">
-                <h1 id="skills__title">Technologies</h1>
-                <h2 class="category__titles"><a class="fa-solid fa-compact-disc"></a> Operating Systems</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <img src="/assets/gentoo-icon-sm.png" alt="">
-                        <h2>Gentoo</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/arch-linux.png">
-                        <h2>Arch Linux</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-microsoft"></i>
-                        <h2>Windows</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-apple"></i>
-                        <h2>macOS</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://freepngimg.com/save/71407-suse-get-started-button-opensuse-mate-linux/1024x1024" alt="">
-                        <h2>openSUSE</h2>
-                    </div>
-                </div>
-                <h2 class="category__titles"><a class="fa-solid fa-code"></a> Languages</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <i class="fa-brands fa-python"></i>
-                        <h2>Python</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-java"></i>
-                        <h2>Java</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-css3-alt"></i>
-                        <h2>CSS</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-html5"></i>
-                        <h2>HTML</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-square-js"></i>
-                        <h2>JavaScript</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-markdown"></i>
-                        <h2>Markdown</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/1_nLbfO_PdTSpeCdZQuUr8RQ.png">
-                        <h2>Astro</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-sass"></i>
-                        <h2>SASS/SCSS</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/1200px-The_C_Programming_Language_logo.svg.png" alt="">
-                        <h2>C</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-php"></i>
-                        <h2>PHP</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-vuejs"></i>
-                        <h2>Vue JS</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/vite_logo_icon_249258.png" alt="">
-                        <h2>Vite</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-react"></i>
-                        <h2>React</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-rust"></i>
-                        <h2>Rust</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-solid fa-terminal"></i>
-                        <h2>Shell Script</h2>
-                    </div>
-                    
-                </div>
-                <h2 class="category__titles"><a class="fa-solid fa-rocket"></a> Deployment</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <i class="fa-brands fa-docker"></i>
-                        <h2>Docker</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fab fa-cloudflare"></i>
-                        <h2>CloudFlare</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/68747470733a2f2f63616464797365727665722e636f6d2f7265736f75726365732f696d616765732f66617669636f6e2e706e67" alt="">
-                        <h2>Caddy</h2>
-                    </div>
-                </div>
-                <h2 class="category__titles"><a class="fa-solid fa-server"></a> Homelab</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <!-- <div class="skills__item">
-                        <img src="https://idroot.us/wp-content/uploads/2018/06/Cockpit-logo.png">
-                        <h2>Cockpit</h2>
-                    </div> -->
-                    <div class="skills__item">
-                        <img src="/assets/82976448.png" alt="">
-                        <h2>Authentik</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/bitwarden-icon-512x512-qdi0py2h.png">
-                        <h2>Bitwarden</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/nextcloud.svg">
-                        <h2>Nextcloud</h2>
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-brands fa-gitlab"></i>
-                        <h2>Gitlab</h2>
-                    </div>
-                </div>
-                <h2 class="category__titles"><a class="fa-solid fa-computer"></a> Main Desktop</h2>
-                <hr class="skills__divider">
-                <div class="skills__category">
-                    <div class="skills__item">
-                        <i class="fa-solid fa-microchip"></i>
-                        <h2>AMD Ryzen 5 5600X</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3716/3716996.png">
-                        <h2>NVIDIA RTX 3060 12GB</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3962/3962832.png">
-                        <h2>GIGABYTE B450 AORUS ELITE</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://cdn-icons-png.flaticon.com/512/4529/4529469.png">
-                        <h2>2x Samsung 970 EVO</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="https://images.vexels.com/media/users/3/153161/isolated/preview/138505dfa285ee9c13107adbad9a7a0e-gaming-monitor-stroke-icon.png">
-                        <h2>1080p 165hz</h2>                        
-                    </div>
-                    <div class="skills__item">
-                        <i class="fa-solid fa-memory"></i>
-                        <h2>32GB 3100hz</h2>
-                    </div>
-                    <div class="skills__item">
-                        <img src="/assets/gentoo-icon-sm.png" alt="">
-                        <h2>Gentoo</h2>
-                    </div>
-                </div>
-
-                
-            </div>
-    <!-- <script src="../scripts/app.js"></script> -->
-    <script>
-// // Get how old I am in years
-// function diff_years(dt2, dt1) 
-// {
-//   // Calculate the difference in milliseconds between the two dates
-//   var diff = (dt2.getTime() - dt1.getTime()) / 1000;
-//   // Convert the difference from milliseconds to days
-//   diff /= (60 * 60 * 24);
-//   // Calculate the approximate number of years by dividing the difference in days by the average number of days in a year (365.25)
-// //   return Math.abs(Math.round(diff / 365));
-//     return Math.abs(Math.trunc(diff/365.25));
-// }
-// var currentDate = new Date(); // November 2, 2014
-// const birthDate = new Date(2003, 2, 4); // March 4, 2003 (month goes from 0-11)
-
-// var ageElement = document.getElementById("age");
-// var age = diff_years(birthDate, currentDate);
-// ageElement.innerHTML = age.toString();
-
-        // Remove the transition class
-const divider = document.querySelector('#divider');
-const skills__title = document.querySelector('#skills__title');
-const hr = document.querySelectorAll('.skills__divider');
-const category__titles = document.querySelectorAll('.category__titles');
-const skills__item = document.querySelectorAll('.skills__item');
-const subtitles = document.querySelectorAll('.category__subtitles');
-
-// Create the observer, same as before:
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-    if (entry.isIntersecting) {
-        divider.classList.add('active');
-        skills__title.classList.add('active');
-        hr.forEach((element) => {
-            element.classList.add('active');
-        })
-        category__titles.forEach((element) => {
-            element.classList.add('active');
-        })
-        skills__item.forEach((element) => {
-            element.classList.add('active');
-        })
-        subtitles.forEach((element) => {
-            element.classList.add('active');
-        })
-        return;
-    }
-    });
-});
-
-observer.observe(document.querySelector('.skills'));
-
-    </script>
+    </section>
 </Layout>

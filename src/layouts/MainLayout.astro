@@ -1,52 +1,37 @@
 ---
 import '../styles/global.scss';
+import BaseHead from '../components/BaseHead.astro';
 import TopBar from '../components/topbar.astro';
+import Footer from '../components/Footer.astro';
+
 interface Props {
-	title: string;
-    currentPath: string;
+    title: string;
+    currentPath?: string;
+    description?: string;
+    image?: string;
+    flush?: boolean;
 }
-const properties = Astro.props;
-let metaTitle = "Joshua Randall - " + properties.title;
-let currentPath = properties.currentPath;
+const {
+    title,
+    currentPath = Astro.url.pathname,
+    description,
+    image,
+    flush = false,
+} = Astro.props;
 ---
 <!DOCTYPE html>
 <html id="mainHTML" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- Open Graph Data -->
-    <meta name="og:site_name" content="Joshua Randall">
-    <meta property="og:title" content={metaTitle}>
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="/assets/preview.png">
-    <meta property="og:url" content={"https://joshrandall.net" + currentPath}>
-    <meta property="og:description" content="Main website for Joshua Randall">
-    <!-- <meta name="theme-color" content="#77DD77"> -->
-
-    <!-- Stylesheet and Favicon -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
-
-    <!-- FontAwesome Javascript Link -->
-    <script src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>
-    <title>{metaTitle}</title>
+    <BaseHead title={title} description={description} image={image} path={currentPath} />
 </head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J470W803CJ"></script>
-<script src="./analytics.js"></script>
 <body>
     <!-- Navbar -->
-    <TopBar/>
+    <TopBar currentPath={currentPath} />
     <!-- Main Content -->
-    <main>
+    <main class:list={["site-main", { "site-main--flush": flush }]}>
         <slot />
     </main>
-    
+    <Footer />
+    <script src="../scripts/reveal.js"></script>
 </body>
 </html>

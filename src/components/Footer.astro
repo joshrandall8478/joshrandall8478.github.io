@@ -1,0 +1,45 @@
+---
+import Logo from './Logo.astro';
+import SocialLinks from './SocialLinks.astro';
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+    <div class="wrap">
+        <div class="site-footer__grid">
+            <div class="site-footer__brand">
+                <a href="/" aria-label="Home">
+                    <Logo />
+                </a>
+                <p>
+                    Software, DevOps, and a self-hosted homelab —
+                    green text on a black screen since day one.
+                </p>
+                <SocialLinks />
+            </div>
+            <nav class="site-footer__col" aria-label="Site">
+                <h3>Site</h3>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/now">Now</a></li>
+                    <li><a href="/posts">Posts</a></li>
+                    <li><a href="/projects">Projects</a></li>
+                </ul>
+            </nav>
+            <nav class="site-footer__col" aria-label="Elsewhere">
+                <h3>Elsewhere</h3>
+                <ul>
+                    <li><a href="https://sso.joshrandall.net">Services <i class="ext fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://status.joshrandall.net">Uptime <i class="ext fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://gitlab.joshrandall.net/josh">GitLab <i class="ext fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                    <li><a href="https://github.com/joshrandall8478/joshrandall8478.github.io">Site source <i class="ext fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></li>
+                    <li><a href="/rss.xml">RSS feed</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="site-footer__bottom">
+            <p>© {year} Joshua Randall</p>
+            <p>Built with <a href="https://astro.build">Astro</a> · <a href="mailto:contact@joshrandall.net">contact@joshrandall.net</a></p>
+        </div>
+    </div>
+</footer>
