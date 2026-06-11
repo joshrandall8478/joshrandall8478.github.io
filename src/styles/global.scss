@@ -36,6 +36,12 @@ $font-body: "Inter", "Poppins", sans-serif;
 $font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
 $font-family_1: $font-body; // legacy alias
 
+// Renders any image as a flat #77dd77 silhouette, matching FontAwesome
+// icons colored with $green (chain solved against the CSS filter spec).
+@mixin green-tint {
+	filter: brightness(0) saturate(100%) invert(69%) sepia(100%) saturate(311%) hue-rotate(64deg) brightness(119%) contrast(73%);
+}
+
 :root {
 	--accent: #{$green};
 	--nav-h: 76px;

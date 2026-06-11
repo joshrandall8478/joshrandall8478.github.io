@@ -67,8 +67,7 @@
 	}
 
 	#icon {
-		// Filter converts images to whitesmoke (approximately)
-		filter: brightness(0) invert(95%);
+		@include green-tint;
 		display: inline-block;
 		width: auto;
 		height: 25px;
