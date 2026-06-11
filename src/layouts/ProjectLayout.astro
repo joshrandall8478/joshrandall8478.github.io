@@ -4,11 +4,12 @@ import BaseHead from '../components/BaseHead.astro';
 import TopBar from '../components/topbar.astro';
 import Footer from '../components/Footer.astro';
 import { tools } from '../maps/tools.json';
-import { formatDate } from '../utils/content.js';
+import { formatDate, readingTime } from '../utils/content.js';
 
-const { frontmatter } = Astro.props;
+const { frontmatter, rawContent } = Astro.props;
 const currentPath = frontmatter.url ?? "";
 const updated = frontmatter.date !== frontmatter.originalDate ? frontmatter.date : null;
+const readTime = readingTime(rawContent);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -38,6 +39,7 @@ const updated = frontmatter.date !== frontmatter.originalDate ? frontmatter.date
                     <div class="article__meta">
                         <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>Posted {formatDate(frontmatter.originalDate)}</span>
                         {updated && <span><i class="fa-solid fa-rotate" aria-hidden="true"></i>Updated {formatDate(updated)}</span>}
+                        {readTime && <span><i class="fa-regular fa-clock" aria-hidden="true"></i>{readTime} min read</span>}
                     </div>
                     {frontmatter.tools?.length > 0 && (
                         <div class="article__tools">
