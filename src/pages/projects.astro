@@ -2,7 +2,7 @@
 import '../styles/blog-list.scss';
 import Layout from '../layouts/MainLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { published } from '../utils/content.js';
+import { published, readingTime } from '../utils/content.js';
 
 const projects = published(import.meta.glob('./projects/*.md', { eager: true }));
 const currentPath = Astro.url.pathname;
@@ -30,6 +30,7 @@ const currentPath = Astro.url.pathname;
                     date={project.frontmatter.date}
                     description={project.frontmatter.subtitle}
                     tools={project.frontmatter.tools}
+                    readTime={readingTime(project)}
                     eager={i < 6}
                 />
             ))}
