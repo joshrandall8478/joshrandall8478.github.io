@@ -1,4 +1,6 @@
 ---
+import fs from 'node:fs';
+import path from 'node:path';
 import '../styles/index.scss';
 import Layout from '../layouts/MainLayout.astro';
 import SocialLinks from '../components/SocialLinks.astro';
@@ -10,6 +12,22 @@ const projects = published(import.meta.glob('./projects/*.md', { eager: true }))
 const latestPost = posts[0];
 const latestProject = projects[0];
 const currentPath = Astro.url.pathname;
+
+// Hero backdrop slideshow: gather the background GIFs at build time,
+// skipping the heaviest ones to keep the rotation light on bandwidth.
+// Resolved from the project root — page code is bundled elsewhere at build.
+const MAX_GIF_BYTES = 4 * 1024 * 1024;
+let heroGifs = [];
+try {
+    const gifDir = path.join(process.cwd(), 'public/assets/backgrounds/gif');
+    heroGifs = fs
+        .readdirSync(gifDir)
+        .filter((file) => file.endsWith('.gif'))
+        .filter((file) => fs.statSync(path.join(gifDir, file)).size <= MAX_GIF_BYTES)
+        .map((file) => `/assets/backgrounds/gif/${file}`);
+} catch {
+    // Without the folder the hero simply renders without the slideshow.
+}
 ---
 <Layout title="Home" currentPath={currentPath} flush>
     <!-- Mastodon Verification-->
@@ -20,6 +38,10 @@ const currentPath = Astro.url.pathname;
 
     <!-- Hero -->
     <section class="hero" id="top">
+        <div class="hero__bg" aria-hidden="true" data-gifs={JSON.stringify(heroGifs)}>
+            <div class="hero__bg-layer"></div>
+            <div class="hero__bg-layer"></div>
+        </div>
         <canvas id="hero-canvas" aria-hidden="true"></canvas>
         <div class="hero__grid" aria-hidden="true"></div>
         <div class="hero__glow" aria-hidden="true"></div>
@@ -143,6 +165,7 @@ const currentPath = Astro.url.pathname;
     </section>
 
     <script src="../scripts/hero.js"></script>
+    <script src="../scripts/hero-bg.js"></script>
     <script>
         // Typewriter for the hero role line.
         const typed = document.getElementById('typed');

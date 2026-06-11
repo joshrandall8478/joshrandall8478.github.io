@@ -34,6 +34,43 @@
 	overflow: hidden;
 	padding: calc(var(--nav-h) + 20px) 0 70px;
 
+	&__bg {
+		position: absolute;
+		inset: 0;
+		z-index: 0;
+		overflow: hidden;
+
+		.hero__bg-layer {
+			position: absolute;
+			inset: 0;
+			background-size: cover;
+			background-position: center;
+			transform: scale(1.04);
+			filter: saturate(0.78) brightness(0.85);
+			opacity: 0;
+			transition: opacity 2s ease-in-out;
+
+			&.is-visible {
+				opacity: 1;
+			}
+		}
+
+		// Green-black wash keeps text contrast and blends the backdrop
+		// into the page background at the bottom edge.
+		&::after {
+			content: "";
+			position: absolute;
+			inset: 0;
+			background: linear-gradient(
+				180deg,
+				rgba(8, 11, 9, 0.84),
+				rgba(8, 11, 9, 0.68) 45%,
+				rgba(8, 11, 9, 0.9) 82%,
+				$bg 100%
+			);
+		}
+	}
+
 	#hero-canvas {
 		position: absolute;
 		inset: 0;
