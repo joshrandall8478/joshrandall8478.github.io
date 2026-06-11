@@ -1,32 +1,24 @@
 ---
 import Layout from '../layouts/MainLayout.astro';
-// import '../styles/now.css'
 const currentPath = Astro.url.pathname;
-// import { tools } from '../maps/tools.json';
 ---
-<Layout title="Engage" currentPath={currentPath}>
-    <div class="container" style="padding: 15px; top:90px;">
-        <h1>Engage has now been redirected to our new domain:</h1>
-        <h1 style="font-size:3rem;"><a class=link href="https://ngage.lol">ngage.lol</a></h1>
-        <br>
-        <h2>Thank you for participating in our experimental barebones deployment!</h2>
-        <br>
-        <h3>We appreciate the support from our new and loyal users.
-            <br> Please continue to enjoy our developing web app on our new domain.</h3>
-    </div>
-    <style>
-        .container{
-            margin: 0 auto;
-            position: relative;
-            /* display: block; */
-            align-items: center;
-            justify-content: center;
-            /* width: 50%; */
-            /* padding: 10px; */
-            text-align: center;
-            padding: 20px 0;
-            height: 50vh;
-            top: 25vh;
-        }
-    </style>
+<Layout title="Engage" currentPath={currentPath} description="Engage has moved to ngage.lol.">
+    <section class="status-page">
+        <div class="status-page__grid" aria-hidden="true"></div>
+        <div class="wrap status-page__content">
+            <p class="eyebrow"><span class="prompt">~$</span> curl -IL /engage</p>
+            <i class="status-page__icon fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <h1>Engage has moved to a new domain.</h1>
+            <p class="status-page__msg">HTTP/1.1 301 Moved Permanently → ngage.lol</p>
+            <p>
+                Thank you for participating in our experimental barebones deployment!
+                We appreciate the support from our new and loyal users — please continue
+                to enjoy our developing web app on our new domain.
+            </p>
+            <div class="status-page__actions">
+                <a class="button button--solid" href="https://ngage.lol">Go to ngage.lol <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="button" href="/projects/engage">About the project</a>
+            </div>
+        </div>
+    </section>
 </Layout>

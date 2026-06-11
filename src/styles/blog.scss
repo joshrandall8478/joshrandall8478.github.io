@@ -292,40 +292,6 @@
 }
 
 // ------------------------------------------------------------
-//  LEGACY HOOKS (Joanne layout)
-// ------------------------------------------------------------
-.blog__container {
-	width: 100%;
-	max-width: 900px;
-	margin: 0 auto;
-	padding: 20px clamp(18px, 4vw, 32px) 60px;
-	color: $text;
-}
-
-#back__container {
-	padding: calc(var(--nav-h) + 14px) 0 26px;
-
-	a {
-		display: inline-flex;
-		align-items: center;
-		gap: 0.55em;
-		font-family: $font-mono;
-		font-size: 0.95rem;
-		color: $muted;
-		text-decoration: none;
-		padding: 8px 16px;
-		border: 1px solid $line-soft;
-		border-radius: 999px;
-		transition: color 0.25s ease, border-color 0.25s ease;
-
-		&:hover {
-			color: $green;
-			border-color: rgba($green, 0.45);
-		}
-	}
-}
-
-// ------------------------------------------------------------
 //  MOBILE
 // ------------------------------------------------------------
 @media screen and (max-width: 700px) {
