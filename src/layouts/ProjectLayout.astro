@@ -17,7 +17,11 @@ const updated = frontmatter.date !== frontmatter.originalDate ? frontmatter.date
         title={frontmatter.title}
         description={frontmatter.subtitle}
         image={frontmatter.image?.url}
+        imageAlt={frontmatter.image?.alt}
         path={currentPath}
+        type="article"
+        publishedDate={frontmatter.originalDate}
+        modifiedDate={updated}
     />
 </head>
 <body>

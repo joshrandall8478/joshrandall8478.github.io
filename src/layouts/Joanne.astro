@@ -15,7 +15,10 @@ const currentPath = frontmatter.url ?? "";
         title={frontmatter.title}
         description={frontmatter.description}
         image={frontmatter.image?.url}
+        imageAlt={frontmatter.image?.alt}
         path={currentPath}
+        type="article"
+        publishedDate={frontmatter.date}
     />
 </head>
 <body>
