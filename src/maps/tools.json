@@ -21,6 +21,11 @@
         "database":"fa-solid fa-database",
         "php":"fa-brands fa-php",
         "fork":"fa-solid fa-code-fork",
-        "unity":"fab fa-unity"
+        "unity":"fab fa-unity",
+        "claude": "fa-brands fa-claude",
+        "chatgpt": "fa-brands fa-openai",
+        "codeberg":"fa-brands fa-codeberg",
+        "forgejo:":"fa-brands fa-forgejo"
+
     }
 }

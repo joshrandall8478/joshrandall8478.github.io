@@ -7,7 +7,7 @@ image:
     url: '/assets/repoghost.png'
     alt: 'Image Description'
 layout: ../../layouts/ProjectLayout.astro
-tools: ["python", "js", "html", "css", "github", "docker"]
+tools: ["claude", "chatgpt", "python", "js", "html", "css", "github", "docker"]
 draft: false
 unlisted: false
 ---
