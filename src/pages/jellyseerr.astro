@@ -1,0 +1,21 @@
+---
+import Layout from '../layouts/MainLayout.astro';
+const currentPath = Astro.url.pathname;
+---
+<Layout title="Engage" currentPath={currentPath} description="Engage has moved to seerr.joshrandall.net.">
+    <section class="status-page">
+        <div class="status-page__grid" aria-hidden="true"></div>
+        <div class="wrap status-page__content">
+            <p class="eyebrow"><span class="prompt">~$</span> curl -IL /jellyseerr</p>
+            <i class="status-page__icon fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            <h1>Jellyseerr has moved to a new domain.</h1>
+            <p class="status-page__msg">HTTP/1.1 301 Moved Permanently → seerr.joshrandall.net</p>
+            <p>
+                Jellyseerr has now rebranded to Seerr. Please use <b>seerr.joshrandall.net</b> instead.
+            </p>
+            <div class="status-page__actions">
+                <a class="button button--solid" href="https://seerr.joshrandall.net">Go to Seerr <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </section>
+</Layout>
