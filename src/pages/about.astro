@@ -4,13 +4,13 @@ import Layout from '../layouts/MainLayout.astro';
 const currentPath = Astro.url.pathname;
 
 // ! Update this variable EVERY TIME this page is updated
-const dateUpdated = "01/13/26"
+const dateUpdated = "September 5th, 2026"
 ---
 
 <Layout
     title="About"
     currentPath={currentPath}
-    description="About Joshua Randall — computer science graduate, software/web developer, and Linux enthusiast."
+    description="About Joshua Randall"
 >
     <!-- Intro -->
     <section class="about-hero">
@@ -19,21 +19,21 @@ const dateUpdated = "01/13/26"
                 <p class="eyebrow"><span class="prompt">~$</span> cat about.md</p>
                 <h1>Hi! I'm Josh.</h1>
                 <p class="about-hero__roles">
-                    Computer Science Graduate · Software/Web Developer · Linux/Tech Enthusiast
+                    Software/Web Developer · Linux/Tech Enthusiast
                 </p>
                 <div class="about-hero__copy">
                     <p>
-                        I am an aspiring DevOps/Software Engineer. I have started to learn professional languages
-                        since 2019-2020, but have had an interest for programming since early high school. I take special
-                        interest in Linux/UNIX based systems. I currently run Gentoo Linux on my main desktop (since 2025), and
+                        I am a Software Engineer based in Detroit, MI. I have started to learn programming
+                        in 2019-2020. I take 
+                        interest in Linux/UNIX based systems, web development, and UI/UX design. I currently run CachyOS on my main desktop, and I have extensive experience in DIY distrubtions such as Arch, Gentoo, and Nix.
                         I run a small homelab cluster that used to be used for school.
                         I use both of these systems for software development purposes.
                         I graduated Eastern Michigan University in December 2025.
                     </p>
                     <p>
-                        Besides coding and technology: I drive manual transmission, I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
+                        Besides coding and technology: I like graphic/motion design + video editing (was using Adobe from 2014 to 2024),
                         and I have played violin for 6 years before the COVID-19 pandemic. I also play PC games
-                        such as Titanfall 2 and <s>Overwatch</s> Marvel Rivals. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and Persona 3.
+                        such as Titanfall 2. Outside of the FPS genre, I play Super Smash Bros. Ultimate, Minecraft, and the Persona series.
                         Due to the rise and accessibility of the Steam Deck (and similar portable handhelds),
                         I've started to take special interest in the roguelike genre that has started to rise in the early 2020s, such as Hades I/II, Cult of the Lamb, Megabonk, Balatro, Inscryption, and more.
                     </p>
@@ -64,6 +64,10 @@ const dateUpdated = "01/13/26"
             <h3 class="category__titles"><i class="fa-solid fa-compact-disc" aria-hidden="true"></i> Operating Systems</h3>
             <div class="skills__category" data-reveal-stagger>
                 <div class="skills__item">
+                    <img src="/assets/cachyos.svg" alt="">
+                    <h4>CachyOS</h4>
+                </div>
+                <div class="skills__item">
                     <img src="/assets/gentoo-icon-sm.png" alt="">
                     <h4>Gentoo</h4>
                 </div>
@@ -82,6 +86,10 @@ const dateUpdated = "01/13/26"
                 <div class="skills__item">
                     <img src="https://freepngimg.com/save/71407-suse-get-started-button-opensuse-mate-linux/1024x1024" alt="">
                     <h4>openSUSE</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/debian.png" alt="">
+                    <h4>Debian</h4>
                 </div>
             </div>
 
@@ -108,10 +116,6 @@ const dateUpdated = "01/13/26"
                     <h4>JavaScript</h4>
                 </div>
                 <div class="skills__item">
-                    <i class="fa-brands fa-markdown" aria-hidden="true"></i>
-                    <h4>Markdown</h4>
-                </div>
-                <div class="skills__item">
                     <img src="/assets/1_nLbfO_PdTSpeCdZQuUr8RQ.png" alt="">
                     <h4>Astro</h4>
                 </div>
@@ -126,10 +130,6 @@ const dateUpdated = "01/13/26"
                 <div class="skills__item">
                     <i class="fa-brands fa-php" aria-hidden="true"></i>
                     <h4>PHP</h4>
-                </div>
-                <div class="skills__item">
-                    <i class="fa-brands fa-vuejs" aria-hidden="true"></i>
-                    <h4>Vue JS</h4>
                 </div>
                 <div class="skills__item">
                     <img src="/assets/vite_logo_icon_249258.png" alt="">
@@ -163,6 +163,7 @@ const dateUpdated = "01/13/26"
                     <img src="/assets/68747470733a2f2f63616464797365727665722e636f6d2f7265736f75726365732f696d616765732f66617669636f6e2e706e67" alt="">
                     <h4>Caddy</h4>
                 </div>
+                
             </div>
 
             <h3 class="category__titles"><i class="fa-solid fa-server" aria-hidden="true"></i> Homelab</h3>
@@ -182,6 +183,10 @@ const dateUpdated = "01/13/26"
                 <div class="skills__item">
                     <i class="fa-brands fa-gitlab" aria-hidden="true"></i>
                     <h4>Gitlab</h4>
+                </div>
+                <div class="skills__item">
+                    <img src="/assets/debian.png" alt="">
+                    <h4>Debian</h4>
                 </div>
             </div>
 
@@ -205,15 +210,15 @@ const dateUpdated = "01/13/26"
                 </div>
                 <div class="skills__item">
                     <img src="https://images.vexels.com/media/users/3/153161/isolated/preview/138505dfa285ee9c13107adbad9a7a0e-gaming-monitor-stroke-icon.png" alt="">
-                    <h4>1080p 165hz</h4>
+                    <h4>1440p 180hz</h4>
                 </div>
                 <div class="skills__item">
                     <i class="fa-solid fa-memory" aria-hidden="true"></i>
                     <h4>32GB 3100hz</h4>
                 </div>
                 <div class="skills__item">
-                    <img src="/assets/gentoo-icon-sm.png" alt="">
-                    <h4>Gentoo</h4>
+                    <img src="/assets/cachyos.svg" alt="">
+                    <h4>CachyOS</h4>
                 </div>
             </div>
         </div>
