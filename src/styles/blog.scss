@@ -1,63 +1,93 @@
-@use 'global.scss' as *;
+@use 'tokens' as *;
+
+// Reading column: ~70 characters of serif text per line.
+$measure: 760px;
 
 // ------------------------------------------------------------
 //  ARTICLE SHELL
 // ------------------------------------------------------------
 .article {
-	padding: clamp(24px, 5vh, 56px) 0 70px;
+	padding: clamp(32px, 6vh, 68px) 0 80px;
 }
 
-.article__inner {
-	max-width: 900px;
+// Two classes so the measure beats .wrap regardless of bundle order.
+.article .article__inner {
+	max-width: calc(#{$measure} + 2 * clamp(20px, 5vw, 48px));
 }
 
 .back-link {
 	display: inline-flex;
 	align-items: center;
-	gap: 0.55em;
-	font-family: $font-mono;
-	font-size: 0.92rem;
+	gap: 0.7em;
+	@include label;
 	color: $muted;
 	text-decoration: none;
-	padding: 8px 16px;
-	border: 1px solid $line-soft;
-	border-radius: 999px;
-	margin-bottom: 34px;
-	transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+	margin-bottom: clamp(30px, 5vh, 48px);
+	transition: color 0.25s ease;
+
+	i {
+		font-size: 0.95em;
+		transition: transform 0.35s $ease-out;
+	}
 
 	&:hover {
-		color: $green;
-		border-color: rgba($green, 0.45);
-		transform: translateX(-3px);
+		color: $text;
+
+		i {
+			transform: translateX(-4px);
+		}
 	}
 }
 
 .article__head {
-	margin-bottom: 38px;
+	margin-bottom: clamp(34px, 6vh, 52px);
 
-	.article__subtitle {
-		margin-bottom: 12px;
+	.eyebrow {
+		margin-bottom: 18px;
 	}
 }
 
 .article__title {
-	font-size: clamp(2rem, 5.5vw, 3.2rem);
-	line-height: 1.12;
+	font-size: clamp(2.4rem, 6.2vw, 3.7rem);
+	line-height: 1.06;
+	letter-spacing: -0.022em;
 	margin-bottom: 20px;
+}
+
+// Italic standfirst beneath the title.
+.article__dek {
+	font-family: $font-display;
+	font-style: italic;
+	font-size: clamp(1.2rem, 2.6vw, 1.42rem);
+	line-height: 1.45;
+	color: $text-soft;
+	margin: -4px 0 22px;
+	max-width: 46ch;
 }
 
 .article__meta {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px 22px;
-	font-family: $font-mono;
-	font-size: 0.92rem;
+	align-items: center;
+	gap: 8px 0;
+	font-family: $font-sans;
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
 	color: $muted;
-	margin-bottom: 22px;
+	padding-bottom: 24px;
+	margin-bottom: 28px;
+	border-bottom: 1px solid $line-soft;
 
 	i {
-		color: $green;
-		margin-right: 0.5em;
+		display: none;
+	}
+
+	span + span::before {
+		content: "·";
+		margin: 0 0.9em;
+		color: $accent-lo;
 	}
 }
 
@@ -65,20 +95,21 @@
 	display: flex;
 	flex-wrap: wrap;
 	gap: 8px;
-	margin-bottom: 24px;
+	margin: -6px 0 28px;
 }
 
 .article__cover {
 	margin: 0;
 
 	img {
+		display: block;
 		width: 100%;
 		height: auto;
-		max-height: 480px;
+		max-height: 520px;
 		object-fit: cover;
 		border-radius: var(--r-lg);
 		border: 1px solid $line-soft;
-		box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.8);
+		box-shadow: 0 34px 70px -40px rgba(0, 0, 0, 0.9);
 	}
 }
 
@@ -88,8 +119,8 @@
 	align-items: center;
 	gap: 14px;
 	flex-wrap: wrap;
-	margin-top: 56px;
-	padding-top: 28px;
+	margin-top: 64px;
+	padding-top: 30px;
 	border-top: 1px solid $line-soft;
 }
 
@@ -101,7 +132,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	height: 3px;
+	height: 2px;
 	z-index: 1200;
 	pointer-events: none;
 
@@ -109,8 +140,7 @@
 		display: block;
 		height: 100%;
 		width: 0;
-		background: linear-gradient(90deg, $green-deep, $green, $mint);
-		box-shadow: 0 0 12px rgba($green, 0.65);
+		background: linear-gradient(90deg, $accent-lo, $accent-hi);
 		transition: width 0.08s linear;
 	}
 }
@@ -122,18 +152,24 @@
 	z-index: 900;
 	width: 46px;
 	height: 46px;
-	border-radius: 14px;
-	background: rgba(14, 19, 15, 0.85);
+	border-radius: 50%;
+	background: rgba($bg, 0.82);
 	border: 1px solid $line;
-	color: $green;
-	font-size: 1.05rem;
+	color: $text-soft;
+	font-size: 1rem;
 	cursor: pointer;
-	backdrop-filter: blur(8px);
-	-webkit-backdrop-filter: blur(8px);
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
 	opacity: 0;
 	visibility: hidden;
 	transform: translateY(10px);
-	transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+	transition:
+		opacity 0.35s ease,
+		visibility 0.35s ease,
+		transform 0.45s $ease-out,
+		background 0.3s ease,
+		color 0.3s ease,
+		border-color 0.3s ease;
 
 	&.is-visible {
 		opacity: 1;
@@ -142,74 +178,87 @@
 	}
 
 	&:hover {
-		border-color: $green;
-		box-shadow: 0 0 22px rgba($green, 0.3);
+		background: $accent-hi;
+		border-color: $accent-hi;
+		color: $on-accent;
 	}
 }
 
 // ------------------------------------------------------------
-//  PROSE (markdown body)
+//  PROSE (markdown body) — serif reading text.
 //  .blog__content kept as an alias — Joanne layout still uses it.
 // ------------------------------------------------------------
 .prose,
 .blog__content {
-	font-size: 1.075rem;
-	line-height: 1.78;
+	font-family: $font-serif;
+	font-optical-sizing: auto;
+	font-size: 1.2rem;
+	line-height: 1.72;
 	color: $text-soft;
 	word-wrap: break-word;
+	hanging-punctuation: first;
 
 	> * + * {
-		margin-top: 1.15em;
+		margin-top: 1.1em;
 	}
 
 	h1, h2, h3, h4 {
 		color: $text;
+		line-height: 1.2;
 	}
 
 	h1 {
-		font-size: 2.1rem;
+		font-size: 2.2rem;
 		margin-top: 1.8em;
 	}
 
 	h2 {
-		font-size: 1.65rem;
-		margin-top: 2em;
-		padding-bottom: 0.4em;
-		border-bottom: 1px solid $line-soft;
+		font-size: 1.85rem;
+		margin-top: 1.9em;
 	}
 
 	h3 {
-		font-size: 1.32rem;
+		font-size: 1.45rem;
 		margin-top: 1.6em;
 	}
 
 	h4 {
-		font-size: 1.12rem;
-		margin-top: 1.4em;
+		font-family: $font-sans;
+		font-size: 1rem;
+		font-weight: 600;
+		letter-spacing: 0.01em;
+		margin-top: 1.6em;
 	}
 
 	a:not(.button) {
-		color: $green;
+		color: $accent-hi;
 		text-decoration: underline;
-		text-underline-offset: 3px;
-		text-decoration-color: rgba($green, 0.4);
+		text-decoration-thickness: 1px;
+		text-underline-offset: 0.2em;
+		text-decoration-color: rgba($accent-hi, 0.4);
 		transition: color 0.25s ease, text-decoration-color 0.25s ease;
 
 		&:hover {
-			color: $mint;
-			text-decoration-color: $mint;
+			color: $text;
+			text-decoration-color: $text;
 		}
 	}
 
 	strong {
 		color: $text;
+		font-weight: 600;
 	}
 
 	ul, ol {
-		padding-left: 1.5em;
+		padding-left: 1.3em;
 
 		li {
-			margin: 0.5em 0;
+			margin: 0.45em 0;
+			padding-left: 0.2em;
+
+			&::marker {
+				color: $accent;
+			}
 		}
 
 		ul, ol {
@@ -224,48 +273,67 @@
 		max-height: 75vh;
 		border-radius: var(--r-md);
 		border: 1px solid $line-soft;
-		margin: 1.6em auto;
+		margin: 1.8em auto;
 	}
 
 	.emote {
 		display: inline-block;
-		width: 1.5em;
+		width: 1.4em;
 		height: auto;
 		margin: 0;
 		border: none;
 		border-radius: 0;
-		vertical-align: -0.35em;
+		vertical-align: -0.3em;
 	}
 
 	video {
 		display: block;
 		max-width: 100%;
 		border-radius: var(--r-md);
-		margin: 1.6em auto;
+		margin: 1.8em auto;
 	}
 
 	iframe {
 		max-width: 100%;
 	}
 
+	code {
+		font-size: 0.78em;
+	}
+
 	.astro-code {
-		margin: 1.5em 0;
-		font-size: 0.92rem;
+		margin: 1.6em 0;
+		font-size: 0.8rem;
+		line-height: 1.65;
+
+		code {
+			font-size: inherit;
+		}
 	}
 
 	blockquote {
-		margin: 1.5em 0;
+		margin: 1.6em 0;
+		font-size: 1.08em;
 
 		> * + * {
 			margin-top: 0.6em;
 		}
 	}
 
+	// Centered asterism instead of a rule.
 	hr {
 		border: 0;
-		height: 1px;
-		background: linear-gradient(90deg, $line, transparent);
+		height: auto;
 		margin: 2.4em 0;
+		text-align: center;
+		color: $accent;
+		overflow: visible;
+
+		&::before {
+			content: "· · ·";
+			letter-spacing: 0.6em;
+			font-size: 1.1rem;
+		}
 	}
 
 	.button {
@@ -277,16 +345,19 @@
 		width: 100%;
 		display: block;
 		overflow-x: auto;
+		font-family: $font-sans;
+		font-size: 0.92rem;
 
 		th, td {
-			border: 1px solid $line-soft;
-			padding: 8px 14px;
+			border: 1px solid $line;
+			padding: 9px 14px;
 			text-align: left;
 		}
 
 		th {
 			color: $text;
-			background: $surface-2;
+			font-weight: 600;
+			background: $surface;
 		}
 	}
 }
@@ -297,7 +368,7 @@
 @media screen and (max-width: 700px) {
 	.prose,
 	.blog__content {
-		font-size: 1.02rem;
+		font-size: 1.12rem;
 	}
 
 	.article__foot {

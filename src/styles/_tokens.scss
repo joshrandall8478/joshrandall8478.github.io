@@ -1,0 +1,64 @@
+// ============================================================
+//  JOSHRANDALL.NET — DESIGN TOKENS
+//  Warm brownish grey, taupe accents, editorial serif type.
+//
+//  This partial only defines variables and mixins — it emits no
+//  CSS, so every stylesheet can `@use` it without duplicating the
+//  global rules (those live once, in global.scss).
+// ============================================================
+
+// ------------------------------------------------------------
+//  PALETTE
+// ------------------------------------------------------------
+$bg-deep:     #1b1816; // footer, open menu
+$bg:          #23201d; // page
+$surface:     #2b2724; // cards
+$surface-2:   #34302d; // raised / hover
+$line:        rgba(232, 218, 200, 0.12); // hairlines
+$line-soft:   rgba(232, 218, 200, 0.07);
+$line-strong: rgba(232, 218, 200, 0.22);
+$text:        #f0ece5; // warm ivory
+$text-soft:   #c9c2ba;
+$muted:       #a59c93;
+$accent:      #b5a392; // taupe
+$accent-hi:   #d5c8b9; // light taupe — hovers, solid buttons
+$accent-lo:   #7a6a5c; // deep taupe — decorative only
+$on-accent:   $bg;
+
+// ------------------------------------------------------------
+//  TYPE
+//  Newsreader stands in for Claude's Tiempos/Copernicus serifs,
+//  DM Sans for its Styrene UI sans.
+// ------------------------------------------------------------
+$font-serif: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+$font-sans:  "DM Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+$font-mono:  "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+$font-display: $font-serif;
+$font-body: $font-sans;
+
+// ------------------------------------------------------------
+//  MOTION
+// ------------------------------------------------------------
+$ease-out:    cubic-bezier(0.22, 1, 0.36, 1);
+$ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+// ------------------------------------------------------------
+//  MIXINS
+// ------------------------------------------------------------
+
+// Renders any image as a flat $accent silhouette, matching icon
+// fonts colored with $accent (chain solved against the CSS filter
+// spec; reproduces #b5a392 exactly).
+@mixin accent-tint {
+	filter: brightness(0) saturate(100%) invert(71%) sepia(16%) saturate(348%) hue-rotate(348deg) brightness(92%) contrast(85%);
+}
+
+// Small uppercase label used above headings.
+@mixin label {
+	font-family: $font-sans;
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.2em;
+	text-transform: uppercase;
+	color: $accent;
+}

@@ -5,7 +5,7 @@ I started working on this site while I was taking an HTML, CSS, and JS class. Th
 ![Screenshot](public/assets/240129_00h12m07s_screenshot.png)
 
 Using the site is very straight forward since the site uses a very simple design. Current feature set includes:
-- [x] Parallax backgrounds for desktop
+- [x] Animated WebGL topographic hero that reacts to the pointer (with reduced-motion and no-WebGL fallbacks)
 - [x] Mobile prioritized design
 - [x] Clean but non intrusive CSS animations
 - [x] Handling of post and project pages using Astro's built in routing
@@ -15,7 +15,8 @@ Using the site is very straight forward since the site uses a very simple design
 - [Astro](https://astro.build)
 - [This YouTube tutorial for HTML CSS and JS](https://youtu.be/FazgJVnrVuI).
     - The tutorial was used to make early template versions of this site which were never public (much thanks to [Brian Design](https://www.youtube.com/@briandesign)). After practicing with the tutorial, I used the template versions I created as a base for this site. The only things that is very reminiscent or the same, would be the hamburger menu bars to open the mobile menu + the top navigation bar, and the fonts may be similar since Google fonts were used. Everything else apart from those things mentioned was made from scratch.
-- The many GIFs taken from Google images to create the awesome backgrounds for this site.
+- [Newsreader](https://fonts.google.com/specimen/Newsreader) and [DM Sans](https://fonts.google.com/specimen/DM+Sans) via Google Fonts.
+- [webgl-noise](https://github.com/ashima/webgl-noise) by Ashima Arts (MIT) for the simplex noise behind the home page field.
 - Icons for the [about page](https://joshrandall.net/about) taken from Google images, some with necessary proper attribution visible on site.
 
 

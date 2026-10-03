@@ -1,27 +1,23 @@
-@use 'global.scss' as *;
-@use 'blog.scss' as *;
+@use 'tokens' as *;
 
 // Memorial page — soft, quiet styling on top of the article shell.
 
 .joanne__memoriam {
-	font-family: $font-mono;
-	font-size: 0.95rem;
-	letter-spacing: 0.08em;
-	text-transform: uppercase;
-	color: $mint;
+	font-family: $font-display;
+	font-style: italic;
+	font-size: 1.2rem;
+	color: $accent-hi;
 	margin-bottom: 14px;
 }
 
 // Photo slideshow (driven by joanne-post.js)
 .joanne__frame {
-	margin: 0 0 36px;
+	margin: 0 0 40px;
 	padding: 10px;
-	border: 1px solid $line-soft;
+	border: 1px solid $line;
 	border-radius: var(--r-lg);
-	background: #000;
-	box-shadow:
-		0 26px 60px -30px rgba(0, 0, 0, 0.85),
-		0 0 44px -18px rgba($green, 0.2);
+	background: $bg-deep;
+	box-shadow: 0 34px 70px -40px rgba(0, 0, 0, 0.9);
 }
 
 .joanne__img {
@@ -36,7 +32,7 @@
 }
 
 .fade-in {
-	animation: fade-in 1s ease-in-out forwards;
+	animation: fade-in 1.2s ease-in-out forwards;
 }
 
 .fade-out {

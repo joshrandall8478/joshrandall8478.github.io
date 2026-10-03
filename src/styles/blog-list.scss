@@ -1,9 +1,9 @@
-@use 'global.scss' as *;
+@use 'tokens' as *;
 
 // List pages (posts / projects) are composed from global primitives:
 // .page-head, .card-grid, and .article-card. Page-specific tweaks live here.
 
 .page-head {
 	border-bottom: 1px solid $line-soft;
-	margin-bottom: clamp(26px, 5vh, 44px);
+	margin-bottom: clamp(32px, 6vh, 56px);
 }

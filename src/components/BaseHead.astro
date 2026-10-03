@@ -4,7 +4,7 @@ const SITE = "https://joshrandall.net";
 const {
     title,
     description = "Joshua Randall — software developer, DevOps engineer, and Linux enthusiast.",
-    image = "/assets/preview.png",
+    image = "/assets/preview.jpg",
     imageAlt,
     path = "",
     type = "website",
@@ -20,7 +20,7 @@ const url = SITE + normalizedPath;
 
 // Scrapers require absolute image URLs.
 const imageUrl = image.startsWith("http") ? image : SITE + image;
-const isDefaultImage = image === "/assets/preview.png";
+const isDefaultImage = image === "/assets/preview.jpg";
 const ogImageAlt = imageAlt || (isDefaultImage ? "Joshua Randall — joshrandall.net" : metaTitle);
 
 const toIso = (value) => {
@@ -35,7 +35,9 @@ const modifiedIso = toIso(modifiedDate);
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content={description}>
-<meta name="theme-color" content="#080b09">
+<meta name="theme-color" content="#23201d">
+<!-- Flags JS support before first paint so reveal animations never hide content without it -->
+<script is:inline>document.documentElement.classList.add('js');</script>
 
 <!-- Open Graph Data -->
 <meta property="og:site_name" content="Joshua Randall">
@@ -70,7 +72,7 @@ const modifiedIso = toIso(modifiedDate);
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..700;1,9..40,300..700&family=JetBrains+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..700&display=swap" rel="stylesheet">
 
 <!-- FontAwesome Javascript Link -->
 <script is:inline src="https://kit.fontawesome.com/61a8afa681.js" crossorigin="anonymous"></script>

@@ -1,141 +1,139 @@
-// Hero particle network: drifting green nodes joined by faint lines,
-// gently reactive to the pointer. Honors prefers-reduced-motion.
+// Home page motion: the WebGL contour field, the rolling role line,
+// scroll parallax, magnetic buttons, and pointer spotlights on the focus
+// cards. Everything degrades to a calm, static page under
+// prefers-reduced-motion.
 
-const canvas = document.getElementById('hero-canvas');
+import { createHeroField } from './hero-field.js';
 
-if (canvas) {
-    const ctx = canvas.getContext('2d');
-    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const ACCENT = { r: 119, g: 221, b: 119 };
-    const MINT = { r: 193, g: 225, b: 193 };
-    const LINK_DIST = 130;
-    const MOUSE_DIST = 150;
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = window.matchMedia('(pointer: fine)').matches;
+const hero = document.querySelector('.hero');
 
-    let width = 0;
-    let height = 0;
-    let particles = [];
-    let rafId = null;
-    const pointer = { x: -1e4, y: -1e4 };
+// ------------------------------------------------------------
+//  Contour field
+// ------------------------------------------------------------
+const canvas = document.getElementById('hero-field');
+const fallback = () => hero.classList.add('no-field');
+let field = null;
+try {
+    field = canvas && createHeroField(canvas, { reducedMotion: reduceMotion, onLost: fallback });
+} catch (err) {
+    console.warn('hero-field:', err);
+}
+if (!field) fallback();
 
-    function seed() {
-        const count = Math.min(110, Math.max(32, Math.round((width * height) / 20000)));
-        particles = Array.from({ length: count }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.4,
-            vy: (Math.random() - 0.5) * 0.4,
-            r: Math.random() * 1.5 + 0.7,
-            mint: Math.random() < 0.18,
-        }));
-    }
-
-    function resize() {
-        const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        width = canvas.clientWidth;
-        height = canvas.clientHeight;
-        canvas.width = Math.max(1, Math.round(width * dpr));
-        canvas.height = Math.max(1, Math.round(height * dpr));
-        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-        seed();
-        if (reduceMotion) draw();
-    }
-
-    function draw() {
-        ctx.clearRect(0, 0, width, height);
-
-        for (let i = 0; i < particles.length; i++) {
-            const a = particles[i];
-            for (let j = i + 1; j < particles.length; j++) {
-                const b = particles[j];
-                const dx = a.x - b.x;
-                const dy = a.y - b.y;
-                const dist = Math.hypot(dx, dy);
-                if (dist < LINK_DIST) {
-                    const alpha = (1 - dist / LINK_DIST) * 0.32;
-                    ctx.strokeStyle = `rgba(${ACCENT.r}, ${ACCENT.g}, ${ACCENT.b}, ${alpha})`;
-                    ctx.lineWidth = 1;
-                    ctx.beginPath();
-                    ctx.moveTo(a.x, a.y);
-                    ctx.lineTo(b.x, b.y);
-                    ctx.stroke();
-                }
+// ------------------------------------------------------------
+//  Scroll parallax — publishes --hero-p (0 → 1 as the hero leaves)
+// ------------------------------------------------------------
+if (!reduceMotion) {
+    let queued = false;
+    const update = () => {
+        queued = false;
+        const progress = Math.min(1, Math.max(0, window.scrollY / hero.offsetHeight));
+        hero.style.setProperty('--hero-p', progress.toFixed(4));
+        field?.setScroll(progress);
+    };
+    window.addEventListener(
+        'scroll',
+        () => {
+            if (!queued) {
+                queued = true;
+                requestAnimationFrame(update);
             }
+        },
+        { passive: true }
+    );
+    update();
+}
+
+// ------------------------------------------------------------
+//  Role line — letters roll over in 3D, one after another
+// ------------------------------------------------------------
+const role = document.querySelector('.hero__role');
+const roles = JSON.parse(role.dataset.roles);
+const wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const whenVisible = () =>
+    document.hidden
+        ? new Promise((resolve) =>
+              document.addEventListener('visibilitychange', resolve, { once: true })
+          )
+        : Promise.resolve();
+
+function setLetters(text) {
+    role.replaceChildren(
+        ...[...text].map((char) => {
+            const span = document.createElement('span');
+            span.className = 'hero__role-char';
+            span.textContent = char;
+            return span;
+        })
+    );
+    return [...role.children];
+}
+
+function roll(letters, direction) {
+    const entering = direction === 'in';
+    const hidden = {
+        transform: `translateY(${entering ? 0.7 : -0.7}em) rotateX(${entering ? -90 : 90}deg)`,
+        opacity: 0,
+        filter: 'blur(3px)',
+    };
+    const shown = { transform: 'none', opacity: 1, filter: 'blur(0px)' };
+    return Promise.all(
+        letters.map(
+            (letter, i) =>
+                letter.animate(entering ? [hidden, shown] : [shown, hidden], {
+                    duration: entering ? 760 : 460,
+                    delay: i * (entering ? 34 : 20),
+                    easing: entering ? 'cubic-bezier(0.22, 1, 0.36, 1)' : 'cubic-bezier(0.55, 0, 0.8, 0.3)',
+                    fill: 'both',
+                }).finished
+        )
+    );
+}
+
+if (!reduceMotion && role.animate) {
+    (async () => {
+        let index = 0;
+        let letters = setLetters(roles[index]);
+        letters.forEach((letter) => (letter.style.opacity = '0'));
+        // Join the entrance just after the name has settled (timed from
+        // navigation start, like the CSS entrance).
+        await wait(Math.max(150, 1250 - performance.now()));
+        letters.forEach((letter) => (letter.style.opacity = ''));
+        await roll(letters, 'in');
+        for (;;) {
+            await wait(2600);
+            await whenVisible();
+            await roll(letters, 'out');
+            index = (index + 1) % roles.length;
+            letters = setLetters(roles[index]);
+            await roll(letters, 'in');
         }
+    })();
+}
 
-        for (const p of particles) {
-            const c = p.mint ? MINT : ACCENT;
-            ctx.fillStyle = `rgba(${c.r}, ${c.g}, ${c.b}, 0.85)`;
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    }
-
-    function step() {
-        for (const p of particles) {
-            // Gentle push away from the pointer.
-            const dx = p.x - pointer.x;
-            const dy = p.y - pointer.y;
-            const dist = Math.hypot(dx, dy);
-            if (dist < MOUSE_DIST && dist > 0.001) {
-                const force = ((MOUSE_DIST - dist) / MOUSE_DIST) * 0.06;
-                p.vx += (dx / dist) * force;
-                p.vy += (dy / dist) * force;
-            }
-
-            // Cap velocity so pointer interaction never gets wild.
-            const speed = Math.hypot(p.vx, p.vy);
-            const maxSpeed = 0.9;
-            if (speed > maxSpeed) {
-                p.vx = (p.vx / speed) * maxSpeed;
-                p.vy = (p.vy / speed) * maxSpeed;
-            }
-
-            p.x += p.vx;
-            p.y += p.vy;
-
-            if (p.x < -20) p.x = width + 20;
-            if (p.x > width + 20) p.x = -20;
-            if (p.y < -20) p.y = height + 20;
-            if (p.y > height + 20) p.y = -20;
-        }
-
-        draw();
-        rafId = requestAnimationFrame(step);
-    }
-
-    function start() {
-        if (rafId === null && !reduceMotion) rafId = requestAnimationFrame(step);
-    }
-
-    function stop() {
-        if (rafId !== null) {
-            cancelAnimationFrame(rafId);
-            rafId = null;
-        }
-    }
-
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(resize, 150);
+// ------------------------------------------------------------
+//  Magnetic buttons and card spotlights (mouse / trackpad only)
+// ------------------------------------------------------------
+if (finePointer && !reduceMotion) {
+    document.querySelectorAll('[data-magnetic]').forEach((el) => {
+        el.addEventListener('pointermove', (e) => {
+            const rect = el.getBoundingClientRect();
+            const x = e.clientX - (rect.left + rect.width / 2);
+            const y = e.clientY - (rect.top + rect.height / 2);
+            el.style.transform = `translate(${x * 0.22}px, ${y * 0.32}px)`;
+        });
+        el.addEventListener('pointerleave', () => {
+            el.style.transform = '';
+        });
     });
 
-    document.addEventListener('visibilitychange', () => {
-        document.hidden ? stop() : start();
+    document.querySelectorAll('.focus-card').forEach((card) => {
+        card.addEventListener('pointermove', (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty('--mx', `${e.clientX - rect.left}px`);
+            card.style.setProperty('--my', `${e.clientY - rect.top}px`);
+        });
     });
-
-    const hero = canvas.parentElement;
-    hero.addEventListener('pointermove', (e) => {
-        const rect = canvas.getBoundingClientRect();
-        pointer.x = e.clientX - rect.left;
-        pointer.y = e.clientY - rect.top;
-    });
-    hero.addEventListener('pointerleave', () => {
-        pointer.x = -1e4;
-        pointer.y = -1e4;
-    });
-
-    resize();
-    reduceMotion ? draw() : start();
 }

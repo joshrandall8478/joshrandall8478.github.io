@@ -1,43 +1,50 @@
-@use 'global.scss' as *;
-@use 'blog.scss' as *;
+@use 'tokens' as *;
 
 .now {
-	padding-bottom: 70px;
+	padding-bottom: 80px;
 }
 
-.now__inner {
-	max-width: 900px;
+// Same reading measure as articles.
+.now .now__inner {
+	max-width: calc(760px + 2 * clamp(20px, 5vw, 48px));
 }
 
 .now__accent {
-	color: $green;
-	font-family: $font-mono;
-	font-weight: 500;
+	font-style: italic;
+	color: $accent-hi;
 }
 
 .now__updated {
 	display: flex;
 	align-items: center;
-	gap: 12px;
-	margin-top: 18px;
+	gap: 14px;
+	margin-top: 22px;
+	font-family: $font-sans;
+	font-size: 0.74rem;
+	font-weight: 500;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
 	color: $muted;
-	font-size: 0.95rem;
 }
 
 .now__cover {
-	margin: 10px 0 26px;
+	margin: 6px 0 30px;
 
 	img {
+		display: block;
 		width: 100%;
 		height: auto;
 		border-radius: var(--r-lg);
 		border: 1px solid $line-soft;
-		box-shadow: 0 26px 60px -30px rgba(0, 0, 0, 0.8);
+		box-shadow: 0 34px 70px -40px rgba(0, 0, 0, 0.9);
 	}
 }
 
 .now__note {
-	font-size: 0.98rem;
+	font-family: $font-display;
+	font-size: 1.12rem;
+	line-height: 1.6;
+	margin-bottom: 8px;
 }
 
 .now-content {
@@ -47,25 +54,23 @@
 		display: flex;
 		align-items: center;
 		gap: 14px;
-		border-bottom: none;
-		padding-bottom: 0;
-		margin-top: 2.2em;
+		margin-top: 2.1em;
 
 		i {
-			color: $green;
-			font-size: 0.85em;
+			color: $accent;
+			font-size: 0.7em;
 		}
 
 		&::after {
 			content: "";
 			flex: 1;
 			height: 1px;
-			background: linear-gradient(90deg, $line, transparent);
+			background: linear-gradient(90deg, $line-strong, transparent);
 		}
 	}
 
 	#icon {
-		@include green-tint;
+		@include accent-tint;
 		display: inline-block;
 		width: auto;
 		height: 25px;

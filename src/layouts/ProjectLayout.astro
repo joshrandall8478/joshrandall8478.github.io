@@ -34,8 +34,8 @@ const readTime = readingTime(rawContent);
             <div class="wrap article__inner">
                 <a class="back-link" href="/projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a>
                 <header class="article__head">
-                    <p class="article__subtitle eyebrow">{frontmatter.subtitle}</p>
                     <h1 class="article__title">{frontmatter.title}</h1>
+                    {frontmatter.subtitle && <p class="article__dek">{frontmatter.subtitle}</p>}
                     <div class="article__meta">
                         <span><i class="fa-regular fa-calendar" aria-hidden="true"></i>Posted {formatDate(frontmatter.originalDate)}</span>
                         {updated && <span><i class="fa-solid fa-rotate" aria-hidden="true"></i>Updated {formatDate(updated)}</span>}

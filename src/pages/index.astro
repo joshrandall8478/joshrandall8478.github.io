@@ -10,6 +10,14 @@ const projects = published(import.meta.glob('./projects/*.md', { eager: true }))
 const latestPost = posts[0];
 const latestProject = projects[0];
 const currentPath = Astro.url.pathname;
+
+// The hero name is split into letters at build time so the entrance
+// animation needs no script; --i drives each letter's stagger.
+let letterIndex = 0;
+const nameWords = ['Joshua', 'Randall'].map((word) =>
+    [...word].map((char) => ({ char, i: letterIndex++ }))
+);
+const roles = ['Software Developer', 'DevOps Engineer', 'Linux Enthusiast', 'Homelab Operator'];
 ---
 <Layout title="Home" currentPath={currentPath} flush>
     <!-- Mastodon Verification-->
@@ -20,28 +28,36 @@ const currentPath = Astro.url.pathname;
 
     <!-- Hero -->
     <section class="hero" id="top">
-        <canvas id="hero-canvas" aria-hidden="true"></canvas>
-        <div class="hero__grid" aria-hidden="true"></div>
-        <div class="hero__glow" aria-hidden="true"></div>
+        <canvas class="hero__field" id="hero-field" aria-hidden="true"></canvas>
+        <div class="hero__fallback" aria-hidden="true"></div>
+        <div class="hero__veil" aria-hidden="true"></div>
         <div class="wrap hero__content">
-            <p class="hero__eyebrow eyebrow"><span class="prompt">~$</span> whoami</p>
-            <h1 class="hero__title">Joshua Randall</h1>
-            <p class="hero__type mono">
-                <span id="typed" data-phrases='["Software Developer", "DevOps Engineer", "Linux Enthusiast", "Homelab Operator"]'></span><span class="hero__caret" aria-hidden="true"></span>
+            <p class="hero__eyebrow eyebrow eyebrow--center">Hello, I'm</p>
+            <h1 class="hero__title">
+                <span class="sr-only">Joshua Randall</span>
+                <span class="hero__name" aria-hidden="true">
+                    {nameWords.map((letters, w) => (
+                        <span class:list={["hero__word", { "hero__word--italic": w === 1 }]}>
+                            {letters.map(({ char, i }) => (
+                                <span class="hero__char" style={`--i: ${i}`}>{char}</span>
+                            ))}
+                        </span>
+                    ))}
+                </span>
+            </h1>
+            <p class="hero__roles">
+                <span class="sr-only">{roles.join(', ')}</span>
+                <span class="hero__role" aria-hidden="true" data-roles={JSON.stringify(roles)}>{roles[0]}</span>
             </p>
-            <!-- <p class="hero__tagline">
-                I build software and run infrastructure — from web apps and hackathon
-                projects to a self-hosted homelab, mostly from a terminal.
-            </p> -->
             <div class="hero__cta">
-                <a class="button button--solid" href="/projects">View projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
-                <a class="button" href="/about">More about me</a>
+                <a class="button button--solid" href="/projects" data-magnetic>View projects <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                <a class="button" href="/about" data-magnetic>More about me</a>
             </div>
             <SocialLinks class="hero__social" />
         </div>
         <a class="hero__scroll" href="#featured" aria-label="Scroll down for more">
-            <span class="mono">scroll</span>
-            <i class="fa-solid fa-angle-down" aria-hidden="true"></i>
+            <span class="hero__scroll-label">Scroll</span>
+            <span class="hero__scroll-line" aria-hidden="true"></span>
         </a>
     </section>
 
@@ -49,12 +65,15 @@ const currentPath = Astro.url.pathname;
     <section class="home-section" id="featured">
         <div class="wrap">
             <div class="section-head" data-reveal>
-                <p class="eyebrow"><span class="prompt">~$</span> ls focus/</p>
+                <p class="eyebrow">Focus</p>
                 <h2>What I do</h2>
             </div>
             <div class="focus-grid" data-reveal-stagger>
                 <article class="focus-card">
-                    <span class="focus-card__icon"><i class="fa-solid fa-code" aria-hidden="true"></i></span>
+                    <div class="focus-card__top">
+                        <span class="focus-card__num">01</span>
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
+                    </div>
                     <h3>Software &amp; Web</h3>
                     <p>
                         Full-stack development across Python, Java, JavaScript, and Astro —
@@ -62,7 +81,10 @@ const currentPath = Astro.url.pathname;
                     </p>
                 </article>
                 <article class="focus-card">
-                    <span class="focus-card__icon"><i class="fa-solid fa-server" aria-hidden="true"></i></span>
+                    <div class="focus-card__top">
+                        <span class="focus-card__num">02</span>
+                        <i class="fa-solid fa-server" aria-hidden="true"></i>
+                    </div>
                     <h3>DevOps &amp; Homelab</h3>
                     <p>
                         A self-hosted cluster running Jellyfin, Nextcloud, GitLab, and more —
@@ -70,7 +92,10 @@ const currentPath = Astro.url.pathname;
                     </p>
                 </article>
                 <article class="focus-card">
-                    <span class="focus-card__icon"><i class="fa-solid fa-terminal" aria-hidden="true"></i></span>
+                    <div class="focus-card__top">
+                        <span class="focus-card__num">03</span>
+                        <i class="fa-solid fa-terminal" aria-hidden="true"></i>
+                    </div>
                     <h3>Linux &amp; Open Source</h3>
                     <p>
                         Daily-driving Gentoo, maintaining dotfiles, experimenting with GPU
@@ -86,8 +111,8 @@ const currentPath = Astro.url.pathname;
         <div class="wrap">
             <div class="section-head section-head--row" data-reveal>
                 <div>
-                    <p class="eyebrow"><span class="prompt">~$</span> tail activity.log</p>
-                    <h2>Latest activity</h2>
+                    <p class="eyebrow">Latest</p>
+                    <h2>Recent activity</h2>
                 </div>
                 <div class="section-head__links">
                     <a class="link-arrow" href="/posts">All posts</a>
@@ -119,7 +144,7 @@ const currentPath = Astro.url.pathname;
             </div>
             <a class="now-banner" href="/now" data-reveal>
                 <span class="pulse-dot" aria-hidden="true"></span>
-                <span class="now-banner__text"><strong>now</strong> — see what I'm currently building, learning, and playing.</span>
+                <span class="now-banner__text"><em>Now</em> — see what I'm currently building, learning, and playing.</span>
                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
             </a>
         </div>
@@ -129,14 +154,15 @@ const currentPath = Astro.url.pathname;
     <section class="home-section contact-section" id="contact">
         <div class="wrap">
             <div class="contact-card" data-reveal="zoom">
-                <p class="eyebrow"><span class="prompt">~$</span> mail josh</p>
+                <div class="contact-card__rings" aria-hidden="true"></div>
+                <p class="eyebrow eyebrow--center">Contact</p>
                 <h2 id="contact-heading">Want to get in touch?</h2>
                 <p>
                     Email <a class="link" href="mailto:contact@joshrandall.net">contact@joshrandall.net</a> —
                     it keeps your message separate from my main inbox, so I can respond
                     quickly and appropriately.
                 </p>
-                <a class="button button--solid" href="mailto:contact@joshrandall.net">
+                <a class="button button--solid" href="mailto:contact@joshrandall.net" data-magnetic>
                     <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Email me
                 </a>
             </div>
@@ -145,33 +171,6 @@ const currentPath = Astro.url.pathname;
 
     <script src="../scripts/hero.js"></script>
     <script>
-        // Typewriter for the hero role line.
-        const typed = document.getElementById('typed');
-        const phrases = JSON.parse(typed.dataset.phrases);
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            typed.textContent = phrases[0];
-        } else {
-            let phrase = 0;
-            let chars = 0;
-            let deleting = false;
-            const tick = () => {
-                const current = phrases[phrase];
-                chars += deleting ? -1 : 1;
-                typed.textContent = current.slice(0, chars);
-                let delay = deleting ? 38 : 70;
-                if (!deleting && chars === current.length) {
-                    delay = 2100;
-                    deleting = true;
-                } else if (deleting && chars === 0) {
-                    deleting = false;
-                    phrase = (phrase + 1) % phrases.length;
-                    delay = 420;
-                }
-                setTimeout(tick, delay);
-            };
-            setTimeout(tick, 900);
-        }
-
         // Rotating contact heading.
         const headings = [
             'Get in contact.',
