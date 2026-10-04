@@ -60,6 +60,7 @@ const isActive = (href) => {
         links.classList.toggle('is-open', open);
         nav.classList.toggle('is-open', open);
         toggle.setAttribute('aria-expanded', String(open));
+        document.documentElement.classList.toggle('nav-locked', open);
         document.body.classList.toggle('nav-locked', open);
     };
 

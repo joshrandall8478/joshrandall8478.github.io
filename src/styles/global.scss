@@ -95,6 +95,13 @@ html {
 	overflow-x: hidden;
 	scroll-behavior: smooth;
 	scrollbar-color: $surface-2 $bg;
+
+	// Lock the page behind the open mobile menu. Has to sit on <html>:
+	// since html sets overflow-x, body's overflow no longer reaches the
+	// viewport, so hiding it on body alone leaves the page scrollable.
+	&.nav-locked {
+		overflow: hidden;
+	}
 }
 
 body {
@@ -593,6 +600,7 @@ img {
 		transform: translateY(-8px);
 		transition: opacity 0.35s ease, transform 0.45s $ease-out, visibility 0.35s ease;
 		overflow-y: auto;
+		overscroll-behavior: contain;
 		counter-reset: nav;
 
 		li {
