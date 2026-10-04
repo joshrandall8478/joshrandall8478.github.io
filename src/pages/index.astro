@@ -17,7 +17,7 @@ let letterIndex = 0;
 const nameWords = ['Joshua', 'Randall'].map((word) =>
     [...word].map((char) => ({ char, i: letterIndex++ }))
 );
-const roles = ['Software Developer', 'DevOps Engineer', 'Linux Enthusiast', 'Homelab Operator'];
+const roles = ['Software Developer', 'Computer Science Graduate', 'Linux Enthusiast', 'Homelab Operator'];
 ---
 <Layout title="Home" currentPath={currentPath} flush>
     <!-- Mastodon Verification-->
@@ -34,10 +34,10 @@ const roles = ['Software Developer', 'DevOps Engineer', 'Linux Enthusiast', 'Hom
         <div class="wrap hero__content">
             <p class="hero__eyebrow eyebrow eyebrow--center">Hello, I'm</p>
             <h1 class="hero__title">
-                <span class="sr-only">Joshua Randall</span>
+                <!-- <span class="sr-only">Joshua Randall</span> -->
                 <span class="hero__name" aria-hidden="true">
                     {nameWords.map((letters, w) => (
-                        <span class:list={["hero__word", { "hero__word--italic": w === 1 }]}>
+                        <span class:list={["hero__word" ]}>
                             {letters.map(({ char, i }) => (
                                 <span class="hero__char" style={`--i: ${i}`}>{char}</span>
                             ))}
