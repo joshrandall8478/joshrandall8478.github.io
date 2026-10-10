@@ -3,7 +3,7 @@ import '../styles/blog-list.scss';
 import Layout from '../layouts/MainLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
 import ListControls from '../components/ListControls.astro';
-import { published, isArchived, readingTime } from '../utils/content.js';
+import { published, isArchived, searchText, readingTime } from '../utils/content.js';
 
 const projects = published(import.meta.glob('./projects/*.md', { eager: true }));
 const archivedCount = projects.filter(isArchived).length;
@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
                 homelab tooling, and personal experiments.
             </p> -->
         </header>
-        <ListControls noun="projects" archivedCount={archivedCount} />
+        <ListControls noun="projects" search archivedCount={archivedCount} />
         <div class="card-grid" data-reveal-stagger data-list>
             {projects.map((project, i) => (
                 <ArticleCard
@@ -37,6 +37,7 @@ const currentPath = Astro.url.pathname;
                     eager={i < 6}
                     archived={isArchived(project)}
                     hidden={isArchived(project)}
+                    data-search={searchText(project)}
                 />
             ))}
         </div>
