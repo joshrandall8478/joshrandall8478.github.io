@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
+archived: false
 ---
 
 This brief article aims to show you how to import Anki flashcards. I use this as an alternative to Quizlet to avoid advertisements and premium paywalls, and due to the fact that Anki is available on almost every platform.

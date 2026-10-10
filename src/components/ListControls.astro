@@ -1,0 +1,22 @@
+---
+// Search box and "Show archived" toggle for the posts/projects list pages.
+// Filtering happens client-side in scripts/list-filter.js; cards opt in
+// with data-search (lowercased text) and data-archived.
+const { noun = "posts", search = false, archivedCount = 0 } = Astro.props;
+---
+<div class="list-controls" data-list-controls>
+    {search && (
+        <label class="list-controls__search">
+            <i class="list-controls__icon fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+            <span class="sr-only">Search {noun}</span>
+            <input type="search" name="q" placeholder={`Search ${noun}`} autocomplete="off" data-list-search />
+        </label>
+    )}
+    <label class="list-controls__toggle">
+        <input type="checkbox" name="archived" data-list-archived />
+        <span class="list-controls__switch" aria-hidden="true"></span>
+        Show archived{archivedCount > 0 && ` (${archivedCount})`}
+    </label>
+</div>
+<p class="list-empty" data-list-empty hidden>No {noun} match your search.</p>
+<script src="../scripts/list-filter.js"></script>

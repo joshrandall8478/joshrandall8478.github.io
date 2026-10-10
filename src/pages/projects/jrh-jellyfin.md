@@ -10,4 +10,5 @@ layout: ../../layouts/ProjectLayout.astro
 tools: []
 draft: true
 unlisted: false
+archived: false
 ---

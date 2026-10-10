@@ -8,6 +8,7 @@ image:
     alt: 'Computer setup with three monitors'
 layout: ../../layouts/BlogLayout.astro
 draft: true
+archived: false
 ---
 
 > TLDR: Chris was correct.

@@ -12,7 +12,7 @@ const escapeXml = (value) =>
 
 export async function GET() {
     const posts = Object.values(postImports)
-        .filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted)
+        .filter((post) => !post.frontmatter.draft && !post.frontmatter.unlisted && !post.frontmatter.archived)
         .sort((a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date));
 
     const items = posts

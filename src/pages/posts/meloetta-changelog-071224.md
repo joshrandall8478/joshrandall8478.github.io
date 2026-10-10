@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
+archived: false
 ---
 This is the Meloetta changelog from the private gitlab repository. Changes in a [recent breaking change in the python library pytube](https://github.com/pytube/pytube/issues/1954) rendered the bot going in a loop when either a URL or search term is passed.
 

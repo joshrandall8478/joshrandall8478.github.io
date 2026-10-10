@@ -2,9 +2,11 @@
 import '../styles/blog-list.scss';
 import Layout from '../layouts/MainLayout.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { published, readingTime } from '../utils/content.js';
+import ListControls from '../components/ListControls.astro';
+import { published, isArchived, searchText, readingTime } from '../utils/content.js';
 
 const posts = published(import.meta.glob('./posts/*.md', { eager: true }));
+const archivedCount = posts.filter(isArchived).length;
 const currentPath = Astro.url.pathname;
 ---
 <Layout
@@ -21,7 +23,8 @@ const currentPath = Astro.url.pathname;
                 whatever I'm building or breaking at the moment.
             </p> -->
         </header>
-        <div class="card-grid" data-reveal-stagger>
+        <ListControls noun="posts" search archivedCount={archivedCount} />
+        <div class="card-grid" data-reveal-stagger data-list>
             {posts.map((post, i) => (
                 <ArticleCard
                     url={post.url}
@@ -31,6 +34,9 @@ const currentPath = Astro.url.pathname;
                     description={post.frontmatter.description}
                     readTime={readingTime(post)}
                     eager={i < 6}
+                    archived={isArchived(post)}
+                    hidden={isArchived(post)}
+                    data-search={searchText(post)}
                 />
             ))}
         </div>

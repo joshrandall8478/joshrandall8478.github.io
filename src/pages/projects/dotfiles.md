@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: ["linux", "github"] # An array of used languages and coding tools
 draft: false
 unlisted: false
+archived: false
 ---
 <a class=button href="https://github.com/joshrandall8478/dotfiles">Visit Repo</a>
 

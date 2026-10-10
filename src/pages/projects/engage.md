@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: [ "react", "github", "database", "nodejs", "docker", "scss"] # An array of used languages and coding tools
 draft: false
 unlisted: false
+archived: false
 ---
 <a class=button href="https://ngage.lol">Visit Engage</a>
 

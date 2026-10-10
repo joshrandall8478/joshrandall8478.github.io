@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
+archived: false
 ---
 In May 2024, we rolled out a new SSO provider for signing into all JRH services (except Vaultwarden). This was to allow more simplicity for our users since they would in theory only have to remember one account, one password, for all enrolled services. This also allows easier permission handling, service access handling, and basic security options like 2FA/TOTP. This also allows for more recent security technology like passkeys/web authentication, and stronger technology like hardware keys. This also allows us to potentially have oauth login options like with Discord, Apple, Google, or otherwise.
 

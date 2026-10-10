@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: ['shell', 'linux', 'github']
 draft: false
 unlisted: false
+archived: false
 ---
 
 <a class=button href="https://github.com/joshrandall8478/hyprdots">Visit the Repository</a>

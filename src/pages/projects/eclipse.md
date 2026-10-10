@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: ["unity", "html", "js", "github"] # An array of used languages and coding tools
 draft: false
 unlisted: false
+archived: false
 ---
 <a class=button href="https://joshrandall.net/eclipse">Play Eclipse</a>
 

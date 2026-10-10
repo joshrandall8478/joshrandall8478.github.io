@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/Joanne.astro
 draft: false
 unlisted: true
+archived: false
 ---
 Joanne Randall was my grandmother, who I was lucky to know for my entire life. She was a generous person, who put others before herself every single time. She was a loving mother, grandmother, and great-grandmother. She was a friend to many, and she will be missed dearly.
 

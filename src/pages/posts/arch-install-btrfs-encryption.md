@@ -8,6 +8,7 @@ image:
     alt: 'AI generated image of an open SSD in the dark'
 layout: ../../layouts/BlogLayout.astro
 draft: false
+archived: false
 ---
 
 > *Editors note: This documentation was written by a friend during the Summer of 2023 (hence why I made him the author). These commands were transcribed directly from [this YouTube video](https://youtu.be/Xynotc9BKe8). Parts of this document is edited by me for accuracy, continuity, and formatting with this site.*

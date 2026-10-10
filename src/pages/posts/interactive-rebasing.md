@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
+archived: false
 ---
 I cannot find any other resources that cover this part of git rebasing, but this is important.
 

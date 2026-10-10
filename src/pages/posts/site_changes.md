@@ -7,6 +7,7 @@ image:
     url: 'https://prorecognition.in/wp-content/uploads/2020/05/Blog-article-Image-716-x-444-b.jpg'
     alt: 'Smiling engineer'
 layout: ../../layouts/BlogLayout.astro
+archived: false
 ---
 I spent some time working on the site while I was with family. Here are all the changes made:
 <br>

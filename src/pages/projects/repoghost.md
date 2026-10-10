@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: ["claude", "chatgpt", "python", "js", "html", "css", "github", "docker"]
 draft: false
 unlisted: false
+archived: false
 ---
 
 <a class="button" href="https://repo-ghost.com">Visit repo-ghost.com</a>

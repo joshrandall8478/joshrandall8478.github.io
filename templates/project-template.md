@@ -10,4 +10,5 @@ layout: ../../layouts/ProjectLayout.astro
 tools: [] # An array of used languages and coding tools
 draft: true
 unlisted: true
+archived: false
 ---

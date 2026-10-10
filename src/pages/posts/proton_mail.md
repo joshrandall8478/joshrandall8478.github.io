@@ -8,4 +8,5 @@ image:
     alt: 'Wireguard Logo'
 layout: ../../layouts/BlogLayout.astro
 draft: true
+archived: false
 ---

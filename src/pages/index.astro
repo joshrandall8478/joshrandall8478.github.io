@@ -3,10 +3,10 @@ import '../styles/index.scss';
 import Layout from '../layouts/MainLayout.astro';
 import SocialLinks from '../components/SocialLinks.astro';
 import ArticleCard from '../components/ArticleCard.astro';
-import { published, readingTime } from '../utils/content.js';
+import { current, readingTime } from '../utils/content.js';
 
-const posts = published(import.meta.glob('./posts/*.md', { eager: true }));
-const projects = published(import.meta.glob('./projects/*.md', { eager: true }));
+const posts = current(import.meta.glob('./posts/*.md', { eager: true }));
+const projects = current(import.meta.glob('./projects/*.md', { eager: true }));
 const latestPost = posts[0];
 const latestProject = projects[0];
 const currentPath = Astro.url.pathname;
