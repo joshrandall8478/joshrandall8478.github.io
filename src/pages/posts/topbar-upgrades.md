@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
+archived: false
 ---
 This site has gotten quite a few compliments when it comes to design, and its simple functionality. Today, we are expanding on some of the design aspects by now extending the background blur styling from the pagination elements to the navbar. The navbar will have the background blur styling on all pages, but it will go fully transparent on the top part of the home page.
 

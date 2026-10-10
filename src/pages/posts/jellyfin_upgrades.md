@@ -7,6 +7,7 @@ image:
     url: 'https://jellyfin.org/images/social.png'
     alt: 'Jellyfin logo'
 layout: ../../layouts/BlogLayout.astro
+archived: false
 ---
 The JRH Jellyfin instance has received a number of upgrades going into 2024. The updates include:
 

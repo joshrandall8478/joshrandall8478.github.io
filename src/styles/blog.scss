@@ -47,6 +47,14 @@ $measure: 760px;
 	}
 }
 
+// Shown above the title when the entry is archived.
+.article__badge {
+	margin-bottom: 18px;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-size: 0.72rem;
+}
+
 .article__title {
 	font-size: clamp(2.4rem, 6.2vw, 3.7rem);
 	line-height: 1.06;

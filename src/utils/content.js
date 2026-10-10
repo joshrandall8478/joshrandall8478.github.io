@@ -14,6 +14,42 @@ export function formatDate(input) {
     return date.toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric" });
 }
 
+// True when an entry is marked `archived: true` in its frontmatter.
+// Archived entries still build and stay reachable by URL, but list pages
+// hide them until the "Show archived" toggle is on.
+export function isArchived(mod) {
+    return mod.frontmatter.archived === true;
+}
+
+// Entries for the home page and feeds: published and not archived.
+export function current(modules) {
+    return published(modules).filter((mod) => !isArchived(mod));
+}
+
+// Lowercased plain text (title, description, tools and body) used by the
+// client-side search on list pages.
+export function searchText(mod) {
+    const { title = "", description = "", subtitle = "", tools = [] } = mod.frontmatter;
+    let body = "";
+    try {
+        body = typeof mod.rawContent === "function" ? mod.rawContent() : "";
+    } catch {}
+    body = body
+        .replace(/<[^>]+>/g, " ") // html tags
+        .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1"); // markdown links/images -> text
+    return normalizeSearch([title, description, subtitle, tools.join(" "), body].join(" "));
+}
+
+// Shared by the index above and the search box, so a query like "dm-crypt"
+// is split the same way as the text it is matched against.
+export function normalizeSearch(text) {
+    return text
+        .replace(/[#>*_`~|-]+/g, " ") // markdown punctuation
+        .replace(/\s+/g, " ")
+        .trim()
+        .toLowerCase();
+}
+
 // Estimated minutes to read a markdown module (~215 wpm).
 export function readingTime(source) {
     try {

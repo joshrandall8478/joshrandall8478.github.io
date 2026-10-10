@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: ["python","github","docker","database","php"] # An array of used languages and coding tools
 draft: false
 unlisted: false
+archived: false
 ---
 ## Project Overview
 This is a group project I worked on for my database course, which ended up being presented in the EMU 45th Annual Undergrad Symposium. The end goal was to create an "obstacle course", and have users compete to get the lowest time and see if they can reach the leaderboard for the fastest completion.

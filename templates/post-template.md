@@ -9,4 +9,5 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: true
 unlisted: true
+archived: false
 ---

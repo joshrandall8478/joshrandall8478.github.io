@@ -9,6 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: true
 unlisted: false
+archived: false
 ---
 
 [`neofetch`](https://github.com/dylanaraps/neofetch) is still one of the most 

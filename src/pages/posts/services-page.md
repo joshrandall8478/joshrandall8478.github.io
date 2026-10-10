@@ -8,6 +8,7 @@ image:
     alt: 'Services Page'
 layout: ../../layouts/BlogLayout.astro
 draft: false
+archived: true
 ---
 To make it easier for users to navigate to services they have access to, I have created a new services page that is powered by Homarr™. This page will be updated as I add more services to the site.
 

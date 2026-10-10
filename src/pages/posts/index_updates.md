@@ -8,6 +8,7 @@ image:
     alt: 'Gojo Domain Expansion'
 layout: ../../layouts/BlogLayout.astro
 draft: false
+archived: false
 ---
 
 I have made a few significant changes to the landing page of <a href="/">the main site</a>, by finally adding two extra sections that automatically change to the latest post/project that has been pushed to the site.

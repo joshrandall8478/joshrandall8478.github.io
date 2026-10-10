@@ -8,4 +8,5 @@ image:
     alt: 'Classic old meme man sitting at his laptop with a white mug, smiling at the camera'
 layout: ../../layouts/BlogLayout.astro
 draft: true
+archived: false
 ---

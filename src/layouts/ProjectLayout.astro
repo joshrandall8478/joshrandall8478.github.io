@@ -34,6 +34,9 @@ const readTime = readingTime(rawContent);
             <div class="wrap article__inner">
                 <a class="back-link" href="/projects"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> All projects</a>
                 <header class="article__head">
+                    {frontmatter.archived === true && (
+                        <p class="article__badge chip"><i class="fa-solid fa-box-archive" aria-hidden="true"></i>Archived</p>
+                    )}
                     <h1 class="article__title">{frontmatter.title}</h1>
                     {frontmatter.subtitle && <p class="article__dek">{frontmatter.subtitle}</p>}
                     <div class="article__meta">

@@ -10,6 +10,7 @@ layout: ../../layouts/ProjectLayout.astro
 tools: [] # An array of used languages and coding tools
 draft: true
 unlisted: true
+archived: false
 ---
 First physical project I am posting to the site. I've built computers for friends before, but this was the first Micro ATX build I've done. The main difficulties that I encountered were the massive CPU cooler I recommended my friend to get (It's a Noctua cooler, but unfortunately I forgot the exact model), and how close it is to the graphics card + other small physical conflicts due to this being a Micro ATX build.
 

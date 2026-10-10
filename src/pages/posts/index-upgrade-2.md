@@ -8,6 +8,7 @@ image:
     alt: 'A gif of a computer game playing on a 90s PC'
 layout: ../../layouts/BlogLayout.astro
 draft: false
+archived: trues
 ---
 *TLDR: I've been hard at work.*
 

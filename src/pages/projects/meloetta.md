@@ -10,6 +10,7 @@ tools: ['python', 'docker', 'gitlab', 'discord']
 layout: ../../layouts/ProjectLayout.astro
 draft: false
 unlisted: true
+archived: false
 ---
 
 <a href="https://discord.com/api/oauth2/authorize?client_id=922939931729469471&permissions=414501375040&scope=bot"  class=button>Invite Meloetta</a>

@@ -12,9 +12,12 @@ const {
     badge,
     readTime,
     eager = false,
+    archived = false,
+    ...attrs
 } = Astro.props;
+const label = badge ?? (archived ? "Archived" : undefined);
 ---
-<a class="article-card" href={url} data-reveal>
+<a class="article-card" href={url} data-reveal data-archived={archived ? "" : undefined} {...attrs}>
     <div class="article-card__media">
         <img
             src={image?.url}
@@ -22,7 +25,7 @@ const {
             loading={eager ? "eager" : "lazy"}
             decoding="async"
         />
-        {badge && <span class="article-card__badge">{badge}</span>}
+        {label && <span class="article-card__badge">{label}</span>}
     </div>
     <div class="article-card__body">
         <p class="article-card__meta">
