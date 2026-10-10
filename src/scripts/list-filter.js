@@ -2,6 +2,8 @@
 // over each card's data-search text and a toggle that reveals cards marked
 // data-archived. State is mirrored to ?q= and ?archived=1 so links keep it.
 
+import { normalizeSearch } from '../utils/content.js';
+
 const controls = document.querySelector('[data-list-controls]');
 const grid = document.querySelector('[data-list]');
 
@@ -16,7 +18,7 @@ if (controls && grid) {
     archivedToggle.checked = params.get('archived') === '1';
 
     const apply = () => {
-        const terms = (searchInput?.value ?? '').toLowerCase().split(/\s+/).filter(Boolean);
+        const terms = normalizeSearch(searchInput?.value ?? '').split(' ').filter(Boolean);
         const showArchived = archivedToggle.checked;
         let visible = 0;
 

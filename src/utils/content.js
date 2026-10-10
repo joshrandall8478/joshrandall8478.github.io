@@ -36,10 +36,15 @@ export function searchText(mod) {
     } catch {}
     body = body
         .replace(/<[^>]+>/g, " ") // html tags
-        .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1") // markdown links/images -> text
-        .replace(/[#>*_`~|-]+/g, " "); // markdown punctuation
-    return [title, description, subtitle, tools.join(" "), body]
-        .join(" ")
+        .replace(/!?\[([^\]]*)\]\([^)]*\)/g, "$1"); // markdown links/images -> text
+    return normalizeSearch([title, description, subtitle, tools.join(" "), body].join(" "));
+}
+
+// Shared by the index above and the search box, so a query like "dm-crypt"
+// is split the same way as the text it is matched against.
+export function normalizeSearch(text) {
+    return text
+        .replace(/[#>*_`~|-]+/g, " ") // markdown punctuation
         .replace(/\s+/g, " ")
         .trim()
         .toLowerCase();
