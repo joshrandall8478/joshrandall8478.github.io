@@ -8,7 +8,7 @@ image:
     alt: 'Rocky Linux 9'
 layout: ../../layouts/BlogLayout.astro
 draft: false
-archived: false
+archived: true
 ---
 
 <a class=button href="https://jellyfin.joshrandall.net">Go to JRH Jellyfin</a>

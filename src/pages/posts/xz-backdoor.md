@@ -9,7 +9,7 @@ image:
 layout: ../../layouts/BlogLayout.astro
 draft: false
 unlisted: false
-archived: false
+archived: true
 ---
 
 ## Facts

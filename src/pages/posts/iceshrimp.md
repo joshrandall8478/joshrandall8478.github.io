@@ -8,7 +8,7 @@ image:
     alt: 'Iceshrimp branding'
 layout: ../../layouts/BlogLayout.astro
 draft: false
-archived: false
+archived: true
 ---
 
 If you don't like using Twitter, move to the Fediverse.
